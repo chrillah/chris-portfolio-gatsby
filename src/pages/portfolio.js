@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import PortfolioItem from "../components/portfolioItem"
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +26,17 @@ const Portfolio = () => {
   `)
   return (
     <Layout>
-      <ul>
+      {data.allContentfulPortfolioItem.edges.map((edge, index) => {
+        return (
+          <PortfolioItem
+            key={edge.node.portfolioTitle}
+            item={edge.node}
+            lengthOfItems={data.allContentfulPortfolioItem.edges.length}
+            indexOfItem={index + 1}
+          />
+        )
+      })}
+      {/* <ul>
         {data.allContentfulPortfolioItem.edges.map(edge => {
           return (
             <li key={edge.node.portfolioTitle}>
@@ -38,7 +49,7 @@ const Portfolio = () => {
             </li>
           )
         })}
-      </ul>
+      </ul> */}
       <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
