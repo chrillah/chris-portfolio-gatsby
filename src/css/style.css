@@ -4,6 +4,14 @@
 :root {
   --display-font: "Dela Gothic One", sans-serif;
   --app-font: "Poppins", sans-serif;
+
+  --item-bg: #efefef;
+
+  --border-radius: 10px;
+
+  --item-pad: 0.5rem;
+
+  --item-image-size: 280px;
 }
 
 h1,
@@ -36,9 +44,67 @@ li {
   font-family: var(--app-font);
 }
 
+@media (min-width: 375px) {
+  body {
+    --item-image-size: 350px;
+  }
+}
+
+@media (min-width: 425px) {
+  body {
+    --item-image-size: 380px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  body {
+    --item-pad: 1rem;
+  }
+}
 
 /* Portfolio */
 
-.portfolio-item-container{
-    
+.portfolio-item-container {
+}
+
+.portfolio-item {
+  background-color: var(--item-bg);
+  border-radius: var(--border-radius);
+  padding: var(--item-pad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item-top-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-image-container {
+  overflow: hidden;
+  width: var(--item-image-size);
+  border-radius: 50%;
+}
+
+.item-image {
+  height: var(--item-image-size);
+}
+
+.item-top-container h3 {
+  padding-bottom: var(--item-pad);
+}
+
+.item-middle-container h1,
+p {
+  padding-bottom: calc(var(--item-pad) * 2);
+}
+
+.item-bottom-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
