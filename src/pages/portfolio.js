@@ -19,6 +19,8 @@ const Portfolio = () => {
             portfolioDescription {
               portfolioDescription
             }
+            portfolioSubject
+            timePeriod
           }
         }
       }
@@ -26,16 +28,18 @@ const Portfolio = () => {
   `)
   return (
     <Layout>
-      {data.allContentfulPortfolioItem.edges.map((edge, index) => {
-        return (
-          <PortfolioItem
-            key={edge.node.portfolioTitle}
-            item={edge.node}
-            lengthOfItems={data.allContentfulPortfolioItem.edges.length}
-            indexOfItem={index + 1}
-          />
-        )
-      })}
+      <ul className="portfolio-item-container">
+        {data.allContentfulPortfolioItem.edges.map((edge, index) => {
+          return (
+            <PortfolioItem
+              key={edge.node.portfolioTitle}
+              item={edge.node}
+              lengthOfItems={data.allContentfulPortfolioItem.edges.length}
+              indexOfItem={index + 1}
+            />
+          )
+        })}
+      </ul>
       {/* <ul>
         {data.allContentfulPortfolioItem.edges.map(edge => {
           return (
