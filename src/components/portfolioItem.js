@@ -4,7 +4,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
   const image = getImage(item.portfolioHeroImage)
   return (
-    <li className="portfolio-item">
+    <li
+      className={
+        item.portfolioSubject === "React"
+          ? "portfolio-item color-set-3"
+          : item.portfolioSubject === "Vue"
+          ? "portfolio-item color-set-2"
+          : "portfolio-item color-set-1"
+      }
+    >
       <div className="item-top-container">
         <h3>{item.timePeriod}</h3>
         <h3>{item.portfolioSubject}</h3>

@@ -5,12 +5,19 @@
   --display-font: "Dela Gothic One", sans-serif;
   --app-font: "Poppins", sans-serif;
 
-  --item-bg: #efefef;
+  --turquoise: #9ef3ca;
+  --blue: #1544eb;
 
+  --pink: #fcb8ad;
+  --red: #ff2e17;
+
+  --lavender: #dac9ff;
+  --indigo: #5200ff;
+
+  --item-bg: #efefef;
   --item-font-color: #111111;
 
   --border-radius: 10px;
-
   --item-pad: 0.5rem;
 
   --item-image-size: 280px;
@@ -70,6 +77,21 @@ li {
 
 /* Portfolio */
 
+.color-set-1 {
+  --item-bg: var(--turquoise);
+  --item-font-color: var(--blue);
+}
+
+.color-set-2 {
+  --item-bg: var(--lavender);
+  --item-font-color: var(--indigo);
+}
+
+.color-set-3 {
+  --item-bg: var(--pink);
+  --item-font-color: var(--red);
+}
+
 .portfolio-item-container {
   display: grid;
   grid-auto-flow: column;
@@ -90,6 +112,10 @@ li {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.item-top-container h3 {
+  color: var(--item-font-color);
 }
 
 .item-image-container {
@@ -130,4 +156,8 @@ p {
   display: flex;
   justify-content: flex-end;
   padding: var(--item-pad);
+}
+
+.item-bottom-container {
+  color: var(--item-font-color);
 }
