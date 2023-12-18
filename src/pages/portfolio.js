@@ -28,6 +28,10 @@ const Portfolio = () => {
   `)
   return (
     <Layout>
+      <Link className="back-button" to="/">
+        <div className="caret"></div>
+        <p>Back</p>
+      </Link>
       <ul className="portfolio-item-container">
         {data.allContentfulPortfolioItem.edges.map((edge, index) => {
           return (
@@ -54,7 +58,6 @@ const Portfolio = () => {
           )
         })}
       </ul> */}
-      <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
 }

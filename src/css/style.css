@@ -7,6 +7,8 @@
 
   --item-bg: #efefef;
 
+  --item-font-color: #111111;
+
   --border-radius: 10px;
 
   --item-pad: 0.5rem;
@@ -82,10 +84,6 @@ li {
   background-color: var(--item-bg);
   border-radius: var(--border-radius);
   padding: var(--item-pad);
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
 }
 
 .item-top-container {
@@ -98,6 +96,11 @@ li {
   overflow: hidden;
   width: var(--item-image-size);
   border-radius: 50%;
+  transition: all 200ms ease-in-out;
+}
+
+.item-image-container:hover {
+  border-radius: 0;
 }
 
 .item-image {
@@ -115,6 +118,7 @@ li {
 
 .item-middle-container h1,
 p {
+  color: var(--item-font-color);
   padding-bottom: calc(var(--item-pad) * 2);
 }
 
