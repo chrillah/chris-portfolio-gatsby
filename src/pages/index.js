@@ -12,6 +12,13 @@ const samplePageLinks = [
     description:
       "A simple example of linking to another page within a Gatsby site",
   },
+  {
+    text: "Portfolio",
+    url: "portfolio",
+    badge: false,
+    description:
+      "A simple example of linking to another page within a Gatsby site",
+  },
 ]
 
 const IndexPage = () => (
