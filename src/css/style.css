@@ -44,6 +44,10 @@ li {
   font-family: var(--app-font);
 }
 
+li {
+  list-style: none;
+}
+
 @media (min-width: 375px) {
   body {
     --item-image-size: 350px;
@@ -56,7 +60,6 @@ li {
   }
 }
 
-
 @media (min-width: 768px) {
   body {
     --item-pad: 1rem;
@@ -66,16 +69,23 @@ li {
 /* Portfolio */
 
 .portfolio-item-container {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  gap: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .portfolio-item {
+  position: relative;
   background-color: var(--item-bg);
   border-radius: var(--border-radius);
   padding: var(--item-pad);
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .item-top-container {
@@ -98,13 +108,22 @@ li {
   padding-bottom: var(--item-pad);
 }
 
+.item-middle-container {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
 .item-middle-container h1,
 p {
   padding-bottom: calc(var(--item-pad) * 2);
 }
 
 .item-bottom-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  padding: var(--item-pad);
 }
