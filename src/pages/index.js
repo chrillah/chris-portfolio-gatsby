@@ -8,6 +8,7 @@ const IndexPage = () => (
   <Layout>
     <div className="home-container">
       <h1>Enter</h1>
+      <Link to="/portfolio">Portfolio</Link>
     </div>
   </Layout>
 )

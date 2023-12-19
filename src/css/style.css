@@ -29,6 +29,8 @@
   --border-radius: 10px;
   --item-pad: 0.5rem;
 
+  --app-stroke-width: 2px;
+
   --item-image-size: 280px;
 }
 
@@ -46,7 +48,8 @@ p,
 a,
 li,
 ul,
-button {
+button,
+svg {
   margin: 0;
   padding: 0;
 }
@@ -76,6 +79,15 @@ li {
   list-style: none;
 }
 
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
 body {
   background-color: var(--app-bg);
 }
@@ -83,6 +95,7 @@ body {
 main {
   background-color: white;
   margin-top: 5rem;
+  min-height: 100svh;
 }
 
 @media (min-width: 375px) {
@@ -119,26 +132,90 @@ nav {
   margin: 0 auto;
 }
 
-/* LOGO SVG */
+.header-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-.logo {
+.close-button,
+.open-button {
+  cursor: pointer;
+}
+
+.visible {
+  display: block;
+}
+
+.no-visible {
+  display: none;
+}
+
+.nav-buttons-container {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  transition: all ease-in-out 150ms;
+}
+
+.menu-open {
+  height: 100svh;
+}
+
+.menu-close {
+  height: 0;
+  overflow: hidden;
+}
+
+.nav-button {
+  border: calc(var(--app-stroke-width) / 2) var(--app-color) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
+}
+
+.nav-button:hover {
+  transform: scaleY(1.05);
+}
+
+/* SVG */
+
+.logo,
+.burger,
+.cross {
   width: 30px;
 }
 
-.cls-1 {
+.logo-rect-1 {
   stroke-miterlimit: 10;
 }
 
-.cls-1,
-.cls-2 {
+.logo-rect-1,
+.logo-rect {
   fill: none;
   stroke: var(--app-color);
-  stroke-width: 2px;
+  stroke-width: var(--app-stroke-width);
 }
 
-.cls-2 {
+.logo-rect {
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.cross-rect {
+  fill: none;
+  stroke: var(--app-color);
+  stroke-miterlimit: 10;
+  stroke-width: var(--app-stroke-width);
+}
+
+.burger-rect {
+  fill: none;
+  stroke: var(--app-color);
+  stroke-miterlimit: 10;
+  stroke-width: var(--app-stroke-width);
 }
 
 /* Portfolio */
@@ -172,6 +249,11 @@ nav {
   background-color: var(--item-bg);
   border-radius: var(--border-radius);
   padding: var(--item-pad);
+  transition: all ease-in-out 150ms;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.01);
 }
 
 .item-top-container {
