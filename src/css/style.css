@@ -79,17 +79,17 @@ li {
 
 .color-set-1 {
   --item-bg: var(--turquoise);
-  --item-font-color: var(--blue);
+  /* --item-font-color: var(--blue); */
 }
 
 .color-set-2 {
   --item-bg: var(--lavender);
-  --item-font-color: var(--indigo);
+  /* --item-font-color: var(--indigo); */
 }
 
 .color-set-3 {
   --item-bg: var(--pink);
-  --item-font-color: var(--red);
+  /* --item-font-color: var(--red); */
 }
 
 .portfolio-item-container {
