@@ -16,6 +16,6 @@ const SecondPage = () => {
   )
 }
 
-export const Head = () => <Seo title="Page two" />
+export const Head = () => <Seo title="Illustrations" />
 
 export default SecondPage
