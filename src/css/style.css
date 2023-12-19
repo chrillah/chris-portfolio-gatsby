@@ -14,8 +14,17 @@
   --lavender: #dac9ff;
   --indigo: #5200ff;
 
-  --item-bg: #efefef;
-  --item-font-color: #111111;
+  --yellow: #f2d022;
+  --black: #111111;
+  --grey: #efefef;
+
+  --app-bg: var(--yellow);
+  --app-color: var(--black);
+
+  --item-bg: var(--grey);
+  --item-font-color: var(--app-color);
+
+  --max-width: 1400px;
 
   --border-radius: 10px;
   --item-pad: 0.5rem;
@@ -23,6 +32,10 @@
   --item-image-size: 280px;
 }
 
+body,
+header,
+nav,
+main,
 h1,
 h2,
 h3,
@@ -41,6 +54,7 @@ button {
 h1,
 h2,
 h3 {
+  color: var(--app-color);
   font-family: var(--display-font);
 }
 
@@ -50,11 +64,25 @@ h5,
 p,
 a,
 li {
+  color: var(--app-color);
   font-family: var(--app-font);
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+body {
+  background-color: var(--app-bg);
+}
+
+main {
+  background-color: white;
+  margin-top: 5rem;
 }
 
 @media (min-width: 375px) {
@@ -73,6 +101,22 @@ li {
   body {
     --item-pad: 1rem;
   }
+}
+
+/* Header */
+
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  position: fixed;
+  background-color: var(--app-bg);
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 /* Portfolio */

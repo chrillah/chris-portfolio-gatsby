@@ -28,11 +28,15 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
-      {samplePageLinks.map((link, i) => (
-        <React.Fragment key={link.url}>
-          <Link to={link.url}>{link.text}</Link>
-        </React.Fragment>
-      ))}
+      <nav>
+        {samplePageLinks.map((link, i) => (
+          <React.Fragment key={link.url}>
+            <Link className="nav-buttons" to={link.url}>
+              {link.text}
+            </Link>
+          </React.Fragment>
+        ))}
+      </nav>
     </header>
   )
 }
