@@ -30,7 +30,9 @@
   --item-pad: 0.5rem;
   --item-height: 500px;
 
-  --app-stroke-width: 2px;
+  --app-stroke-width: 1px;
+
+  --svg-stroke-width: calc(var(--app-stroke-width) * 3);
 
   --item-image-size: 280px;
 }
@@ -196,7 +198,7 @@ nav {
 }
 
 .nav-button {
-  border: calc(var(--app-stroke-width) / 2) var(--app-color) solid;
+  border: var(--app-stroke-width) var(--app-color) solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,7 +228,7 @@ nav {
 .logo-rect {
   fill: none;
   stroke: var(--app-color);
-  stroke-width: var(--app-stroke-width);
+  stroke-width: var(--svg-stroke-width);
 }
 
 .logo-rect {
@@ -238,21 +240,21 @@ nav {
   fill: none;
   stroke: var(--app-color);
   stroke-miterlimit: 10;
-  stroke-width: var(--app-stroke-width);
+  stroke-width: var(--svg-stroke-width);
 }
 
 .burger-rect {
   fill: none;
   stroke: var(--app-color);
   stroke-miterlimit: 10;
-  stroke-width: var(--app-stroke-width);
+  stroke-width: var(--svg-stroke-width);
 }
 
 .arrow-detail {
   fill: none;
   stroke: var(--app-color);
   stroke-miterlimit: 10;
-  stroke-width: var(--app-stroke-width);
+  stroke-width: var(--svg-stroke-width);
 }
 /* Portfolio */
 
