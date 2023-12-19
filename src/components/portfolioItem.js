@@ -7,7 +7,7 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
     <li
       className={
         item.portfolioSubject === "React"
-          ? "portfolio-item color-set-3"
+          ? "portfolio-item"
           : item.portfolioSubject === "Vue"
           ? "portfolio-item color-set-2"
           : "portfolio-item color-set-1"
