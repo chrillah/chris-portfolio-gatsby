@@ -14,14 +14,14 @@ const Header = ({ siteTitle }) => {
     },
     {
       text: "Page 2",
-      url: "page-2",
+      url: "page-2/",
       badge: false,
       description:
         "A simple example of linking to another page within a Gatsby site",
     },
     {
       text: "Portfolio",
-      url: "portfolio",
+      url: "portfolio/",
       badge: false,
       description:
         "A simple example of linking to another page within a Gatsby site",
@@ -201,19 +201,33 @@ const Header = ({ siteTitle }) => {
               : "nav-buttons-container menu-close"
           }
         >
-          {samplePageLinks.map((link, i) => (
-            <React.Fragment key={link.url}>
-              <Link
-                className="nav-button"
-                to={link.url}
-                onClick={() => {
-                  closeMenu()
-                }}
-              >
-                {link.text}
-              </Link>
-            </React.Fragment>
-          ))}
+          <Link
+            onClick={() => {
+              closeMenu()
+            }}
+            className="nav-button"
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            onClick={() => {
+              closeMenu()
+            }}
+            className="nav-button"
+            to="/portfolio/"
+          >
+            Portfolio
+          </Link>
+          <Link
+            onClick={() => {
+              closeMenu()
+            }}
+            className="nav-button"
+            to="/page-2/"
+          >
+            Page 2
+          </Link>
         </div>
       </nav>
     </header>

@@ -29,7 +29,6 @@ const Portfolio = () => {
   return (
     <Layout>
       <div className="app-page">
-        {" "}
         <Link className="back-button" to="/">
           <svg
             className="arrow rev"
