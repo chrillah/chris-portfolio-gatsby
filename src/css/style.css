@@ -109,6 +109,7 @@ main {
   display: grid;
   grid-template-columns: 30px auto;
   gap: 0.5rem;
+  height: 30px;
 }
 
 .rev {
@@ -267,6 +268,10 @@ nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* .portfolio-item-container::-webkit-scrollbar-thumb{
+    background: none;
+} */
 
 .portfolio-item {
   position: relative;

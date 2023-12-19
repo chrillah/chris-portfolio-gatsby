@@ -19,8 +19,9 @@ const Portfolio = () => {
             portfolioDescription {
               portfolioDescription
             }
-            portfolioSubject
             timePeriod
+            portfolioSubject
+            slug
           }
         }
       }
@@ -64,20 +65,6 @@ const Portfolio = () => {
           )
         })}
       </ul>
-      {/* <ul>
-        {data.allContentfulPortfolioItem.edges.map(edge => {
-          return (
-            <li key={edge.node.portfolioTitle}>
-              <h2>{edge.node.portfolioTitle}</h2>
-              <GatsbyImage
-                image={getImage(edge.node.portfolioHeroImage)}
-                alt={edge.node.portfolioTitle}
-              />
-              <p>{edge.node.portfolioDescription.portfolioDescription}</p>
-            </li>
-          )
-        })}
-      </ul> */}
     </Layout>
   )
 }
