@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <div className="home-container">
+    <div className="app-page">
       <h1>Enter</h1>
       <Link to="/portfolio">Portfolio</Link>
     </div>

@@ -34,6 +34,7 @@
   --item-image-size: 280px;
 }
 
+/* Global settings */
 body,
 header,
 nav,
@@ -96,6 +97,22 @@ main {
   background-color: white;
   margin-top: 5rem;
   min-height: 100svh;
+}
+
+.app-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.back-button {
+  max-width: 100px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  gap: 0.5rem;
+}
+
+.rev {
+  rotate: 180deg;
 }
 
 @media (min-width: 375px) {
@@ -184,7 +201,8 @@ nav {
 
 .logo,
 .burger,
-.cross {
+.cross,
+.arrow {
   width: 30px;
 }
 
@@ -218,6 +236,12 @@ nav {
   stroke-width: var(--app-stroke-width);
 }
 
+.arrow-detail {
+  fill: none;
+  stroke: var(--app-color);
+  stroke-miterlimit: 10;
+  stroke-width: var(--app-stroke-width);
+}
 /* Portfolio */
 
 .color-set-1 {
@@ -309,3 +333,5 @@ p {
 .item-bottom-container {
   color: var(--item-font-color);
 }
+
+/* Home */
