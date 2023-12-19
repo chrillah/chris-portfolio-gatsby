@@ -28,6 +28,7 @@
 
   --border-radius: 10px;
   --item-pad: 0.5rem;
+  --item-height: 500px;
 
   --app-stroke-width: 2px;
 
@@ -112,6 +113,14 @@ main {
   height: 30px;
 }
 
+.to-button {
+  max-width: 200px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  gap: 0.5rem;
+  height: 30px;
+}
+
 .rev {
   rotate: 180deg;
 }
@@ -119,12 +128,14 @@ main {
 @media (min-width: 375px) {
   body {
     --item-image-size: 350px;
+    --item-height: 550px;
   }
 }
 
 @media (min-width: 425px) {
   body {
     --item-image-size: 380px;
+    --item-height: 600px;
   }
 }
 
@@ -279,6 +290,7 @@ nav {
   border-radius: var(--border-radius);
   padding: var(--item-pad);
   transition: all ease-in-out 150ms;
+  min-height: var(--item-height);
 }
 
 .portfolio-item:hover {
@@ -325,6 +337,13 @@ p {
   padding-bottom: calc(var(--item-pad) * 2);
 }
 
+.item-button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: var(--item-pad);
+}
+
 .item-bottom-container {
   position: absolute;
   bottom: 0;
@@ -333,10 +352,6 @@ p {
   display: flex;
   justify-content: flex-end;
   padding: var(--item-pad);
-}
-
-.item-bottom-container {
-  color: var(--item-font-color);
 }
 
 /* Home */
