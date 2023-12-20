@@ -25,7 +25,7 @@
   --item-bg: var(--grey);
   --item-font-color: var(--app-color);
 
-  --max-width: 1400px;
+  --max-width: 1800px;
 
   --app-pad: 0.2rem;
 
@@ -280,11 +280,12 @@ nav {
   gap: 0.5rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding: var(--app-pad) 0;
 }
 
-/* .portfolio-item-container::-webkit-scrollbar-thumb{
-    background: none;
-} */
+.portfolio-item-container::-webkit-scrollbar {
+    display: none;
+  }
 
 .portfolio-item {
   position: relative;
