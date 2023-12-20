@@ -228,6 +228,24 @@ const Header = ({ siteTitle }) => {
           >
             Page 2
           </Link>
+          <Link
+            onClick={() => {
+              closeMenu()
+            }}
+            className="nav-button"
+            to="/about"
+          >
+            About
+          </Link>
+          <Link
+            onClick={() => {
+              closeMenu()
+            }}
+            className="nav-button"
+            to="/home"
+          >
+            My home
+          </Link>
         </div>
       </nav>
     </header>
