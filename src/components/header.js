@@ -47,28 +47,40 @@ const Header = ({ siteTitle }) => {
             }}
           >
             <svg
-              className="logo"
               id="Layer_1"
+              className="logo"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 30"
             >
-              <path
-                className="logo-detail"
-                d="m29,1v28H1V1h28M30,0H0v30h30V0h0Z"
-              />
+              <line className="logo-detail" x1="16" x2="16" y2="30" />
+              <line className="logo-detail" x1="16" y1="15" x2="8.17" y2="15" />
               <line
                 className="logo-detail"
                 x1="30"
                 y1="15"
-                x2="14.34"
+                x2="22.17"
                 y2="15"
               />
               <line
                 className="logo-detail"
-                x1="14.34"
+                x1="23.17"
+                y1="30"
+                x2="23.17"
+                y2="22.17"
+              />
+              <line
+                className="logo-detail"
+                x1="23.17"
+                y1="12.04"
+                x2="23.17"
+                y2="4.21"
+              />
+              <line
+                className="logo-detail"
+                x1="8.17"
                 y1="22.83"
-                x2="14.34"
+                x2="8.17"
                 y2="7.17"
               />
             </svg>

@@ -7,13 +7,12 @@
         stroke: #000;
         stroke-miterlimit: 10;
       }
-
-      .cls-2 {
-        stroke-width: 0px;
-      }
     </style>
   </defs>
-  <path class="cls-2" d="m29,1v28H1V1h28M30,0H0v30h30V0h0Z"/>
-  <line class="cls-1" x1="30" y1="15" x2="14.34" y2="15"/>
-  <line class="cls-1" x1="14.34" y1="22.83" x2="14.34" y2="7.17"/>
+  <line class="cls-1" x1="16" x2="16" y2="30"/>
+  <line class="cls-1" x1="16" y1="15" x2="8.17" y2="15"/>
+  <line class="cls-1" x1="30" y1="15" x2="22.17" y2="15"/>
+  <line class="cls-1" x1="23.17" y1="30" x2="23.17" y2="22.17"/>
+  <line class="cls-1" x1="23.17" y1="12.04" x2="23.17" y2="4.21"/>
+  <line class="cls-1" x1="8.17" y1="22.83" x2="8.17" y2="7.17"/>
 </svg>
