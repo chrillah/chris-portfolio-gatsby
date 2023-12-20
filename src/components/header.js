@@ -4,29 +4,29 @@ import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const samplePageLinks = [
-    {
-      text: "Home",
-      url: "/",
-      badge: false,
-      description:
-        "A simple example of linking to another page within a Gatsby site",
-    },
-    {
-      text: "Page 2",
-      url: "page-2/",
-      badge: false,
-      description:
-        "A simple example of linking to another page within a Gatsby site",
-    },
-    {
-      text: "Portfolio",
-      url: "portfolio/",
-      badge: false,
-      description:
-        "A simple example of linking to another page within a Gatsby site",
-    },
-  ]
+  //   const samplePageLinks = [
+  //     {
+  //       text: "Home",
+  //       url: "/",
+  //       badge: false,
+  //       description:
+  //         "A simple example of linking to another page within a Gatsby site",
+  //     },
+  //     {
+  //       text: "Page 2",
+  //       url: "page-2/",
+  //       badge: false,
+  //       description:
+  //         "A simple example of linking to another page within a Gatsby site",
+  //     },
+  //     {
+  //       text: "Portfolio",
+  //       url: "portfolio/",
+  //       badge: false,
+  //       description:
+  //         "A simple example of linking to another page within a Gatsby site",
+  //     },
+  //   ]
 
   const closeMenu = () => {
     setIsMenuOpen(false)
@@ -45,6 +45,13 @@ const Header = ({ siteTitle }) => {
             onClick={() => {
               closeMenu()
             }}
+            onKeyDown={event => {
+              if (event.key === "Enter") {
+                closeMenu()
+              }
+            }}
+            role="button"
+            tabIndex={0}
           >
             <svg
               id="Layer_1"
@@ -90,6 +97,13 @@ const Header = ({ siteTitle }) => {
             onClick={() => {
               closeMenu()
             }}
+            onKeyDown={event => {
+              if (event.key === "Enter") {
+                closeMenu()
+              }
+            }}
+            role="button"
+            tabIndex={0}
             className={isMenuOpen ? "close-button" : "close-button no-visible"}
           >
             <svg
@@ -120,6 +134,13 @@ const Header = ({ siteTitle }) => {
             onClick={() => {
               openMenu()
             }}
+            onKeyDown={event => {
+              if (event.key === "Enter") {
+                openMenu()
+              }
+            }}
+            role="button"
+            tabIndex={0}
             className={isMenuOpen ? "open-button no-visible" : "open-button"}
           >
             <svg
