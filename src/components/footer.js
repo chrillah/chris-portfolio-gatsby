@@ -26,7 +26,7 @@ const Footer = () => {
                 />
                 <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
               </svg>
-              <p>linkedin.com/in/christopher-rönnberg/</p>
+              <p>linkedin.com/in/ christopher-rönnberg/</p>
             </a>
             <a
               className="to-button"
