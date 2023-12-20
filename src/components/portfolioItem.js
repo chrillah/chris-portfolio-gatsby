@@ -5,7 +5,8 @@ import { Link } from "gatsby"
 const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
   const image = getImage(item.portfolioHeroImage)
   return (
-    <li
+    <Link
+      to={`/portfolio/${item.slug}`}
       className={
         item.portfolioSubject === "React"
           ? "portfolio-item"
@@ -30,7 +31,7 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
         {/* <p>{item.portfolioDescription.portfolioDescription}</p> */}
       </div>
       <div className="item-button-container">
-        <Link className="to-button" to={`/portfolio/${item.slug}`}>
+        <div className="to-button">
           <svg
             className="arrow"
             id="Layer_1"
@@ -45,14 +46,14 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
             <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
           </svg>
           <p>Check it out</p>
-        </Link>
+        </div>
       </div>
       <div className="item-bottom-container">
         <h3>
           {indexOfItem} of {lengthOfItems}
         </h3>
       </div>
-    </li>
+    </Link>
   )
 }
 

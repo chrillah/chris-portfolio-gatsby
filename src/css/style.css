@@ -217,10 +217,20 @@ nav {
   font-weight: 600;
   cursor: pointer;
   transition: all ease-in-out 150ms;
+  border-radius: 100px;
 }
 
 .nav-button:hover {
   transform: scaleY(1.05);
+}
+
+.logo:active,
+.close-button:active,
+.open-button:active,
+.back-button:active,
+.to-button:active,
+.nav-button:active {
+  transform: scale(0.95);
 }
 
 /* SVG */
@@ -347,3 +357,27 @@ p {
 }
 
 /* Home */
+
+/* Footer */
+
+.contact-container {
+  display: grid;
+  gap: calc(var(--app-pad) * 10);
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+@media (min-width: 580px) {
+  .contact-container {
+    gap: calc(var(--app-pad) * 8);
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (min-width: 1170px) {
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
