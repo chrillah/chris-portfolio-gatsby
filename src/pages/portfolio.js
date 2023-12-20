@@ -30,22 +30,24 @@ const Portfolio = () => {
   return (
     <Layout>
       <div className="app-page">
-        <Link className="back-button" to="/">
-          <svg
-            className="arrow rev"
-            id="Layer_1"
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 30 30"
-          >
-            <polyline
-              className="arrow-detail"
-              points="14.95 29.44 29.39 15 14.95 .56"
-            />
-            <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
-          </svg>
-          <p>Back</p>
-        </Link>
+        <div className="app-container">
+          <Link className="back-button" to="/">
+            <svg
+              className="arrow rev"
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 30"
+            >
+              <polyline
+                className="arrow-detail"
+                points="14.95 29.44 29.39 15 14.95 .56"
+              />
+              <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
+            </svg>
+            <p>Back</p>
+          </Link>
+        </div>
       </div>
       <ul className="portfolio-item-container">
         {data.allContentfulPortfolioItem.edges.map((edge, index) => {

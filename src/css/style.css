@@ -26,10 +26,10 @@
 
   --max-width: 1400px;
 
-  --app-pad: .5rem;
+  --app-pad: 0.2rem;
 
   --border-radius: 10px;
-  --item-pad: var(--app-pad);
+  --item-pad: calc(var(--app-pad) * 2);
   --item-height: 500px;
 
   --app-stroke-width: 1px;
@@ -109,6 +109,10 @@ main {
   margin: 0 auto;
 }
 
+.app-container {
+  margin: 0 var(--app-pad);
+}
+
 .back-button,
 .to-button {
   display: grid;
@@ -150,7 +154,7 @@ main {
 
 @media (min-width: 768px) {
   body {
-    --item-pad: 1rem;
+    --app-pad: 0.5rem;
   }
 }
 
@@ -171,6 +175,7 @@ nav {
 }
 
 .header-buttons-container {
+  margin: 0 var(--app-pad);
   display: flex;
   justify-content: space-between;
 }
@@ -191,7 +196,7 @@ nav {
 .nav-buttons-container {
   display: grid;
   gap: 1rem;
-  margin: 0 auto;
+  margin: 0 var(--app-pad);
   transition: all ease-in-out 150ms;
 }
 
