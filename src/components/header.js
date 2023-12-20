@@ -158,56 +158,56 @@ const Header = ({ siteTitle }) => {
         </div>
         <div
           className={
-            isMenuOpen
-              ? "nav-buttons-container menu-open"
-              : "nav-buttons-container menu-close"
+            isMenuOpen ? "nav-container menu-open" : "nav-container menu-close"
           }
         >
-          <Link
-            onClick={() => {
-              closeMenu()
-            }}
-            className="nav-button"
-            to="/"
-          >
-            Home
-          </Link>
-          <Link
-            onClick={() => {
-              closeMenu()
-            }}
-            className="nav-button"
-            to="/portfolio/"
-          >
-            Portfolio
-          </Link>
-          <Link
-            onClick={() => {
-              closeMenu()
-            }}
-            className="nav-button"
-            to="/page-2/"
-          >
-            Page 2
-          </Link>
-          <Link
-            onClick={() => {
-              closeMenu()
-            }}
-            className="nav-button"
-            to="/about"
-          >
-            About
-          </Link>
-          <Link
-            onClick={() => {
-              closeMenu()
-            }}
-            className="nav-button"
-            to="/home"
-          >
-            My home
-          </Link>
+          <div class="nav-buttons-container">
+            <Link
+              onClick={() => {
+                closeMenu()
+              }}
+              className="nav-button"
+              to="/"
+            >
+              Home
+            </Link>
+            <Link
+              onClick={() => {
+                closeMenu()
+              }}
+              className="nav-button"
+              to="/portfolio/"
+            >
+              Portfolio
+            </Link>
+            <Link
+              onClick={() => {
+                closeMenu()
+              }}
+              className="nav-button"
+              to="/page-2/"
+            >
+              Page 2
+            </Link>
+            <Link
+              onClick={() => {
+                closeMenu()
+              }}
+              className="nav-button"
+              to="/about"
+            >
+              About
+            </Link>
+            <Link
+              onClick={() => {
+                closeMenu()
+              }}
+              className="nav-button"
+              to="/home"
+            >
+              My home
+            </Link>
+          </div>
         </div>
       </nav>
     </header>

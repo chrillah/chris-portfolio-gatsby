@@ -194,16 +194,20 @@ nav {
   display: none;
 }
 
-.nav-buttons-container {
-  display: grid;
-  gap: 1rem;
+.nav-container {
   margin: 0 var(--app-pad);
   transition: all ease-in-out 150ms;
 }
 
+.nav-buttons-container {
+  display: grid;
+  gap: 1rem;
+  min-height: 80vh;
+}
+
 .menu-open {
   /* width: 100%; */
-    height: 100svh;
+  height: 100svh;
 }
 
 .menu-close {
