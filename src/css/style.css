@@ -17,6 +17,7 @@
   --yellow: #f2d022;
   --black: #111111;
   --grey: #efefef;
+  --light-purple: #a0b0d9;
 
   --app-bg: var(--yellow);
   --app-color: var(--black);
@@ -359,6 +360,7 @@ p {
 /* Home */
 
 /* Footer */
+
 
 .contact-container {
   display: grid;
