@@ -13,7 +13,7 @@
       }
     </style>
   </defs>
-  <path class="cls-2" d="m29.23.77v28.45H.77V.77h28.45m1-1H-.23v30.45h30.45V-.23h0Z"/>
+  <path class="cls-2" d="m29,1v28H1V1h28M30,0H0v30h30V0h0Z"/>
   <line class="cls-1" x1="30" y1="15" x2="14.34" y2="15"/>
   <line class="cls-1" x1="14.34" y1="22.83" x2="14.34" y2="7.17"/>
 </svg>

@@ -35,19 +35,13 @@ const PortfolioItemTemplate = ({ data }) => {
           id="Layer_1"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 109.14 109.14"
+          viewBox="0 0 30 30"
         >
           <polyline
             className="arrow-detail"
-            points="55.07 .5 109.14 54.57 55.07 108.64"
+            points="14.95 29.44 29.39 15 14.95 .56"
           />
-          <line
-            className="arrow-detail"
-            x1="0"
-            y1="54.57"
-            x2="109.14"
-            y2="54.57"
-          />
+          <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
         </svg>
         <p>Back</p>
       </Link>

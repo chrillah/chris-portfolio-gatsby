@@ -26,13 +26,15 @@
 
   --max-width: 1400px;
 
+  --app-pad: .5rem;
+
   --border-radius: 10px;
-  --item-pad: 0.5rem;
+  --item-pad: var(--app-pad);
   --item-height: 500px;
 
   --app-stroke-width: 1px;
 
-  --svg-stroke-width: calc(var(--app-stroke-width) * 3);
+  --svg-stroke-width: var(--app-stroke-width);
 
   --item-image-size: 280px;
 }
@@ -99,7 +101,7 @@ body {
 main {
   background-color: white;
   margin-top: 5rem;
-  min-height: 100svh;
+  /* min-height: 100svh; */
 }
 
 .app-page {
@@ -107,20 +109,25 @@ main {
   margin: 0 auto;
 }
 
-.back-button {
-  max-width: 100px;
+.back-button,
+.to-button {
   display: grid;
   grid-template-columns: 30px auto;
   gap: 0.5rem;
   height: 30px;
 }
 
+.back-button {
+  max-width: 100px;
+}
+
 .to-button {
   max-width: 200px;
-  display: grid;
-  grid-template-columns: 30px auto;
-  gap: 0.5rem;
-  height: 30px;
+}
+
+.back-button p,
+.to-button p {
+  padding-top: 2px;
 }
 
 .rev {
@@ -220,40 +227,17 @@ nav {
   width: 30px;
 }
 
-.logo-rect-1 {
-  stroke-miterlimit: 10;
-}
-
-.logo-rect-1,
-.logo-rect {
+.logo-detail,
+.burger-detail,
+.cross-detail {
   fill: none;
   stroke: var(--app-color);
-  stroke-width: var(--svg-stroke-width);
-}
-
-.logo-rect {
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.cross-rect {
-  fill: none;
-  stroke: var(--app-color);
-  stroke-miterlimit: 10;
-  stroke-width: var(--svg-stroke-width);
-}
-
-.burger-rect {
-  fill: none;
-  stroke: var(--app-color);
-  stroke-miterlimit: 10;
   stroke-width: var(--svg-stroke-width);
 }
 
 .arrow-detail {
   fill: none;
   stroke: var(--app-color);
-  stroke-miterlimit: 10;
   stroke-width: var(--svg-stroke-width);
 }
 /* Portfolio */
