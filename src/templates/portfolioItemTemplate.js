@@ -19,7 +19,7 @@ const PortfolioItemTemplate = ({ data }) => {
       [INLINES.HYPERLINK]: (node, children) => {
         const { uri } = node.data
         return (
-          <a href={uri} target="_blank">
+          <a href={uri} target="_blank" rel="noopener noreferrer">
             {children}
           </a>
         )
