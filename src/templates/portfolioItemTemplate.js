@@ -2,10 +2,30 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
+import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const PortfolioItemTemplate = ({ data }) => {
-  const { portfolioTitle, portfolioDescription, portfolioSubject } =
-    data.contentfulPortfolioItem
+  const {
+    portfolioTitle,
+    portfolioDescription,
+    portfolioSubject,
+    githubLink,
+    webpageLink,
+  } = data.contentfulPortfolioItem
+
+  const richTextConfig = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node, children) => {
+        const { uri } = node.data
+        return (
+          <a href={uri} target="_blank">
+            {children}
+          </a>
+        )
+      },
+    },
+  }
 
   return (
     <Layout>
@@ -33,7 +53,16 @@ const PortfolioItemTemplate = ({ data }) => {
       </Link>
       <h1>{portfolioTitle}</h1>
       <p>{portfolioDescription.portfolioDescription}</p>
-      {/* Rendera resten av datan här */}
+      {githubLink ? (
+        <div>{renderRichText(githubLink, richTextConfig)}</div>
+      ) : (
+        <></>
+      )}
+      {webpageLink ? (
+        <div>{renderRichText(webpageLink, richTextConfig)}</div>
+      ) : (
+        <></>
+      )}
     </Layout>
   )
 }
@@ -51,6 +80,12 @@ export const query = graphql`
       timePeriod
       portfolioSubject
       slug
+      githubLink {
+        raw
+      }
+      webpageLink {
+        raw
+      }
     }
   }
 `

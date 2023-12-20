@@ -16,11 +16,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  // Skapa sidor baserat på slugs från Contentful
   result.data.allContentfulPortfolioItem.edges.forEach(({ node }) => {
     createPage({
-      path: `/portfolio/${node.slug}`, // Anpassa sökvägen efter behov
-      component: path.resolve("./src/templates/portfolioItemTemplate.js"), // Använd din egna template-fil
+      path: `/portfolio/${node.slug}`,
+      component: path.resolve("./src/templates/portfolioItemTemplate.js"),
       context: {
         slug: node.slug,
       },
