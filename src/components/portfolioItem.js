@@ -28,7 +28,6 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
       </div>
       <div className="item-middle-container">
         <h1>{item.portfolioTitle}</h1>
-        {/* <p>{item.portfolioDescription.portfolioDescription}</p> */}
       </div>
       <div className="item-button-container">
         <div className="to-button">

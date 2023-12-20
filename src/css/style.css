@@ -102,7 +102,7 @@ body {
 main {
   background-color: white;
   margin-top: 5rem;
-  /* min-height: 100svh; */
+  min-height: 100svh;
 }
 
 .app-page {
@@ -284,8 +284,8 @@ nav {
 }
 
 .portfolio-item-container::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
 .portfolio-item {
   position: relative;
@@ -304,6 +304,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding-top: calc(var(--app-pad) *2);
 }
 
 .item-top-container h3 {
@@ -345,7 +346,8 @@ p {
   bottom: 0;
   left: 0;
   z-index: 800;
-  padding: var(--item-pad);
+  padding: var(--item-pad) var(--item-pad) calc(var(--item-pad) * 3)
+    var(--item-pad);
 }
 
 .item-bottom-container {
@@ -355,13 +357,13 @@ p {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: var(--item-pad);
+  padding: var(--item-pad) var(--item-pad) calc(var(--item-pad) * 3)
+    var(--item-pad);
 }
 
 /* Home */
 
 /* Footer */
-
 
 .contact-container {
   display: grid;

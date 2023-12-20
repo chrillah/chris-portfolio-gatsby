@@ -1,19 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { GatsbyImage, getImage, gatsbyImageData } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const PortfolioItemTemplate = ({ data }) => {
   const {
     portfolioTitle,
     portfolioDescription,
-    portfolioSubject,
+    portfolioImages,
     githubLink,
     webpageLink,
   } = data.contentfulPortfolioItem
 
+  const images = [
+    portfolioImages?.image1,
+    portfolioImages?.image2,
+    portfolioImages?.image3,
+    portfolioImages?.image4,
+  ]
   const richTextConfig = {
     renderNode: {
       [INLINES.HYPERLINK]: (node, children) => {
@@ -47,6 +54,17 @@ const PortfolioItemTemplate = ({ data }) => {
             </svg>
             <p>Back</p>
           </Link>
+          {/* {console.log(portfolioImages)}
+          {images.map((image, index) => {
+            const imageData = getImage(image)
+            return (
+              <GatsbyImage
+                key={index}
+                image={imageData}
+                alt={`Image ${index + 1}`}
+              />
+            )
+          })} */}
           <h1>{portfolioTitle}</h1>
           <p>{portfolioDescription.portfolioDescription}</p>
           {githubLink ? (
@@ -69,8 +87,8 @@ export const query = graphql`
   query PortfolioItemBySlug($slug: String!) {
     contentfulPortfolioItem(slug: { eq: $slug }) {
       portfolioTitle
-      portfolioHeroImage {
-        gatsbyImageData(width: 1000)
+      portfolioImages {
+        gatsbyImageData
       }
       portfolioDescription {
         portfolioDescription
