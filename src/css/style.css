@@ -117,6 +117,16 @@ main {
   margin: 0 auto;
 }
 
+.app-hero-container {
+    margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.app-hero-item {
+  max-width: var(--max-width);
+}
+
 .app-container {
   margin: 0 var(--app-pad);
 }
@@ -276,11 +286,6 @@ nav {
   stroke-width: var(--svg-stroke-width);
 }
 /* Portfolio */
-
-.app-hero-container {
-  display: grid;
-  grid-template-columns: auto auto;
-}
 
 .project-list {
   background-color: var(--pink);
