@@ -17,7 +17,7 @@ const Page = ({ data }) => {
     }
   }
 
-  return <Layout>{getTemplate()}</Layout>
+  return <>{getTemplate()}</>
 }
 
 export const data = graphql`
