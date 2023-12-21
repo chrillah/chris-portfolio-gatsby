@@ -4,7 +4,6 @@ import * as React from "react"
 import Header from "./header"
 import Footer from "./footer"
 import "../css/style.css"
-// import "./layout.css"
 
 const Layout = ({ children }) => {
   //   const data = useStaticQuery(graphql`

@@ -18,18 +18,10 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allContentfulPortfolioItem.edges.forEach(({ node }) => {
     createPage({
       path: `/portfolio/${node.slug}`,
-      component: path.resolve("./src/templates/project-item-template.js"),
+      component: path.resolve("./src/templates/portfolio-item-template.js"),
       context: {
         slug: node.slug,
       },
     })
   })
-
-  // Lägg till den tidigare koden här för att skapa en statisk sida
-  //   createPage({
-  //     path: "/using-dsg",
-  //     component: require.resolve("./src/templates/using-dsg.js"),
-  //     context: {},
-  //     defer: true,
-  //   })
 }

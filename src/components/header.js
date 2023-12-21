@@ -3,32 +3,9 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import useNavigation from "../hooks/use-navigation"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const navigation = useNavigation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  //   const samplePageLinks = [
-  //     {
-  //       text: "Home",
-  //       url: "/",
-  //       badge: false,
-  //       description:
-  //         "A simple example of linking to another page within a Gatsby site",
-  //     },
-  //     {
-  //       text: "Page 2",
-  //       url: "page-2/",
-  //       badge: false,
-  //       description:
-  //         "A simple example of linking to another page within a Gatsby site",
-  //     },
-  //     {
-  //       text: "Portfolio",
-  //       url: "portfolio/",
-  //       badge: false,
-  //       description:
-  //         "A simple example of linking to another page within a Gatsby site",
-  //     },
-  //   ]
 
   const closeMenu = () => {
     setIsMenuOpen(false)
@@ -195,15 +172,6 @@ const Header = ({ siteTitle }) => {
               to="/portfolio/"
             >
               Portfolio
-            </Link>
-            <Link
-              onClick={() => {
-                closeMenu()
-              }}
-              className="nav-button"
-              to="/page-2/"
-            >
-              Page 2
             </Link>
             {/* <Link
               onClick={() => {
