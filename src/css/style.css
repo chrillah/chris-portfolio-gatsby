@@ -31,13 +31,16 @@
 
   --border-radius: 10px;
   --item-pad: calc(var(--app-pad) * 2);
-  --item-height: 500px;
 
   --app-stroke-width: 1px;
 
   --svg-stroke-width: var(--app-stroke-width);
+  /*
+  --item-image-size: 280px; */
+  /* --item-height: 500px; */
 
   --item-image-size: 280px;
+  --item-height: 490px;
 }
 
 /* Global settings */
@@ -59,6 +62,10 @@ button,
 svg {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  line-height: 32px;
 }
 
 h1,
@@ -120,6 +127,7 @@ main {
   grid-template-columns: 30px auto;
   gap: 0.5rem;
   height: 30px;
+  transition: transform ease-in-out 150ms;
 }
 
 .back-button {
@@ -128,6 +136,11 @@ main {
 
 .to-button {
   max-width: 230px;
+}
+
+.back-button:hover,
+.to-button:hover {
+  transform: scale(1.05);
 }
 
 .back-button p,
@@ -139,19 +152,19 @@ main {
   rotate: 180deg;
 }
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   body {
     --item-image-size: 350px;
     --item-height: 550px;
   }
-}
-
+} */
+/*
 @media (min-width: 425px) {
   body {
-    --item-image-size: 380px;
-    --item-height: 600px;
+    --item-image-size: 280px;
+    --item-height: 490px;
   }
-}
+} */
 
 @media (min-width: 768px) {
   body {

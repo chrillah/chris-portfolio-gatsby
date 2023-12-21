@@ -16,7 +16,7 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
       }
     >
       <div className="item-top-container">
-        <h3>{item.timePeriod}</h3>
+        <p>{item.timePeriod}</p>
         <h3>{item.portfolioSubject}</h3>
       </div>
       <div className="item-image-container">
