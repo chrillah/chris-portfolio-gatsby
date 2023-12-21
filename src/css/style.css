@@ -220,9 +220,13 @@ nav {
 .nav-container {
   margin: 0 var(--app-pad);
   transition: all ease-in-out 150ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-buttons-container {
+    width: 100%;
   display: grid;
   gap: 1rem;
   min-height: 80vh;
@@ -248,6 +252,7 @@ nav {
   cursor: pointer;
   transition: all ease-in-out 150ms;
   border-radius: 100px;
+  max-height: 150px;
 }
 
 .nav-button:hover {
