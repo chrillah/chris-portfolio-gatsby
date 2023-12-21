@@ -118,7 +118,7 @@ main {
 }
 
 .app-hero-container {
-    margin: 0 auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -270,6 +270,12 @@ nav {
 .cross,
 .arrow {
   width: 30px;
+}
+
+.logo:active,
+.burger:active,
+.cross:active {
+  border: var(--app-color) var(--app-stroke-width) solid;
 }
 
 .logo-detail,
