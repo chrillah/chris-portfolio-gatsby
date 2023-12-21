@@ -155,42 +155,6 @@ const Header = () => {
                 </Link>
               )
             })}
-            <Link
-              onClick={() => {
-                closeMenu()
-              }}
-              className="nav-button"
-              to="/"
-            >
-              Home
-            </Link>
-            <Link
-              onClick={() => {
-                closeMenu()
-              }}
-              className="nav-button"
-              to="/portfolio/"
-            >
-              Portfolio
-            </Link>
-            {/* <Link
-              onClick={() => {
-                closeMenu()
-              }}
-              className="nav-button"
-              to="/about"
-            >
-              About
-            </Link>
-            <Link
-              onClick={() => {
-                closeMenu()
-              }}
-              className="nav-button"
-              to="/home"
-            >
-              My home
-            </Link> */}
           </div>
         </div>
       </nav>

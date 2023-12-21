@@ -1,7 +1,14 @@
 import * as React from "react"
 import Layout from "../components/layout"
 
-const AboutTemplate = contentfulPage => {
+// Add later?
+// import Seo from "../components/seo"
+
+// Not using, remove?
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+const HomeTemplate = contentfulPage => {
+
   return (
     <Layout>
       <div className="app-page-container">
@@ -13,4 +20,6 @@ const AboutTemplate = contentfulPage => {
   )
 }
 
-export default AboutTemplate
+// export const Head = () => <Seo title="Home" />
+
+export default HomeTemplate

@@ -1,15 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-import HomeTemplate from "../templates/homeTemplate"
+import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
+import PortfolioTemplate from "../templates/portfolio-template"
 
 const Page = ({ data }) => {
   const { contentfulPage } = data
 
   const getTemplate = () => {
-    switch (contentfulPage.templateTest) {
+    switch (contentfulPage.template) {
       case "about":
         return <AboutTemplate {...contentfulPage} />
+
+      case "portfolio":
+        return <PortfolioTemplate {...contentfulPage} />
 
       default:
         return <HomeTemplate {...contentfulPage} />
@@ -31,7 +35,7 @@ export const data = graphql`
       content {
         raw
       }
-      templateTest
+      template
       title
       url
     }

@@ -1,16 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-
-// Add later?
-// import Seo from "../components/seo"
+import Seo from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
-
-// Not using, remove?
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PortfolioItem from "../components/portfolioItem"
 
-const HomeTemplate = contentfulPage => {
+const PortfolioTemplate = () => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulPortfolioItem {
@@ -53,7 +49,21 @@ const HomeTemplate = contentfulPage => {
           </Link>
         </div>
       </div>
-      <h1>{contentfulPage.title}</h1>
+      <div className="app-hero-container">
+        <h1>Index</h1>
+        <ul className="project-list">
+          {data.allContentfulPortfolioItem.edges.map((edge, index) => {
+            return (
+              <li key={index}>
+                <Link to={`/portfolio/${edge.node.slug}`}>
+                  <h3>{edge.node.portfolioTitle}</h3>
+                  <p>{edge.node.portfolioSubject}</p>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
       <ul className="portfolio-item-container">
         {data.allContentfulPortfolioItem.edges.map((edge, index) => {
           return (
@@ -70,7 +80,6 @@ const HomeTemplate = contentfulPage => {
   )
 }
 
-// Add later?
-// export const Head = () => <Seo title="Portfolio" />
+export const Head = () => <Seo title="Portfolio" />
 
-export default HomeTemplate
+export default PortfolioTemplate
