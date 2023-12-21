@@ -3,10 +3,12 @@ import * as React from "react"
 
 import Header from "./header"
 import Footer from "./footer"
+import useNavigation from "../hooks/use-navigation"
 import "../css/style.css"
 // import "./layout.css"
 
 const Layout = ({ children }) => {
+    const navigation = useNavigation();
   //   const data = useStaticQuery(graphql`
   //     query SiteTitleQuery {
   //       site {

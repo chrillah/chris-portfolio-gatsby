@@ -1,8 +1,10 @@
 import * as React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
+import useNavigation from "../hooks/use-navigation"
 
 const Header = ({ siteTitle }) => {
+  const navigation = useNavigation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   //   const samplePageLinks = [
   //     {
@@ -162,6 +164,20 @@ const Header = ({ siteTitle }) => {
           }
         >
           <div className="nav-buttons-container">
+            {navigation.map(({ node }, index) => {
+              return (
+                <Link
+                  key={index}
+                  onClick={() => {
+                    closeMenu()
+                  }}
+                  className="nav-button"
+                  to={node.url}
+                >
+                  {node.title}
+                </Link>
+              )
+            })}
             <Link
               onClick={() => {
                 closeMenu()
@@ -189,7 +205,7 @@ const Header = ({ siteTitle }) => {
             >
               Page 2
             </Link>
-            <Link
+            {/* <Link
               onClick={() => {
                 closeMenu()
               }}
@@ -206,7 +222,7 @@ const Header = ({ siteTitle }) => {
               to="/home"
             >
               My home
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>
