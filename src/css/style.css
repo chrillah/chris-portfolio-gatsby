@@ -404,3 +404,14 @@ p {
     justify-content: space-between;
   }
 }
+
+.year-title {
+  padding-top: 1rem;
+  position: absolute;
+  right: 0;
+  margin: var(--app-pad);
+}
+
+/* .year-title span {
+  font-weight: 600;
+} */

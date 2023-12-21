@@ -161,7 +161,7 @@ const Header = ({ siteTitle }) => {
             isMenuOpen ? "nav-container menu-open" : "nav-container menu-close"
           }
         >
-          <div class="nav-buttons-container">
+          <div className="nav-buttons-container">
             <Link
               onClick={() => {
                 closeMenu()

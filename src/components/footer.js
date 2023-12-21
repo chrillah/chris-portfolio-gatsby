@@ -1,6 +1,7 @@
 import * as React from "react"
 
 const Footer = () => {
+  const activeYear = new Date()
   return (
     <footer>
       <div className="app-page">
@@ -84,6 +85,9 @@ const Footer = () => {
               <p>+46 736 70 32 19</p>
             </a>
           </div>
+          <p className="year-title">
+            Made by Christopher <span>{activeYear.getFullYear()}</span>
+          </p>
         </div>
       </div>
     </footer>
