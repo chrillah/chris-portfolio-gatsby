@@ -112,7 +112,7 @@ main {
   min-height: 100svh;
 }
 
-.app-page {
+.app-page-container {
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -276,6 +276,15 @@ nav {
   stroke-width: var(--svg-stroke-width);
 }
 /* Portfolio */
+
+.app-hero-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.project-list {
+  background-color: var(--pink);
+}
 
 .color-set-1 {
   --item-bg: var(--turquoise);

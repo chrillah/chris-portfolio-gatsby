@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 const SecondPage = () => {
   return (
     <Layout>
-      <div className="app-page">
+      <div className="app-page-container">
         <div className="app-container">
           <Link className="back-button" to="/">
             <svg

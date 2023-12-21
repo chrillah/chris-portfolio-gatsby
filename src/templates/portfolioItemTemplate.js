@@ -36,7 +36,7 @@ const PortfolioItemTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div className="app-page">
+      <div className="app-page-container">
         <div className="app-container">
           <Link className="to-button" to="/portfolio">
             <svg

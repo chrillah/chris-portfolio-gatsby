@@ -29,7 +29,7 @@ const Portfolio = () => {
   `)
   return (
     <Layout>
-      <div className="app-page">
+      <div className="app-page-container">
         <div className="app-container">
           <Link className="back-button" to="/">
             <svg
@@ -49,6 +49,21 @@ const Portfolio = () => {
           </Link>
         </div>
       </div>
+      <div className="app-hero-container">
+          <h1>Index</h1>
+          <ul className="project-list">
+            {data.allContentfulPortfolioItem.edges.map((edge, index) => {
+              return (
+                <li key={index}>
+                  <Link to={`/portfolio/${edge.node.slug}`}>
+                    <h3>{edge.node.portfolioTitle}</h3>
+                    <p>{edge.node.portfolioSubject}</p>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       <ul className="portfolio-item-container">
         {data.allContentfulPortfolioItem.edges.map((edge, index) => {
           return (

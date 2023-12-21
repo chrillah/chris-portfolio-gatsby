@@ -4,7 +4,7 @@ const Footer = () => {
   const activeYear = new Date()
   return (
     <footer>
-      <div className="app-page">
+      <div className="app-page-container">
         <div className="app-container">
           <h1>Don't be a stranger</h1>
           <p>Lets connect</p>
