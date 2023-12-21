@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import HomeTemplate from "../templates/homeTemplate"
-import Layout from "../components/layout"
-import AboutTemplate from "../templates/aboutTemplate"
+import AboutTemplate from "../templates/about-template"
 
 const Page = ({ data }) => {
   const { contentfulPage } = data
