@@ -13,7 +13,9 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 const HomeTemplate = contentfulPage => {
   const richTextConfig = {
     renderNode: {
-      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="hero-title">{children}</h1>
+      ),
     },
   }
 
@@ -24,11 +26,21 @@ const HomeTemplate = contentfulPage => {
       <div className="gradient-container">
         <div className="app-page-container">
           <div className="app-container">
-            <div>{renderRichText(contentfulPage.content, richTextConfig)}</div>
-            <GatsbyImage
-              image={image}
-              alt="image"
-            />
+            <div className="home-hero-container">
+              <div className="hero-item-1">
+                <div className="scrolling-text"></div>
+                {renderRichText(contentfulPage.content, richTextConfig)}
+              </div>
+              <div className="hero-item-2">
+                <div className="hero-image-container">
+                  <GatsbyImage
+                    className="hero-image"
+                    image={image}
+                    alt="image"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
