@@ -162,6 +162,24 @@ main {
   margin: 0 var(--app-pad);
 }
 
+.gradient-container {
+  height: 100vh;
+  background-size: 300%;
+  background-position: left;
+  background-image: var(--gradient-1);
+  animation: scroll-animation linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-animation {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
 .back-button,
 .to-button {
   display: grid;
@@ -308,6 +326,10 @@ nav {
   width: 30px;
 }
 
+.logo-alt {
+  height: 30px;
+}
+
 .logo:active,
 .burger:active,
 .cross:active {
@@ -327,6 +349,15 @@ nav {
   stroke: var(--app-color);
   stroke-width: var(--svg-stroke-width);
 }
+
+.logo-alt-detail {
+  fill: none;
+  stroke: var(--app-color);
+  stroke-width: var(--svg-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Portfolio */
 
 .project-list {
@@ -437,26 +468,6 @@ p {
 }
 
 /* Home */
-
-.hero-wrapper {
-  height: 500px;
-  background-size: 300%;
-  background-position: left;
-  background-image: var(--gradient-1);
-  /* background: var(--gradient-1); */
-
-  animation: scroll-animation linear;
-  animation-timeline: scroll();
-}
-
-@keyframes scroll-animation {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}
 
 /* Footer */
 
