@@ -8,12 +8,13 @@ import Layout from "../components/layout"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const HomeTemplate = contentfulPage => {
-
   return (
     <Layout>
       <div className="app-page-container">
         <div className="app-container">
-          <h1>{contentfulPage.title}</h1>
+          <div className="hero-wrapper">
+            <h1>{contentfulPage.title}</h1>
+          </div>
         </div>
       </div>
     </Layout>
