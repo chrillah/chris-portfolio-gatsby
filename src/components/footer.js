@@ -2,11 +2,22 @@ import * as React from "react"
 
 const Footer = () => {
   const activeYear = new Date()
+
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("arrow-animation")
+  //       }
+  //     })
+  //   })
+
+  //     observer.observe(document.querySelectorAll(".arrow"))
+
   return (
     <footer>
       <div className="app-page-container">
         <div className="app-container">
-          <h1>Don't be a stranger</h1>
+          <h1 className="app-header">Don't be a stranger</h1>
           <p>Lets connect</p>
           <div className="contact-container">
             <a

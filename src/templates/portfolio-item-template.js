@@ -20,7 +20,12 @@ const PortfolioItemTemplate = ({ data }) => {
       [INLINES.HYPERLINK]: (node, children) => {
         const { uri } = node.data
         return (
-          <a href={uri} target="_blank" rel="noopener noreferrer">
+          <a
+            className="link-button"
+            href={uri}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {children}
           </a>
         )
@@ -32,7 +37,7 @@ const PortfolioItemTemplate = ({ data }) => {
     <Layout>
       <div className="app-page-container">
         <div className="app-container">
-          <Link className="to-button" to="/portfolio">
+          <Link className="back-button" to="/portfolio">
             <svg
               className="arrow rev"
               id="Layer_1"
@@ -48,30 +53,38 @@ const PortfolioItemTemplate = ({ data }) => {
             </svg>
             <p>Back</p>
           </Link>
-          {portfolioImages.map((image, index) => {
-            const imageData = getImage(image)
-            return (
-              <div key={index}>
-                <GatsbyImage
-                  key={index}
-                  image={imageData}
-                  alt={`Image ${index + 1}`}
-                />
-              </div>
-            )
-          })}
-          <h1>{portfolioTitle}</h1>
+          <h1 className="hero-title">{portfolioTitle}</h1>
+          <div className="gallery-container">
+            {portfolioImages.map((image, index) => {
+              const imageData = getImage(image)
+              return (
+                <div key={index}>
+                  <GatsbyImage
+                    key={index}
+                    image={imageData}
+                    alt={`Image ${index + 1}`}
+                  />
+                </div>
+              )
+            })}
+          </div>
+
+          <h1 className="app-header">Description</h1>
           <p>{portfolioDescription.portfolioDescription}</p>
-          {githubLink ? (
-            <div>{renderRichText(githubLink, richTextConfig)}</div>
-          ) : (
-            <></>
-          )}
-          {webpageLink ? (
-            <div>{renderRichText(webpageLink, richTextConfig)}</div>
-          ) : (
-            <></>
-          )}
+
+          <h1 className="app-header">Links</h1>
+          <div className="link-button-container">
+            {githubLink ? (
+              <div>{renderRichText(githubLink, richTextConfig)}</div>
+            ) : (
+              <></>
+            )}
+            {webpageLink ? (
+              <div>{renderRichText(webpageLink, richTextConfig)}</div>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </div>
     </Layout>
