@@ -38,8 +38,6 @@ const HomeTemplate = contentfulPage => {
     },
   }
 
-  const items = data.length
-
   const randomNumber = Math.floor(Math.random() * 10) + 1
 
   const image = getImage(contentfulPage.image)
@@ -54,8 +52,8 @@ const HomeTemplate = contentfulPage => {
                 <div className="scrolling-text"></div>
 
                 <div className="hero-title-container">
-                {renderRichText(contentfulPage.content, richTextConfig)}
-                {/* {renderRichText(contentfulPage.content, richTextConfig)}
+                  {renderRichText(contentfulPage.content, richTextConfig)}
+                  {/* {renderRichText(contentfulPage.content, richTextConfig)}
                 {renderRichText(contentfulPage.content, richTextConfig)} */}
                 </div>
               </div>
@@ -72,16 +70,20 @@ const HomeTemplate = contentfulPage => {
             <ul className="home-item-container">
               {data.allContentfulPortfolioItem.edges.map((edge, index) => {
                 if (index === randomNumber) {
-                  return (
-                    <PortfolioItem
-                      key={edge.node.portfolioTitle}
-                      item={edge.node}
-                      lengthOfItems={
-                        data.allContentfulPortfolioItem.edges.length
-                      }
-                      indexOfItem={index + 1}
-                    />
-                  )
+                  if (undefined) {
+                    return <></>
+                  } else {
+                    return (
+                      <PortfolioItem
+                        key={edge.node.portfolioTitle}
+                        item={edge.node}
+                        lengthOfItems={
+                          data.allContentfulPortfolioItem.edges.length
+                        }
+                        indexOfItem={index + 1}
+                      />
+                    )
+                  }
                 }
               })}
             </ul>
