@@ -102,7 +102,7 @@ h1 {
 h1,
 h2,
 h3 {
-    text-align: left;
+  text-align: left;
   color: var(--app-color);
   font-family: var(--display-font);
 }
@@ -547,6 +547,49 @@ p {
   grid-template-columns: 1fr 1fr;
 }
 
+/* About */
+
+.about-hero-container {
+  padding-top: var(--app-pad);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+.about-hero-container > :first-child,
+.about-hero-container > :last-child,
+.about-description {
+  border: var(--app-stroke-width) var(--app-color) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--app-pad);
+}
+
+@media (max-width: 424px) {
+  .about-hero-container > :first-child {
+    border-bottom: none;
+  }
+}
+
+.about-description {
+    height: 500px;
+  border-top: none;
+  padding-bottom: var(--app-pad);
+}
+
+@media (min-width: 425px) {
+  .about-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+  }
+
+  .about-hero-container > :first-child {
+    border-right: none;
+  }
+}
+
 /* Home */
 
 .home-hero-container {
@@ -559,31 +602,25 @@ p {
   mix-blend-mode: difference;
 }
 
-
 .hero-item-1,
 .hero-item-2 {
   border: var(--app-stroke-width) var(--app-color) solid;
   width: 100%;
 }
 
-.hero-item-1{
-    padding: var(--app-pad);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.hero-item-1 {
+  padding: var(--app-pad);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.hero-item-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.hero-item-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-/* .hero-title-container{
-    margin-top: auto;
-    margin-left: right;
-} */
 
 .hero-image-container {
   max-width: 450px;
@@ -654,11 +691,11 @@ p {
   mix-blend-mode: difference;
 }
 
-.about-section{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 530px;
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 530px;
 }
 
 .about-section div {
@@ -666,8 +703,8 @@ p {
   justify-content: space-between;
 }
 
-.illustration-section{
-    width: 900px
+.illustration-section {
+  width: 900px;
 }
 
 /* Illustrations */

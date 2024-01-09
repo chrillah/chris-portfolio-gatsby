@@ -40,7 +40,8 @@ const HomeTemplate = contentfulPage => {
     },
   }
 
-  const randomNumber = Math.floor(Math.random() * data.allContentfulPortfolioItem.edges.length) + 1
+  const randomNumber =
+    Math.floor(Math.random() * data.allContentfulPortfolioItem.edges.length) + 1
 
   const image = getImage(contentfulPage.image)
 
@@ -67,24 +68,26 @@ const HomeTemplate = contentfulPage => {
               </div>
             </div>
             <ul className="home-item-container">
-              {data.allContentfulPortfolioItem.edges.map((edge, index) => {
-                if (index === randomNumber) {
-                  if (undefined) {
-                    return <></>
-                  } else {
-                    return (
-                      <PresentPortfolioItem
-                        key={edge.node.portfolioTitle}
-                        item={edge.node}
-                        lengthOfItems={
-                          data.allContentfulPortfolioItem.edges.length
-                        }
-                        indexOfItem={index + 1}
-                      />
-                    )
-                  }
-                }
-              })}
+              {data ? (
+                <>
+                  {data.allContentfulPortfolioItem.edges.map((edge, index) => {
+                    if (index === randomNumber) {
+                      return (
+                        <PresentPortfolioItem
+                          key={edge.node.portfolioTitle}
+                          item={edge.node}
+                          lengthOfItems={
+                            data.allContentfulPortfolioItem.edges.length
+                          }
+                          indexOfItem={index + 1}
+                        />
+                      )
+                    }
+                  })}
+                </>
+              ) : (
+                <></>
+              )}
 
               <DisplayImageFromIllustrations />
               <Link to="/about" className="about-section">
