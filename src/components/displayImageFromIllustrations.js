@@ -11,6 +11,9 @@ function DisplayIllustrations() {
             images {
               gatsbyImageData(width: 900)
             }
+            description {
+                description
+              }
           }
         }
       }
@@ -43,7 +46,7 @@ function DisplayIllustrations() {
                           <GatsbyImage
                             key={imageIndex}
                             image={imageData}
-                            alt="image"
+                            alt="Some of my illustrations"
                           />
                         )
                       }
