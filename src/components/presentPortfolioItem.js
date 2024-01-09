@@ -38,7 +38,7 @@ const PresentPortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
             />
             <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
           </svg>
-          <p>To portfolio</p>
+          <p>A taste</p>
         </div>
       </div>
       <div className="item-bottom-container">
