@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
 import PortfolioTemplate from "../templates/portfolio-template"
+import IllustrationsTemplate from "../templates/illustrations-template"
 
 const Page = ({ data }) => {
   const { contentfulPage } = data
@@ -14,6 +15,9 @@ const Page = ({ data }) => {
 
       case "portfolio":
         return <PortfolioTemplate {...contentfulPage} />
+
+      case "illustrations":
+        return <IllustrationsTemplate {...contentfulPage} />
 
       default:
         return <HomeTemplate {...contentfulPage} />
@@ -38,6 +42,10 @@ export const data = graphql`
       template
       title
       url
+      gallery {
+        title
+        gatsbyImageData(width: 1000)
+      }
     }
   }
 `

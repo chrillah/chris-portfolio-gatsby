@@ -12,7 +12,7 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `CR`,
+    title: `Ch`,
     description: `A collection of my work`,
     author: `Christopher Rönnberg`,
   },

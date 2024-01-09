@@ -1,10 +1,10 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import PortfolioItem from "../components/portfolioItem"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import PresentPortfolioItem from "../components/presentPortfolioItem"
 
 // Add later?
 // import Seo from "../components/seo"
@@ -74,7 +74,7 @@ const HomeTemplate = contentfulPage => {
                     return <></>
                   } else {
                     return (
-                      <PortfolioItem
+                      <PresentPortfolioItem
                         key={edge.node.portfolioTitle}
                         item={edge.node}
                         lengthOfItems={
@@ -86,6 +86,34 @@ const HomeTemplate = contentfulPage => {
                   }
                 }
               })}
+              <div className="about-section">
+                <h1>About ch.projects</h1>
+
+                <div>
+                  <p>Who is behind all of this?</p>
+                  <Link to="/about" className="to-button">
+                    <svg
+                      className="arrow"
+                      id="Layer_1"
+                      data-name="Layer 1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 30 30"
+                    >
+                      <polyline
+                        className="arrow-detail"
+                        points="14.95 29.44 29.39 15 14.95 .56"
+                      />
+                      <line
+                        className="arrow-detail"
+                        x1="29.39"
+                        y1="15"
+                        y2="15"
+                      />
+                    </svg>
+                    <p>See it</p>
+                  </Link>
+                </div>
+              </div>
             </ul>
           </div>
         </div>
