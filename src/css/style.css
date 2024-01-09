@@ -181,10 +181,9 @@ main {
 }
 
 .hero-title {
-  /* padding: var(--app-pad); */
   font-size: clamp(3rem, 50%, 4rem);
   line-height: normal;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .app-header {
@@ -534,11 +533,11 @@ p {
 }
 
 .gallery-container > :first-child {
-  padding-top: calc(var(--app-pad) * 20);
+  margin-top: calc(var(--app-pad) * 20);
 }
 
 .gallery-container > :last-child {
-  padding-bottom: calc(var(--app-pad) * 20);
+  margin-bottom: calc(var(--app-pad) * 20);
 }
 
 .link-button-container {
@@ -573,7 +572,7 @@ p {
 }
 
 .about-description {
-    height: 500px;
+  height: 500px;
   border-top: none;
   padding-bottom: var(--app-pad);
 }
@@ -605,14 +604,15 @@ p {
 .hero-item-1,
 .hero-item-2 {
   border: var(--app-stroke-width) var(--app-color) solid;
-  width: 100%;
 }
 
 .hero-item-1 {
   padding: var(--app-pad);
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+}
+
+.hero-item-1 > .hero-title {
+    margin-top: auto;
 }
 
 .hero-item-2 {
@@ -675,15 +675,14 @@ p {
 .present-portfolio-item .item-middle-container h1,
 .present-portfolio-item .item-button-container .to-button p,
 .present-portfolio-item .item-bottom-container h3 {
-  color: white;
+  color: #ffffff;
 }
 
 .present-portfolio-item .item-button-container .to-button .arrow-detail {
-  stroke: white;
+  stroke: #ffffff;
 }
 
-.about-section,
-.illustration-section {
+.about-section {
   padding: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
   border-radius: var(--border-radius);
@@ -695,7 +694,7 @@ p {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 530px;
+  width: 556px;
 }
 
 .about-section div {
@@ -704,18 +703,37 @@ p {
 }
 
 .illustration-section {
+    border: var(--app-stroke-width) var(--app-color) solid;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 900px;
+  border-radius: var(--border-radius);
+  max-height: 502.78px;
+  overflow: hidden;
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+.illustration-section .to-button {
+    border: var(--app-stroke-width) var(--app-color) solid;
+    border-top: none;
+    border-left: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--app-pad);
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
 }
 
 /* Illustrations */
 
-/* .gallery-image{
-    padding: calc(var(--app-pad)* 4) 0;
-} */
-
-.gallery-image > * {
-  /* max-height: 500px; */
+.gallery-image {
+  background-color: #ffffff;
 }
+
 
 /* Footer */
 

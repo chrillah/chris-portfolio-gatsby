@@ -52,10 +52,7 @@ const HomeTemplate = contentfulPage => {
           <div className="app-container">
             <div className="home-hero-container">
               <div className="hero-item-1">
-                <h4>Hi!</h4>
-                <div className="hero-title-container">
-                  {renderRichText(contentfulPage.content, richTextConfig)}
-                </div>
+              {renderRichText(contentfulPage.content, richTextConfig)}
               </div>
               <div className="hero-item-2">
                 <div className="hero-image-container">
@@ -91,7 +88,7 @@ const HomeTemplate = contentfulPage => {
 
               <DisplayImageFromIllustrations />
               <Link to="/about" className="about-section">
-                <h1>About Ch-projects</h1>
+                <h1>What is Ch-projects?</h1>
 
                 <div>
                   <p>Who is behind all of this?</p>
@@ -114,7 +111,7 @@ const HomeTemplate = contentfulPage => {
                         y2="15"
                       />
                     </svg>
-                    <p>See it</p>
+                    <p>About me</p>
                   </div>
                 </div>
               </Link>
