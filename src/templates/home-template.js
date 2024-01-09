@@ -5,6 +5,7 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import PresentPortfolioItem from "../components/presentPortfolioItem"
+import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
 
 // Add later?
 // import Seo from "../components/seo"
@@ -30,6 +31,7 @@ const HomeTemplate = contentfulPage => {
       }
     }
   `)
+
   const richTextConfig = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => (
@@ -49,12 +51,9 @@ const HomeTemplate = contentfulPage => {
           <div className="app-container">
             <div className="home-hero-container">
               <div className="hero-item-1">
-                <div className="scrolling-text"></div>
-
+                <h4>Hi!</h4>
                 <div className="hero-title-container">
                   {renderRichText(contentfulPage.content, richTextConfig)}
-                  {/* {renderRichText(contentfulPage.content, richTextConfig)}
-                {renderRichText(contentfulPage.content, richTextConfig)} */}
                 </div>
               </div>
               <div className="hero-item-2">
@@ -86,12 +85,14 @@ const HomeTemplate = contentfulPage => {
                   }
                 }
               })}
-              <div className="about-section">
+
+              <DisplayImageFromIllustrations />
+              <Link to="/about" className="about-section">
                 <h1>About Ch-projects</h1>
 
                 <div>
                   <p>Who is behind all of this?</p>
-                  <Link to="/about" className="to-button">
+                  <div className="to-button">
                     <svg
                       className="arrow"
                       id="Layer_1"
@@ -111,9 +112,9 @@ const HomeTemplate = contentfulPage => {
                       />
                     </svg>
                     <p>See it</p>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </ul>
           </div>
         </div>
