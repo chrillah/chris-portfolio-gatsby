@@ -29,7 +29,8 @@ const PortfolioTemplate = () => {
   `)
   return (
     <Layout>
-      <div className="app-page-container">
+        <div className="gradient-container">
+        <div className="app-page-container">
         <div className="app-container">
           <Link className="back-button" to="/">
             <svg
@@ -47,10 +48,8 @@ const PortfolioTemplate = () => {
             </svg>
             <p>Back</p>
           </Link>
-        </div>
-      </div>
-      <div className="app-hero-container">
-        <h1>Index</h1>
+          <div className="portfolio-hero-container">
+        <h1 className="app-header">Index</h1>
         <ul className="project-list">
           {data.allContentfulPortfolioItem.edges.map((edge, index) => {
             return (
@@ -64,6 +63,8 @@ const PortfolioTemplate = () => {
           })}
         </ul>
       </div>
+        </div>
+      </div>
       <ul className="portfolio-item-container">
         {data.allContentfulPortfolioItem.edges.map((edge, index) => {
           return (
@@ -76,6 +77,7 @@ const PortfolioTemplate = () => {
           )
         })}
       </ul>
+        </div>
     </Layout>
   )
 }

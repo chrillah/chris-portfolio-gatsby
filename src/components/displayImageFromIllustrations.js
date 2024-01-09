@@ -18,28 +18,41 @@ function DisplayIllustrations() {
   `)
 
   let numberOfImages
-  data.allContentfulGallery.edges.map(edge => {
-    numberOfImages = edge.node.images.length
-  })
+
+  if (data) {
+    data.allContentfulGallery.edges.forEach(edge => {
+      if (edge) {
+        numberOfImages = edge.node.images.length;
+      }
+    });
+  }
 
   const randomNumber = Math.floor(Math.random() * numberOfImages) + 1
 
   return (
     <Link to="/illustrations" className="illustration-section">
-      {data.allContentfulGallery.edges.map((edge, index) => {
-        return (
-          <div key={index} className="gallery">
-            {edge.node.images.map((image, imageIndex) => {
-              const imageData = getImage(image)
-              if (imageIndex === randomNumber) {
+      {data ?
+              <>
+              {data.allContentfulGallery.edges.map((edge, index) => {
                 return (
-                  <GatsbyImage key={imageIndex} image={imageData} alt="image" />
+                  <div key={index} className="gallery">
+                    {edge.node.images.map((image, imageIndex) => {
+                      const imageData = getImage(image)
+                      if (imageIndex === randomNumber) {
+                        return (
+                          <GatsbyImage
+                            key={imageIndex}
+                            image={imageData}
+                            alt="image"
+                          />
+                        )
+                      }
+                      return null
+                    })}
+                  </div>
                 )
-              }
-            })}
-          </div>
-        )
-      })}
+              })}
+            </> : <>No</>}
       <div className="to-button">
         <svg
           className="arrow"

@@ -35,54 +35,53 @@ const PortfolioItemTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div className="app-page-container">
-        <div className="app-container">
-          <Link className="back-button" to="/portfolio">
-            <svg
-              className="arrow rev"
-              id="Layer_1"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 30 30"
-            >
-              <polyline
-                className="arrow-detail"
-                points="14.95 29.44 29.39 15 14.95 .56"
-              />
-              <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
-            </svg>
-            <p>Back</p>
-          </Link>
-          <h1 className="hero-title">{portfolioTitle}</h1>
-          <div className="gallery-container">
-            {portfolioImages.map((image, index) => {
-              const imageData = getImage(image)
-              return (
-                <div key={index}>
-                  <GatsbyImage
-                    image={imageData}
-                    alt={`Image ${index + 1}`}
-                  />
-                </div>
-              )
-            })}
-          </div>
+      <div className="gradient-container">
+        <div className="app-page-container">
+          <div className="app-container">
+            <Link className="back-button" to="/portfolio">
+              <svg
+                className="arrow rev"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 30 30"
+              >
+                <polyline
+                  className="arrow-detail"
+                  points="14.95 29.44 29.39 15 14.95 .56"
+                />
+                <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
+              </svg>
+              <p>Back</p>
+            </Link>
+            <h1 className="hero-title">{portfolioTitle}</h1>
+            <div className="gallery-container">
+              {portfolioImages.map((image, index) => {
+                const imageData = getImage(image)
+                return (
+                  <div key={index}>
+                    <GatsbyImage image={imageData} alt={`Image ${index + 1}`} />
+                  </div>
+                )
+              })}
+            </div>
 
-          <h1 className="app-header">Description</h1>
-          <p>{portfolioDescription.portfolioDescription}</p>
+            <h1 className="app-header">Description</h1>
+            <p>{portfolioDescription.portfolioDescription}</p>
 
-          <h1 className="app-header">Links</h1>
-          <div className="link-button-container">
-            {githubLink ? (
-              <div>{renderRichText(githubLink, richTextConfig)}</div>
-            ) : (
-              <></>
-            )}
-            {webpageLink ? (
-              <div>{renderRichText(webpageLink, richTextConfig)}</div>
-            ) : (
-              <></>
-            )}
+            <h1 className="app-header">Links</h1>
+            <div className="link-button-container">
+              {githubLink ? (
+                <div>{renderRichText(githubLink, richTextConfig)}</div>
+              ) : (
+                <></>
+              )}
+              {webpageLink ? (
+                <div>{renderRichText(webpageLink, richTextConfig)}</div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </div>
       </div>

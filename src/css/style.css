@@ -321,12 +321,12 @@ main {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* .arrow {
+  .arrow {
     animation: arrow-slide-in linear;
     animation-timeline: view();
-    animation-range-start: cover ;
-    animation-range-end: 80px;
-  } */
+    animation-range-start: contain ;
+    animation-range-end: 0px;
+  }
 }
 
 @keyframes arrow-slide-in {
@@ -409,8 +409,25 @@ nav {
 
 /* Portfolio */
 
+.portfolio-hero-container{
+    padding-top: var(--app-pad);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: var(--app-pad);
+}
+
+.portfolio-hero-container > :first-child,
+.portfolio-hero-container > :last-child{
+    padding: var(--app-pad);
+    border: var(--app-stroke-width) var(--app-color) solid;
+}
+
+.portfolio-hero-container > :first-child{
+    border-right: none;
+}
+
 .project-list {
-  background-color: var(--pink);
+  /* background-color: var(--pink); */
 }
 
 .color-set-1 {
@@ -429,11 +446,6 @@ nav {
 }
 
 .portfolio-item-container {
-  background-size: 400%;
-  background-position: left;
-  background-image: var(--gradient-1);
-  animation: scroll-animation linear;
-  animation-timeline: scroll();
   display: grid;
   grid-auto-flow: column;
   overflow-x: scroll;
