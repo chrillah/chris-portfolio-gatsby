@@ -181,7 +181,7 @@ main {
 
 .hero-title {
   padding: var(--app-pad);
-  font-size: 4rem;
+  font-size: clamp(3rem, 50%, 4rem);
   line-height: normal;
   word-break: break-all;
 }

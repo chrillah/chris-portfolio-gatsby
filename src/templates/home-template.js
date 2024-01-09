@@ -38,7 +38,7 @@ const HomeTemplate = contentfulPage => {
     },
   }
 
-  const randomNumber = Math.floor(Math.random() * 10) + 1
+  const randomNumber = Math.floor(Math.random() * data.allContentfulPortfolioItem.edges.length) + 1
 
   const image = getImage(contentfulPage.image)
 
@@ -87,7 +87,7 @@ const HomeTemplate = contentfulPage => {
                 }
               })}
               <div className="about-section">
-                <h1>About ch.projects</h1>
+                <h1>About Ch-projects</h1>
 
                 <div>
                   <p>Who is behind all of this?</p>
