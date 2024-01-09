@@ -44,7 +44,7 @@ export const data = graphql`
       url
       gallery {
         title
-        gatsbyImageData(width: 1000)
+        gatsbyImageData(height: 800)
       }
     }
   }

@@ -138,7 +138,7 @@ body {
 }
 
 main {
-  background-color: white;
+  /* background-color: white; */
   margin-top: 2.5rem;
   /* min-height: 100svh; */
 }
@@ -429,6 +429,11 @@ nav {
 }
 
 .portfolio-item-container {
+  background-size: 400%;
+  background-position: left;
+  background-image: var(--gradient-1);
+  animation: scroll-animation linear;
+  animation-timeline: scroll();
   display: grid;
   grid-auto-flow: column;
   overflow-x: scroll;
@@ -524,14 +529,15 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.gallery-container > * {
-  padding: calc(var(--app-pad) * 2);
+  gap: calc(var(--app-pad) * 10);
 }
 
 .gallery-container > :first-child {
-  padding-top: calc(var(--app-pad) * 2);
+  padding-top: calc(var(--app-pad) * 20);
+}
+
+.gallery-container > :last-child {
+  padding-bottom: calc(var(--app-pad) * 20);
 }
 
 .link-button-container {
@@ -599,28 +605,28 @@ p {
 }
 
 .present-portfolio-item {
-    filter: invert(1);
-    mix-blend-mode: difference;
-    position: relative;
-    background-color: var(--app-color);
-    border-radius: var(--border-radius);
-    padding: var(--item-pad);
-    transition: all ease-in-out 150ms;
-    min-height: var(--item-height);
-    max-width: 280px;
-  }
+  filter: invert(1);
+  mix-blend-mode: difference;
+  position: relative;
+  background-color: var(--app-color);
+  border-radius: var(--border-radius);
+  padding: var(--item-pad);
+  transition: all ease-in-out 150ms;
+  min-height: var(--item-height);
+  max-width: 280px;
+}
 
-  .present-portfolio-item .item-top-container p,
-  .present-portfolio-item .item-top-container h3,
-  .present-portfolio-item .item-middle-container h1,
-  .present-portfolio-item .item-button-container .to-button p,
-  .present-portfolio-item .item-bottom-container h3 {
-    color: white;
-  }
+.present-portfolio-item .item-top-container p,
+.present-portfolio-item .item-top-container h3,
+.present-portfolio-item .item-middle-container h1,
+.present-portfolio-item .item-button-container .to-button p,
+.present-portfolio-item .item-bottom-container h3 {
+  color: white;
+}
 
-  .present-portfolio-item .item-button-container .to-button .arrow-detail{
-    stroke: white;
-  }
+.present-portfolio-item .item-button-container .to-button .arrow-detail {
+  stroke: white;
+}
 
 .about-section {
   padding: var(--app-pad);
@@ -633,15 +639,19 @@ p {
   flex-direction: column;
 }
 
-.about-section div{
-    display: flex;
-    justify-content: space-between;
+.about-section div {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Illustrations */
 
-.gallery-image{
-    /* max-height: 800px; */
+/* .gallery-image{
+    padding: calc(var(--app-pad)* 4) 0;
+} */
+
+.gallery-image > * {
+  /* max-height: 500px; */
 }
 
 /* Footer */

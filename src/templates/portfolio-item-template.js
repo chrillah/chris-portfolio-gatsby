@@ -60,7 +60,6 @@ const PortfolioItemTemplate = ({ data }) => {
               return (
                 <div key={index}>
                   <GatsbyImage
-                    key={index}
                     image={imageData}
                     alt={`Image ${index + 1}`}
                   />

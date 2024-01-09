@@ -12,7 +12,14 @@ const IllustrationsTemplate = contentfulPage => {
           <div className="gallery-container">
             {contentfulPage.gallery.map((image, index) => {
               const imageData = getImage(image)
-              return <GatsbyImage className="gallery-image" key={index} image={imageData} alt={image.title}/>
+              return (
+                <div                     key={index} className="gallery-image">
+                  <GatsbyImage
+                    image={imageData}
+                    alt={image.title}
+                  />
+                </div>
+              )
             })}
           </div>
         </div>
