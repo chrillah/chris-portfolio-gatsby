@@ -632,10 +632,16 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: var(--app-color);
 }
 
 .hero-image-container {
   max-width: 450px;
+  overflow: hidden;
+}
+
+.hero-image{
+    background-color: #ffffff;
 }
 
 @media (max-width: 424px) {
