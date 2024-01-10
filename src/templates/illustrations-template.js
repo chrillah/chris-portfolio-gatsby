@@ -15,7 +15,7 @@ const IllustrationsTemplate = contentfulPage => {
       <div className="app-page-container">
         <div className="app-container">
           <div className="illustrations-hero-container">
-            <h1 className="hero-title">{contentfulPage.title}</h1>
+            <h1 className="app-header">{contentfulPage.title}</h1>
             <div> {renderRichText(contentfulPage.content, richTextConfig)}</div>
           </div>
           <div className="gallery-container">
