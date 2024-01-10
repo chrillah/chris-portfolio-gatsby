@@ -38,7 +38,7 @@ const PortfolioItemTemplate = ({ data }) => {
       <div className="gradient-container">
         <div className="app-page-container">
           <div className="app-container">
-            <Link className="back-button" to="/portfolio">
+            <Link className="back-button" to="/projects">
               <svg
                 className="arrow rev"
                 id="Layer_1"
