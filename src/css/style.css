@@ -461,7 +461,7 @@ nav {
   padding-top: var(--app-pad);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   filter: invert(1);
   mix-blend-mode: difference;
 }
@@ -488,6 +488,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50vh;
 }
 
 .portfolio-hero-container > :first-child div {
