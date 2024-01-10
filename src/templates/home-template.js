@@ -1,36 +1,17 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link} from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import PresentPortfolioItem from "../components/presentPortfolioItem"
 import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
+import DisplayPortfolioItems from "../components/displayPortfolioItems"
 
 // Add later?
 // import Seo from "../components/seo"
 
 const HomeTemplate = contentfulPage => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulPortfolioItem {
-        edges {
-          node {
-            portfolioTitle
-            portfolioHeroImage {
-              gatsbyImage(width: 1000)
-            }
-            portfolioDescription {
-              portfolioDescription
-            }
-            timePeriod
-            portfolioSubject
-            slug
-          }
-        }
-      }
-    }
-  `)
+
 
   const richTextConfig = {
     renderNode: {
@@ -40,8 +21,6 @@ const HomeTemplate = contentfulPage => {
     },
   }
 
-  const randomNumber =
-    Math.floor(Math.random() * data.allContentfulPortfolioItem.edges.length) + 1
 
   const image = getImage(contentfulPage.image)
 
@@ -65,28 +44,7 @@ const HomeTemplate = contentfulPage => {
               </div>
             </div>
             <ul className="home-item-container">
-              {data ? (
-                <>
-                  {data.allContentfulPortfolioItem.edges.map((edge, index) => {
-                    if (index === randomNumber) {
-                      return (
-                        <PresentPortfolioItem
-                          key={edge.node.portfolioTitle}
-                          item={edge.node}
-                          lengthOfItems={
-                            data.allContentfulPortfolioItem.edges.length
-                          }
-                          indexOfItem={index + 1}
-                        />
-                      )
-                    }
-                    return null
-                  })}
-                </>
-              ) : (
-                <></>
-              )}
-
+              <DisplayPortfolioItems />
               <Link to="/about" className="about-section">
                 <h1>What is Ch-projects?</h1>
                 <svg
