@@ -4,8 +4,9 @@ import { INLINES, BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const ContactTemplate = contentfulPage => {
-  const richLinkConfig = {
+  const richTextConfig = {
     renderNode: {
+      [BLOCKS]: (node, children) => <p>{children}</p>,
       [INLINES.HYPERLINK]: (node, children) => {
         const { uri } = node.data
         return (
@@ -21,11 +22,6 @@ const ContactTemplate = contentfulPage => {
       },
     },
   }
-  const richTextConfig = {
-    renderNode: {
-      [BLOCKS]: (node, children) => <p>{children}</p>,
-    },
-  }
   return (
     <Layout>
       <div className="gradient-container">
@@ -38,7 +34,7 @@ const ContactTemplate = contentfulPage => {
                   {renderRichText(contentfulPage.content, richTextConfig)}
                 </div>
               </div>
-              <div>{renderRichText(contentfulPage.links, richLinkConfig)}</div>
+              <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
             </div>
           </div>
         </div>
