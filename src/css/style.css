@@ -461,15 +461,27 @@ nav {
 
 .portfolio-hero-container > :first-child,
 .portfolio-hero-container > :last-child {
-  padding: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
 }
 
 .portfolio-hero-container > :first-child {
+  display: grid;
+  grid-template-rows: 2fr auto;
+  border-right: none;
+}
+
+.portfolio-hero-container > :first-child h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: none;
+}
+
+.portfolio-hero-container > :first-child div {
+  border-top: var(--app-color) var(--app-stroke-width) solid;
+}
+
+.portfolio-hero-container > :last-child {
+  padding: var(--app-pad);
 }
 
 .project-list {
@@ -602,6 +614,10 @@ p {
   padding: var(--app-pad);
 }
 
+.projects-page-bottom-container > :last-child p {
+  padding: 0;
+}
+
 .portfolio-page {
   background-color: var(--app-bg);
   padding-top: var(--app-pad);
@@ -637,7 +653,6 @@ p {
   filter: invert(1);
   mix-blend-mode: difference;
   padding-top: var(--app-pad);
-  /* padding-bottom: var(--app-pad); */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1fr 1fr;

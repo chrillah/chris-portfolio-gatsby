@@ -1,11 +1,26 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PortfolioItem from "../components/portfolioItem"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
 
 const PortfolioTemplate = contentfulPage => {
+  const richTextConfig = {
+    renderNode: {
+      [BLOCKS]: (node, children) => <p>{children}</p>,
+      [INLINES.ENTRY_HYPERLINK]: (node, children) => {
+        let url = children[0].toLowerCase()
+        return (
+          <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
+            {children}
+          </a>
+        )
+      },
+    },
+  }
   const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
@@ -13,7 +28,15 @@ const PortfolioTemplate = contentfulPage => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="portfolio-hero-container">
-              <h1 className="hero-title">{contentfulPage.title}</h1>
+              <div>
+                <h1 className="hero-title">{contentfulPage.title}</h1>
+
+                <div>
+                  {renderRichText(contentfulPage.content, richTextConfig)}
+                </div>
+              </div>
+
+              {/* last child */}
               <ul className="project-list">
                 {portfolioInformation.map((edge, index) => {
                   return (
@@ -46,11 +69,7 @@ const PortfolioTemplate = contentfulPage => {
           <div className="app-container">
             <div className="projects-page-bottom-container">
               <p>Do you like what you see? Check out the rest.</p>
-              <div>
-                <Link to="/illustrations" className="link-button">
-                  Illustrations
-                </Link>
-              </div>
+              <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
             </div>
           </div>
         </div>
