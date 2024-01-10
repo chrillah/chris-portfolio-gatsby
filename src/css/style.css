@@ -817,13 +817,21 @@ p {
 .hero-item-1 {
   padding: var(--app-pad);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: space-between; */
   flex-direction: column;
 }
 
-/* .hero-item-1 > .hero-title {
+.hero-item-1 div {
   margin-top: auto;
-} */
+}
+
+.hero-item-1 > .hero-title {
+  margin-top: auto;
+  text-align: center;
+}
 
 .hero-item-2 {
   display: flex;
