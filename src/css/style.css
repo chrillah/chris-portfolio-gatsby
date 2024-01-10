@@ -497,7 +497,7 @@ nav {
   gap: var(--app-gap);
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: var(--app-pad) 0;
+  padding: var(--app-pad);
 }
 
 .portfolio-item-container::-webkit-scrollbar {
@@ -603,7 +603,7 @@ p {
 }
 
 .portfolio-page {
-  background-color: var(--page-bg);
+  background-color: var(--app-bg);
   padding-top: var(--app-pad);
   padding-bottom: var(--app-pad);
 }
