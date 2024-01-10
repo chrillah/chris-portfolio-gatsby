@@ -25,7 +25,6 @@ const PortfolioTemplate = contentfulPage => {
   return (
     <Layout>
       <div className="gradient-container">
-        {console.log(navigator.vendor)}
         <div className="app-page-container">
           <div className="app-container">
             <div className="portfolio-hero-container">
