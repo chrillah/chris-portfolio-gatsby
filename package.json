@@ -8,6 +8,7 @@
     "gatsby": "^5.12.12",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
+    "gatsby-plugin-offline": "^6.13.0",
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-source-contentful": "^8.12.5",
     "gatsby-source-filesystem": "^5.12.1",

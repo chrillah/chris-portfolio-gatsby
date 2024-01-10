@@ -143,7 +143,7 @@ body {
 }
 
 main {
-  margin-top: 2.5rem;
+  margin-top: 2.3rem;
 }
 
 .app-page-container {
@@ -355,6 +355,7 @@ header {
   z-index: 999;
   position: fixed;
   background-color: var(--app-bg);
+  border-bottom: var(--app-color) var(--app-stroke-width) solid;
 }
 
 nav {
@@ -433,8 +434,8 @@ nav {
   padding-bottom: calc(var(--app-pad) * 2);
 }
 
-.portfolio-bottom-wrapper{
-    margin-bottom: 0;
+.portfolio-bottom-wrapper {
+  margin-bottom: 0;
 }
 
 .portfolio-page-top {
@@ -587,6 +588,7 @@ p {
 }
 
 .projects-page-bottom-container > :first-child {
+  padding: var(--app-pad);
   border: var(--app-color) var(--app-stroke-width) solid;
   border-right: none;
   display: flex;
@@ -632,8 +634,8 @@ p {
 /* About */
 
 .about-hero-container {
-    filter: invert(1);
-    mix-blend-mode: difference;
+  filter: invert(1);
+  mix-blend-mode: difference;
   padding-top: var(--app-pad);
   /* padding-bottom: var(--app-pad); */
   display: grid;
@@ -949,12 +951,14 @@ p {
 
 .illustrations-page-bottom-container {
   margin-top: var(--app-pad);
+  margin-bottom: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .illustrations-page-bottom-container > :first-child {
+  padding: var(--app-pad);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -969,9 +973,8 @@ p {
 /* Contact */
 
 .contact-hero-container {
-  height: 100vh;
+  height: 92vh;
   padding-top: var(--app-pad);
-  padding-bottom: var(--app-pad);
   min-height: 50vh;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -1019,6 +1022,10 @@ p {
 }
 
 /* Footer */
+
+footer {
+  border-top: var(--app-color) var(--app-stroke-width) solid;
+}
 
 .contact-container {
   display: grid;

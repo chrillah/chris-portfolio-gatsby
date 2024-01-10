@@ -17,6 +17,12 @@ module.exports = {
     author: `Christopher Rönnberg`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/projects/*`],
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     {
