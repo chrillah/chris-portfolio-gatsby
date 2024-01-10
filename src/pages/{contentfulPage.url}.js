@@ -4,7 +4,6 @@ import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
 import PortfolioTemplate from "../templates/portfolio-template"
 import IllustrationsTemplate from "../templates/illustrations-template"
-import NotFoundPageTemplate from "../templates/404-template"
 import ContactTemplate from "../templates/contact-template"
 
 const Page = ({ data }) => {
@@ -21,11 +20,8 @@ const Page = ({ data }) => {
       case "illustrations":
         return <IllustrationsTemplate {...contentfulPage} />
 
-        case "404" :
-            return <NotFoundPageTemplate />
-
         case "contact" :
-            return <ContactTemplate />
+            return <ContactTemplate {...contentfulPage}/>
 
       default:
         return <HomeTemplate {...contentfulPage} />
@@ -53,6 +49,9 @@ export const data = graphql`
       gallery {
         title
         gatsbyImageData(height: 800)
+      }
+      links {
+        raw
       }
     }
   }
