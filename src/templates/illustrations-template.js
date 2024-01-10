@@ -1,13 +1,23 @@
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { BLOCKS } from "@contentful/rich-text-types"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/layout"
 
 const IllustrationsTemplate = contentfulPage => {
+  const richTextConfig = {
+    renderNode: {
+      [BLOCKS]: (node, children) => <p>{children}</p>,
+    },
+  }
   return (
     <Layout>
       <div className="app-page-container">
         <div className="app-container">
-          <h1 className="app-header">{contentfulPage.title}</h1>
+          <div className="illustrations-hero-container">
+            <h1 className="hero-title">{contentfulPage.title}</h1>
+            <div> {renderRichText(contentfulPage.content, richTextConfig)}</div>
+          </div>
           <div className="gallery-container">
             {contentfulPage.gallery.map((image, index) => {
               const imageData = getImage(image)
