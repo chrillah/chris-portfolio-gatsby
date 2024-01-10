@@ -165,6 +165,7 @@ main {
 }
 
 .gradient-container {
+    padding-bottom: var(--app-pad);
   background-size: 400%;
   background-position: left;
   background-image: var(--gradient-1);
@@ -429,9 +430,9 @@ nav {
 }
 
 .portfolio-hero-container > :first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-right: none;
 }
 
@@ -443,7 +444,6 @@ nav {
   mix-blend-mode: difference;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-bottom: var(--app-pad);
 }
 
 .projects-page-bottom-container > :first-child {
@@ -679,6 +679,17 @@ p {
   .education-container > :first-child > :last-child {
     rotate: 0deg;
   }
+}
+
+.about-page-bottom-container {
+  border: var(--app-color) var(--app-stroke-width) solid;
+  padding: var(--app-pad);
+}
+
+.about-page-bottom-container > :last-child {
+  display: grid;
+  gap: var(--app-gap);
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Education items */
