@@ -704,6 +704,10 @@ p {
   .about-hero-container > :first-child {
     border-bottom: none;
   }
+
+  .about-hero-container > div > :first-child {
+    min-height: 50vh;
+  }
 }
 
 .about-description {
@@ -840,6 +844,7 @@ p {
 
 @media (max-width: 767px) {
   .hero-item-1 {
+    min-height: 50vh;
     border-bottom: none;
   }
 }
@@ -973,6 +978,7 @@ p {
 
 @media (max-width: 767px) {
   .illustrations-hero-container > :first-child {
+    min-height: 50vh;
     border-bottom: none;
     border-right: solid var(--app-color) var(--app-stroke-width);
   }
@@ -1039,6 +1045,7 @@ p {
 
 @media (max-width: 489px) {
   .contact-hero-container > :first-child {
+    min-height: 50vh;
     border-bottom: none;
     border-right: var(--app-stroke-width) var(--app-color) solid;
   }
