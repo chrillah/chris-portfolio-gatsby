@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const usePortfolioInfo = () => {
+const usePortfolioInformation = () => {
   const { allContentfulPortfolioItem } = useStaticQuery(graphql`
     query {
       allContentfulPortfolioItem {
@@ -25,4 +25,4 @@ const usePortfolioInfo = () => {
   return allContentfulPortfolioItem.edges
 }
 
-export default usePortfolioInfo
+export default usePortfolioInformation

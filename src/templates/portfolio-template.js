@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PortfolioItem from "../components/portfolioItem"
-import usePortfolioInfo from "../hooks/use-portfolioInfo"
+import usePortfolioInformation from "../hooks/use-portfolioInformation"
 
 const PortfolioTemplate = () => {
-  const portfolioInformation = usePortfolioInfo()
+  const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
       <div className="gradient-container">

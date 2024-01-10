@@ -1,9 +1,9 @@
 import React from "react"
 import PresentPortfolioItem from "../components/presentPortfolioItem"
-import usePortfolioInfo from "../hooks/use-portfolioInfo"
+import usePortfolioInformation from "../hooks/use-portfolioInformation"
 
 function DisplayPortfolioItems() {
-  const portfolioInformation = usePortfolioInfo()
+  const portfolioInformation = usePortfolioInformation()
   const randomNumber =
     Math.floor(Math.random() * portfolioInformation.length) + 1
   return (
