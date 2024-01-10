@@ -9,7 +9,9 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 const PortfolioItemTemplate = ({ data }) => {
   const {
     portfolioTitle,
+    portfolioSubject,
     portfolioDescription,
+    timePeriod,
     portfolioImages,
     githubLink,
     webpageLink,
@@ -35,32 +37,50 @@ const PortfolioItemTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div className="gradient-container">
+      <div
+        className={
+          portfolioSubject === "React"
+            ? "portfolio-page"
+            : portfolioSubject === "Vue"
+            ? "portfolio-page color-set-2"
+            : "portfolio-page color-set-1"
+        }
+      >
         <div className="app-page-container">
           <div className="app-container">
-            <Link className="back-button" to="/projects">
-              <svg
-                className="arrow rev"
-                id="Layer_1"
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 30 30"
-              >
-                <polyline
-                  className="arrow-detail"
-                  points="14.95 29.44 29.39 15 14.95 .56"
-                />
-                <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
-              </svg>
-              <p>Back</p>
-            </Link>
+            <div className="portfolio-page-top-container">
+              <Link className="back-button" to="/projects">
+                <svg
+                  className="arrow rev"
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                >
+                  <polyline
+                    className="arrow-detail"
+                    points="14.95 29.44 29.39 15 14.95 .56"
+                  />
+                  <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
+                </svg>
+                <p>Back</p>
+              </Link>
+              <div>
+                <p>{timePeriod}</p>
+                <h3>{portfolioSubject}</h3>
+              </div>
+            </div>
             <h1 className="hero-title">{portfolioTitle}</h1>
             <div className="gallery-container">
               {portfolioImages.map((image, index) => {
                 const imageData = getImage(image)
                 return (
                   <div key={index}>
-                    <GatsbyImage image={imageData} alt={`Image ${index + 1}`} />
+                    <GatsbyImage
+                      className="gallery-image"
+                      image={imageData}
+                      alt={`Image ${index + 1}`}
+                    />
                   </div>
                 )
               })}

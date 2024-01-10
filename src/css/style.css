@@ -53,6 +53,8 @@
   --app-bg: var(--yellow);
   --app-color: var(--black);
 
+  --page-bg: var(--grey);
+
   --item-bg: var(--grey);
   --item-font-color: var(--app-color);
 
@@ -165,7 +167,7 @@ main {
 }
 
 .gradient-container {
-    padding-bottom: var(--app-pad);
+  padding-bottom: var(--app-pad);
   background-size: 400%;
   background-position: left;
   background-image: var(--gradient-1);
@@ -414,6 +416,18 @@ nav {
 
 /* Portfolio */
 
+.portfolio-page-top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-page-top-container > :last-child > :first-child,
+.portfolio-page-top-container > :last-child > :last-child {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
 .portfolio-hero-container {
   padding-top: var(--app-pad);
   display: grid;
@@ -439,37 +453,19 @@ nav {
 .project-list {
 }
 
-.projects-page-bottom-container {
-  filter: invert(1);
-  mix-blend-mode: difference;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.projects-page-bottom-container > :first-child {
-  border: var(--app-color) var(--app-stroke-width) solid;
-  border-right: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 900;
-}
-
-.projects-page-bottom-container > :last-child {
-  border: var(--app-color) var(--app-stroke-width) solid;
-  padding: var(--app-pad);
-}
-
 .color-set-1 {
   --item-bg: var(--turquoise);
+  --page-bg: var(--turquoise);
 }
 
 .color-set-2 {
   --item-bg: var(--lavender);
+  --page-bg: var(--lavender);
 }
 
 .color-set-3 {
   --item-bg: var(--pink);
+  --page-bg: var(--pink);
 }
 
 .portfolio-item-container {
@@ -562,6 +558,31 @@ p {
 
 /* Portfolio Page */
 
+.projects-page-bottom-container {
+    filter: invert(1);
+    mix-blend-mode: difference;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-page-bottom-container > :first-child {
+    border: var(--app-color) var(--app-stroke-width) solid;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+  }
+
+  .projects-page-bottom-container > :last-child {
+    border: var(--app-color) var(--app-stroke-width) solid;
+    padding: var(--app-pad);
+  }
+
+.portfolio-page {
+    background-color: var(--page-bg);
+  }
+
 .gallery-container {
   background-color: var(--app-color);
   display: flex;
@@ -572,11 +593,11 @@ p {
 }
 
 .gallery-container > :first-child {
-  margin-top: calc(var(--app-pad) * 20);
+  margin-top: calc(var(--app-pad) * 2);
 }
 
 .gallery-container > :last-child {
-  margin-bottom: calc(var(--app-pad) * 20);
+  margin-bottom: calc(var(--app-pad) * 2);
 }
 
 .link-button-container {
