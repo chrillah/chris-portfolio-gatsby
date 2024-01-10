@@ -30,7 +30,7 @@ const IllustrationsTemplate = contentfulPage => {
             })}
           </div>
           <div className="illustrations-page-bottom-container">
-          <h3>Do you like what you see? Check out the rest.</h3>
+          <p>Do you like what you see? Check out the rest.</p>
           <Link to="/projects" className="link-button">Projects</Link>
           </div>
         </div>

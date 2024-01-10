@@ -45,7 +45,7 @@ const PortfolioTemplate = () => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="projects-page-bottom-container">
-              <h3>Do you like what you see? Check out the rest.</h3>
+              <p>Do you like what you see? Check out the rest.</p>
               <div>
                 <Link to="/illustrations" className="link-button">
                   Illustrations

@@ -452,6 +452,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 900;
 }
 
 .projects-page-bottom-container > :last-child {
@@ -912,6 +913,7 @@ p {
   justify-content: center;
   align-items: center;
   border-right: var(--app-stroke-width) var(--app-color) solid;
+  font-weight: 900;
 }
 
 .illustrations-page-bottom-container > :last-child {
