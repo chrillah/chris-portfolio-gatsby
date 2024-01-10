@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import { INLINES,BLOCKS } from "@contentful/rich-text-types"
+import { INLINES, BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const ContactTemplate = contentfulPage => {
@@ -23,9 +23,7 @@ const ContactTemplate = contentfulPage => {
   }
   const richTextConfig = {
     renderNode: {
-      [BLOCKS]: (node, children) => (
-        <p>{children}</p>
-      ),
+      [BLOCKS]: (node, children) => <p>{children}</p>,
     },
   }
   return (
@@ -34,11 +32,14 @@ const ContactTemplate = contentfulPage => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="contact-hero-container">
-                
+              <div>
+                <h1 className="hero-title">{contentfulPage.title}</h1>
+                <div>
+                  {renderRichText(contentfulPage.content, richTextConfig)}
+                </div>
+              </div>
+              <div>{renderRichText(contentfulPage.links, richLinkConfig)}</div>
             </div>
-            <h1>{contentfulPage.title}</h1>
-            <div>{renderRichText(contentfulPage.content, richTextConfig)}</div>
-            <div>{renderRichText(contentfulPage.links, richLinkConfig)}</div>
           </div>
         </div>
       </div>
