@@ -29,7 +29,7 @@ const PortfolioTemplate = () => {
             </div>
           </div>
         </div>
-        <ul className="portfolio-item-container">
+        <div className="portfolio-item-container">
           {portfolioInformation.map((edge, index) => {
             return (
               <PortfolioItem
@@ -40,7 +40,20 @@ const PortfolioTemplate = () => {
               />
             )
           })}
-        </ul>
+        </div>
+
+        <div className="app-page-container">
+          <div className="app-container">
+            <div className="projects-page-bottom-container">
+              <h3>Do you like what you see? Check out the rest.</h3>
+              <div>
+                <Link to="/illustrations" className="link-button">
+                  Illustrations
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )

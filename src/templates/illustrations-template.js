@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 
 const IllustrationsTemplate = contentfulPage => {
   const richTextConfig = {
@@ -27,6 +28,10 @@ const IllustrationsTemplate = contentfulPage => {
                 </div>
               )
             })}
+          </div>
+          <div className="illustrations-page-bottom-container">
+          <h3>Do you like what you see? Check out the rest.</h3>
+          <Link to="/projects" className="link-button">Projects</Link>
           </div>
         </div>
       </div>
