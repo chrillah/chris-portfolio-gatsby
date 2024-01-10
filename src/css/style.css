@@ -160,6 +160,7 @@ main {
 }
 
 .app-container {
+  position: relative;
   margin: 0 var(--app-pad);
 }
 
@@ -753,6 +754,7 @@ p {
 /* Illustrations */
 
 .illustrations-hero-container {
+  min-height: 50vh;
   padding-top: var(--app-pad);
   padding-bottom: var(--app-pad);
   display: grid;
@@ -769,14 +771,14 @@ p {
 
 .illustrations-hero-container > :first-child,
 .illustrations-hero-container > :last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: var(--app-pad);
   border: solid var(--app-color) var(--app-stroke-width);
 }
 
 .illustrations-hero-container > :first-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-right: none;
 }
 
@@ -788,6 +790,7 @@ p {
 }
 
 .gallery-image {
+  margin: var(--app-pad);
   background-color: #ffffff;
 }
 
@@ -870,4 +873,8 @@ p {
   position: absolute;
   right: 0;
   margin: var(--app-pad);
+}
+
+.year-title span {
+  font-weight: 900;
 }
