@@ -414,6 +414,8 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: var(--app-pad);
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 .portfolio-hero-container > :first-child,
