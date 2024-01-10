@@ -797,6 +797,7 @@ p {
 /* Contact */
 
 .contact-hero-container {
+  height: 100vh;
   padding-top: var(--app-pad);
   padding-bottom: var(--app-pad);
   min-height: 50vh;
@@ -872,9 +873,30 @@ p {
   padding-top: 1rem;
   position: absolute;
   right: 0;
-  margin: var(--app-pad);
+  /* margin: var(--app-pad); */
 }
 
 .year-title span {
   font-weight: 900;
+}
+
+/* 404 */
+
+.notfound-hero-container {
+  padding: var(--app-pad);
+  padding: var(--app-pad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.notfound-hero-container div h1{
+    text-align: center;
+}
+
+.notfound-hero-container > :last-child {
+  width: 100%;
+  max-width: 450px;
 }

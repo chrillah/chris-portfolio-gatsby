@@ -1,12 +1,26 @@
 import * as React from "react"
 
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 // import Seo from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="gradient-container">
+      <div className="app-page-container">
+        <div className="app-container">
+          <div className="notfound-hero-container">
+            <div>
+              <h1 className="hero-title">404</h1>
+              <p>Oh snap! Nothing here...</p>
+            </div>
+            <Link className="link-button" to="/">
+              Go home
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
