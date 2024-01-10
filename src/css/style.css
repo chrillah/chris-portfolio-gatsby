@@ -416,13 +416,34 @@ nav {
 
 /* Portfolio */
 
-.portfolio-page-top-container {
+.portfolio-top-wrapper,
+.portfolio-middle-wrapper,
+.portfolio-bottom-wrapper {
+  border: var(--app-stroke-width) var(--app-color) solid;
+  padding: var(--app-pad);
+  margin-bottom: var(--app-pad);
+}
+
+.portfolio-middle-wrapper {
+  margin-top: var(--app-pad);
+}
+
+.portfolio-middle-wrapper > :first-child,
+.portfolio-bottom-wrapper > :first-child {
+  padding-bottom: calc(var(--app-pad) * 2);
+}
+
+.portfolio-bottom-wrapper{
+    margin-bottom: 0;
+}
+
+.portfolio-page-top {
   display: flex;
   justify-content: space-between;
 }
 
-.portfolio-page-top-container > :last-child > :first-child,
-.portfolio-page-top-container > :last-child > :last-child {
+.portfolio-page-top > :last-child > :first-child,
+.portfolio-page-top > :last-child > :last-child {
   padding: 0;
   margin: 0;
   text-align: right;
@@ -559,29 +580,31 @@ p {
 /* Portfolio Page */
 
 .projects-page-bottom-container {
-    filter: invert(1);
-    mix-blend-mode: difference;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  filter: invert(1);
+  mix-blend-mode: difference;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  .projects-page-bottom-container > :first-child {
-    border: var(--app-color) var(--app-stroke-width) solid;
-    border-right: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
-  }
+.projects-page-bottom-container > :first-child {
+  border: var(--app-color) var(--app-stroke-width) solid;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
 
-  .projects-page-bottom-container > :last-child {
-    border: var(--app-color) var(--app-stroke-width) solid;
-    padding: var(--app-pad);
-  }
+.projects-page-bottom-container > :last-child {
+  border: var(--app-color) var(--app-stroke-width) solid;
+  padding: var(--app-pad);
+}
 
 .portfolio-page {
-    background-color: var(--page-bg);
-  }
+  background-color: var(--page-bg);
+  padding-top: var(--app-pad);
+  padding-bottom: var(--app-pad);
+}
 
 .gallery-container {
   background-color: var(--app-color);
@@ -609,6 +632,8 @@ p {
 /* About */
 
 .about-hero-container {
+    filter: invert(1);
+    mix-blend-mode: difference;
   padding-top: var(--app-pad);
   /* padding-bottom: var(--app-pad); */
   display: grid;

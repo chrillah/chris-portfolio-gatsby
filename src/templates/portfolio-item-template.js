@@ -48,29 +48,31 @@ const PortfolioItemTemplate = ({ data }) => {
       >
         <div className="app-page-container">
           <div className="app-container">
-            <div className="portfolio-page-top-container">
-              <Link className="back-button" to="/projects">
-                <svg
-                  className="arrow rev"
-                  id="Layer_1"
-                  data-name="Layer 1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 30 30"
-                >
-                  <polyline
-                    className="arrow-detail"
-                    points="14.95 29.44 29.39 15 14.95 .56"
-                  />
-                  <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
-                </svg>
-                <p>Back</p>
-              </Link>
-              <div>
-                <p>{timePeriod}</p>
-                <h3>{portfolioSubject}</h3>
+            <div className="portfolio-top-wrapper">
+              <div className="portfolio-page-top">
+                <Link className="back-button" to="/projects">
+                  <svg
+                    className="arrow rev"
+                    id="Layer_1"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 30 30"
+                  >
+                    <polyline
+                      className="arrow-detail"
+                      points="14.95 29.44 29.39 15 14.95 .56"
+                    />
+                    <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
+                  </svg>
+                  <p>Projects</p>
+                </Link>
+                <div>
+                  <h3>{portfolioSubject}</h3>
+                  <p>{timePeriod}</p>
+                </div>
               </div>
+              <h1 className="hero-title">{portfolioTitle}</h1>
             </div>
-            <h1 className="hero-title">{portfolioTitle}</h1>
             <div className="gallery-container">
               {portfolioImages.map((image, index) => {
                 const imageData = getImage(image)
@@ -86,21 +88,25 @@ const PortfolioItemTemplate = ({ data }) => {
               })}
             </div>
 
-            <h1 className="app-header">Description</h1>
-            <p>{portfolioDescription.portfolioDescription}</p>
+            <div className="portfolio-middle-wrapper">
+              <h1>Description</h1>
+              <p>{portfolioDescription.portfolioDescription}</p>
+            </div>
 
-            <h1 className="app-header">Links</h1>
-            <div className="link-button-container">
-              {githubLink ? (
-                <div>{renderRichText(githubLink, richTextConfig)}</div>
-              ) : (
-                <></>
-              )}
-              {webpageLink ? (
-                <div>{renderRichText(webpageLink, richTextConfig)}</div>
-              ) : (
-                <></>
-              )}
+            <div className="portfolio-bottom-wrapper">
+              <h1>Links</h1>
+              <div className="link-button-container">
+                {githubLink ? (
+                  <div>{renderRichText(githubLink, richTextConfig)}</div>
+                ) : (
+                  <></>
+                )}
+                {webpageLink ? (
+                  <div>{renderRichText(webpageLink, richTextConfig)}</div>
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
           </div>
         </div>
