@@ -4,14 +4,15 @@ const EducationItem = ({ educationName, schoolName, knowledge }) => {
   return (
     <div className="education-item">
       <div className="education-top-container">
-        <h1>{educationName}</h1>
+      <h3>{schoolName}</h3>
       </div>
 
       <div className="education-middle-container">
-        <p>{schoolName}</p>
+        <h1>{educationName}</h1>
       </div>
 
       <div className="education-bottom-container">
+        <p>Tools & Knowledge</p>
         <p>{knowledge}</p>
       </div>
     </div>
