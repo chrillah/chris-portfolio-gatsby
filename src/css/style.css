@@ -623,18 +623,20 @@ p {
 .hero-item-1 {
   padding: var(--app-pad);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-item-1 > .hero-title {
+/* .hero-item-1 > .hero-title {
   margin-top: auto;
-}
+} */
 
 .hero-item-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--app-color);
+  /* background-color: var(--app-color); */
 }
 
 .hero-image-container {
@@ -643,7 +645,7 @@ p {
 }
 
 .hero-image {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 @media (max-width: 424px) {
