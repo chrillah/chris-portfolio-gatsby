@@ -36,7 +36,6 @@ const PortfolioTemplate = contentfulPage => {
                 </div>
               </div>
 
-              {/* last child */}
               <ul className="project-list">
                 {portfolioInformation.map((edge, index) => {
                   return (
