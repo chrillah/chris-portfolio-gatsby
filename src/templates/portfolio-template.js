@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import PortfolioItem from "../components/portfolioItem"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
 
-const PortfolioTemplate = () => {
+const PortfolioTemplate = contentfulPage => {
   const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
@@ -13,7 +13,7 @@ const PortfolioTemplate = () => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="portfolio-hero-container">
-              <h1 className="hero-title">Index</h1>
+              <h1 className="hero-title">{contentfulPage.title}</h1>
               <ul className="project-list">
                 {portfolioInformation.map((edge, index) => {
                   return (
