@@ -42,7 +42,6 @@ const HomeTemplate = contentfulPage => {
                   <div className="link-button-container">
                     {renderRichText(contentfulPage.links, richTextConfig)}
                   </div>
-                  {renderRichText(contentfulPage.body, richTextConfig)}
                 </div>
               </div>
               <div className="hero-item-2">
@@ -52,6 +51,7 @@ const HomeTemplate = contentfulPage => {
                     image={image}
                     alt="image"
                   />
+                  {renderRichText(contentfulPage.body, richTextConfig)}
                 </div>
               </div>
             </div>

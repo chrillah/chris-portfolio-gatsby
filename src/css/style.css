@@ -848,12 +848,21 @@ background-color: #111111;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* justify-content: space-between; */
   flex-direction: column;
 }
 
 .hero-item-1 div {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   margin-top: auto;
+  width: 100%;
+}
+
+@media (min-width: 425px) {
+  .hero-item-1 div{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .hero-item-1 > .hero-title {
@@ -866,7 +875,10 @@ background-color: #111111;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: var(--app-color); */
+}
+
+.hero-item-2 p{
+  padding: var(--app-pad);
 }
 
 .hero-image-container {
