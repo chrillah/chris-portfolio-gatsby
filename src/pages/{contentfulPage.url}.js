@@ -4,6 +4,7 @@ import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
 import PortfolioTemplate from "../templates/portfolio-template"
 import IllustrationsTemplate from "../templates/illustrations-template"
+import TechnologyTemplate from "../templates/technology-template"
 import ContactTemplate from "../templates/contact-template"
 
 const Page = ({ data }) => {
@@ -19,6 +20,9 @@ const Page = ({ data }) => {
 
       case "illustrations":
         return <IllustrationsTemplate {...contentfulPage} />
+
+        case 'technology' :
+        return <TechnologyTemplate {...contentfulPage} />
 
         case "contact" :
             return <ContactTemplate {...contentfulPage}/>
