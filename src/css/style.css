@@ -1019,7 +1019,15 @@ p {
   margin-bottom: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media (min-width: 425px) {
+  .illustrations-page-bottom-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .illustrations-page-bottom-container > :first-child {
@@ -1033,6 +1041,13 @@ p {
 
 .illustrations-page-bottom-container > :last-child {
   margin: var(--app-pad);
+}
+
+@media (max-width: 424px) {
+  .illustrations-page-bottom-container > :first-child{
+    border-right: none;
+    border-bottom: var(--app-color) var(--app-stroke-width) solid;
+  }
 }
 
 /* Contact */
