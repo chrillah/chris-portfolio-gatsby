@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
     "gatsby": "^5.12.12",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
