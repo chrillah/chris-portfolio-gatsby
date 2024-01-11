@@ -755,7 +755,7 @@ p {
   filter: invert(1);
   mix-blend-mode: difference;
   padding-block: var(--app-pad);
-  gap: var(--app-gap);
+  gap: var(--app-pad);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -775,25 +775,36 @@ p {
   flex-direction: column;
 }
 
-.education-container > :first-child > :last-child {
-  rotate: 90deg;
+.education-container > :first-child {
+background-color: #111111;
 }
 
-@media (min-width: 626px) {
-  .education-container > :first-child > :last-child {
-    rotate: 0deg;
-  }
+.education-container > :first-child h1{
+  color: #FFFFFF;
 }
+
 
 .about-page-bottom-container {
   border: var(--app-color) var(--app-stroke-width) solid;
   padding: var(--app-pad);
 }
 
+.about-page-bottom-container h3 {
+    padding-bottom: var(--app-pad);
+}
+
 .about-page-bottom-container > :last-child {
   display: grid;
   gap: var(--app-gap);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media (min-width:425px) {
+  .about-page-bottom-container > :last-child{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 /* Education items */
