@@ -8,9 +8,11 @@ import "../css/style.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
+          author
+          description
           title
         }
       }
@@ -19,8 +21,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Helmet></Helmet>
-      <meta name="author" content={data.site.siteMetadata.author} />
+      <Helmet>
+      <meta name="author" title={data.site.siteMetadata.title} author={data.site.siteMetadata.author} content={data.site.siteMetadata.description} />
+      </Helmet>
       <Header />
       <main>{children}</main>
       <Footer />
