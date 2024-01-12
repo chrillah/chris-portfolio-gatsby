@@ -1,18 +1,27 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import useEducationInformation from "../hooks/use-educationInformation"
 import EducationItem from "../components/educationItem"
-import { Link } from "gatsby"
 
 const AboutTemplate = contentfulPage => {
   const educationInformation = useEducationInformation()
+
+  // Konfiguration för att anpassa renderingen av richtext.
   const image = getImage(contentfulPage.image)
   const richTextConfig = {
     renderNode: {
-      [BLOCKS.HEADING_1]: (node, children) => <p>{children}</p>,
+      [BLOCKS]: (node, children) => <p>{children}</p>,
+      [INLINES.ENTRY_HYPERLINK]: (node, children) => {
+        let url = children[0].toLowerCase()
+        return (
+          <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
+            {children}
+          </a>
+        )
+      },
     },
   }
 
@@ -22,8 +31,11 @@ const AboutTemplate = contentfulPage => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="about-hero-container">
-              <div>
-                <h1 className="hero-title">{contentfulPage.title}</h1>
+              <div className="about-hero-item-1">
+                <div className="about-presentation">
+                  <h1 className="hero-title">{contentfulPage.title}</h1>
+                  {renderRichText(contentfulPage.body, richTextConfig)}
+                </div>
                 <div className="about-description">
                   {renderRichText(contentfulPage.content, richTextConfig)}
                 </div>
@@ -53,17 +65,8 @@ const AboutTemplate = contentfulPage => {
             )}
             <div className="about-page-bottom-container">
               <h3>Check out the rest.</h3>
-              <div>
-                <div>
-                  <Link to="/projects" className="link-button">
-                    Projects
-                  </Link>
-                </div>
-                <div>
-                  <Link to="/illustrations" className="link-button">
-                    Illustrations
-                  </Link>
-                </div>
+              <div className="link-button-container">
+                {renderRichText(contentfulPage.links, richTextConfig)}
               </div>
             </div>
           </div>

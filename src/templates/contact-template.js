@@ -4,6 +4,7 @@ import { INLINES, BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const ContactTemplate = contentfulPage => {
+  // Konfiguration för att anpassa renderingen av richtext
   const richTextConfig = {
     renderNode: {
       [BLOCKS]: (node, children) => <p>{children}</p>,
@@ -28,13 +29,15 @@ const ContactTemplate = contentfulPage => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="contact-hero-container">
-              <div>
+              <div className="contact-hero-item-1">
                 <h1 className="hero-title">{contentfulPage.title}</h1>
                 <div>
                   {renderRichText(contentfulPage.content, richTextConfig)}
                 </div>
               </div>
-              <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
+              <div className="contact-hero-item-2">
+                {renderRichText(contentfulPage.links, richTextConfig)}
+              </div>
             </div>
           </div>
         </div>

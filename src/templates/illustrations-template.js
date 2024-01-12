@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 
 const IllustrationsTemplate = contentfulPage => {
+  // Konfiguration för att anpassa renderingen av richtext
   const richTextConfig = {
     renderNode: {
       [BLOCKS]: (node, children) => <p>{children}</p>,
@@ -16,8 +17,12 @@ const IllustrationsTemplate = contentfulPage => {
       <div className="app-page-container">
         <div className="app-container">
           <div className="illustrations-hero-container">
-            <h1 className="app-header">{contentfulPage.title}</h1>
-            <div> {renderRichText(contentfulPage.content, richTextConfig)}</div>
+            <div className="illustrations-hero-item-1">
+              <h1 className="hero-title">{contentfulPage.title}</h1>
+            </div>
+            <div className="illustrations-hero-item-2">
+              {renderRichText(contentfulPage.content, richTextConfig)}
+            </div>
           </div>
           <div className="gallery-container">
             {contentfulPage.gallery.map((image, index) => {
@@ -30,8 +35,10 @@ const IllustrationsTemplate = contentfulPage => {
             })}
           </div>
           <div className="illustrations-page-bottom-container">
-          <p>Do you like what you see? Check out the rest.</p>
-          <Link to="/projects" className="link-button">Projects</Link>
+            <p>Do you like what you see? Check out the rest.</p>
+            <Link to="/projects" className="link-button">
+              Projects
+            </Link>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import PortfolioItem from "../components/portfolioItem"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
 
 const PortfolioTemplate = contentfulPage => {
+  // Konfiguration för att anpassa renderingen av richtext
   const richTextConfig = {
     renderNode: {
       [BLOCKS]: (node, children) => <p>{children}</p>,
@@ -28,7 +29,7 @@ const PortfolioTemplate = contentfulPage => {
         <div className="app-page-container">
           <div className="app-container">
             <div className="portfolio-hero-container">
-              <div>
+              <div className="portfolio-hero-item-1">
                 <h1 className="hero-title">{contentfulPage.title}</h1>
 
                 <div>
@@ -36,7 +37,7 @@ const PortfolioTemplate = contentfulPage => {
                 </div>
               </div>
 
-              <ul className="project-list">
+              <ul className="portfolio-hero-item-2">
                 {portfolioInformation.map((edge, index) => {
                   return (
                     <li key={index}>
