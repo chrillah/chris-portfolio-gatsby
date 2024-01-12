@@ -21,11 +21,11 @@ const Page = ({ data }) => {
       case "illustrations":
         return <IllustrationsTemplate {...contentfulPage} />
 
-        case 'technology' :
+      case "technology":
         return <TechnologyTemplate {...contentfulPage} />
 
-        case "contact" :
-            return <ContactTemplate {...contentfulPage}/>
+      case "contact":
+        return <ContactTemplate {...contentfulPage} />
 
       default:
         return <HomeTemplate {...contentfulPage} />
@@ -57,6 +57,13 @@ export const data = graphql`
       links {
         raw
       }
+      about {
+        raw
+      }
+      aboutDescription {
+        aboutDescription
+      }
+      aboutHeader
     }
   }
 `
