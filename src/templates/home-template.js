@@ -11,6 +11,8 @@ import Seo from "../components/seo"
 
 const HomeTemplate = contentfulPage => {
   let aboutLink
+
+  // Konfiguration för att anpassa renderingen av rik text i React.
   const richTextConfig = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => (
@@ -21,7 +23,6 @@ const HomeTemplate = contentfulPage => {
         let url = children[0].toLowerCase()
         if (url === "about") {
           aboutLink = url
-          return aboutLink
         }
         return (
           <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
@@ -33,6 +34,7 @@ const HomeTemplate = contentfulPage => {
   }
 
   const image = getImage(contentfulPage.image)
+  renderRichText(contentfulPage.about, richTextConfig)
 
   return (
     <Layout>
@@ -61,13 +63,17 @@ const HomeTemplate = contentfulPage => {
             </div>
             <div className="home-item-container">
               <DisplayPortfolioItems />
-              <DisplayAboutSection
-                aboutLink={contentfulPage.about}
-                aboutHeader={contentfulPage.aboutHeader}
-                aboutDescription={
-                  contentfulPage.aboutDescription.aboutDescription
-                }
-              />
+              {aboutLink ? (
+                <DisplayAboutSection
+                  aboutLink={aboutLink}
+                  aboutHeader={contentfulPage.aboutHeader}
+                  aboutDescription={
+                    contentfulPage.aboutDescription.aboutDescription
+                  }
+                />
+              ) : (
+                <></>
+              )}
               <DisplayImageFromIllustrations />
             </div>
           </div>
