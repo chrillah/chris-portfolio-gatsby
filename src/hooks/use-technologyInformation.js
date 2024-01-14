@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 const useTechnologyInformation = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       allContentfulTechnic {
         edges {
@@ -11,12 +11,15 @@ const useTechnologyInformation = () => {
             description {
               description
             }
+            logo {
+              gatsbyImageData(width: 1000)
+            }
           }
         }
       }
     }
   `)
-  return data.allContentfulTechnic.edges;
+  return data.allContentfulTechnic.edges
 }
 
 export default useTechnologyInformation

@@ -25,8 +25,8 @@ const PortfolioTemplate = contentfulPage => {
   const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
-      <div className="gradient-container">
-        <div className="app-page-container">
+      <div className="gradient-bg">
+        <div className="app-page-wrapper">
           <div className="app-container">
             <div className="portfolio-hero-container">
               <div className="portfolio-hero-item-1">
@@ -65,7 +65,7 @@ const PortfolioTemplate = contentfulPage => {
           })}
         </div>
 
-        <div className="app-page-container">
+        <div className="app-page-wrapper">
           <div className="app-container">
             <div className="projects-page-bottom-container">
               <p>Do you like what you see? Check out the rest.</p>

@@ -94,6 +94,8 @@ a,
 li,
 ul,
 button,
+select,
+option,
 svg {
   margin: 0;
   padding: 0;
@@ -147,7 +149,7 @@ main {
   scroll-timeline: --squareTimeline y;
 }
 
-.app-page-container {
+.app-page-wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -167,7 +169,7 @@ main {
   margin: 0 var(--app-pad);
 }
 
-.gradient-container {
+.gradient-bg {
   padding-bottom: var(--app-pad);
   background-size: 400%;
   background-position: left;
@@ -207,9 +209,19 @@ main {
   }
 }
 
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
 .app-header {
   padding-top: calc(var(--app-pad) * 2);
-  padding-bottom: var(--app-pad);
+  padding-bottom: calc(var(--app-pad) * 3);
+}
+
+.grid-header {
+  padding-bottom: calc(var(--app-pad) * 3);
 }
 
 .back-button,
@@ -275,20 +287,6 @@ main {
 .nav-button:hover {
   transform: scaleY(1.05);
 }
-
-/* @media (min-width: 375px) {
-  body {
-    --item-image-size: 350px;
-    --item-height: 550px;
-  }
-} */
-/*
-@media (min-width: 425px) {
-  body {
-    --item-image-size: 280px;
-    --item-height: 490px;
-  }
-} */
 
 @media (min-width: 768px) {
   body {
@@ -442,13 +440,17 @@ nav {
   margin-bottom: var(--app-pad);
 }
 
-.portfolio-middle-wrapper {
-  margin-top: var(--app-pad);
+.portfolio-top-wrapper {
+  display: grid;
+  min-height: 80dvh;
 }
 
-.portfolio-middle-wrapper > :first-child,
-.portfolio-bottom-wrapper > :first-child {
-  padding-bottom: calc(var(--app-pad) * 2);
+.portfolio-top-wrapper .hero-title {
+  margin-top: auto;
+}
+
+.portfolio-middle-wrapper {
+  margin-top: var(--app-pad);
 }
 
 .portfolio-bottom-wrapper {
@@ -669,17 +671,16 @@ p {
 }
 
 .gallery-container > :first-child {
-  margin-top: calc(var(--app-pad) * 2);
+  margin-top: calc(var(--app-pad) * 10);
 }
 
 .gallery-container > :last-child {
-  margin-bottom: calc(var(--app-pad) * 2);
+  margin-bottom: calc(var(--app-pad) * 10);
 }
 
 .link-button-container {
   display: grid;
   gap: var(--app-pad);
-  grid-template-columns: 1fr 1fr;
 }
 
 /* About */
@@ -752,10 +753,6 @@ p {
   padding: var(--app-pad);
 }
 
-.about-page-bottom-container h3 {
-  padding-bottom: var(--app-pad);
-}
-
 .about-page-bottom-container > :last-child {
   display: grid;
   gap: var(--app-gap);
@@ -773,6 +770,7 @@ p {
 /* Education items */
 
 .education-item {
+  min-height: 40dvh;
   display: grid;
   padding: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
@@ -782,7 +780,8 @@ p {
   background-color: #111111;
 }
 
-.education-item:first-of-type h1 {
+.education-item:first-of-type h1,
+.education-item:first-of-type p {
   color: #ffffff;
 }
 
@@ -790,6 +789,7 @@ p {
 }
 
 .education-bottom-container {
+  margin-top: auto;
 }
 
 .education-bottom-container > :first-child {
@@ -990,6 +990,55 @@ p {
   border-radius: var(--border-radius);
 }
 
+/* Technology */
+
+.technology-hero-container {
+  padding: var(--app-pad);
+  min-height: 80dvh;
+  display: grid;
+  border: var(--app-stroke-width) var(--app-color) solid;
+}
+
+.technology-hero-container .hero-title {
+  margin-top: auto;
+}
+
+.technology-select{
+
+}
+
+.technology-option{
+
+}
+
+.technology-container {
+  padding-block: var(--app-pad);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--app-pad);
+}
+
+.technology-item {
+  padding: var(--app-pad);
+  border: var(--app-stroke-width) var(--app-color) solid;
+}
+
+.technology-category {
+  font-weight: 900;
+}
+
+.technology-logo-container {
+}
+
+.technology-logo {
+}
+
+.technology-header {
+}
+
+.technology-description {
+}
+
 /* Illustrations */
 
 .illustrations-hero-container {
@@ -1001,7 +1050,7 @@ p {
   min-height: 80dvh;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 968px) {
   .illustrations-hero-container {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
@@ -1015,7 +1064,12 @@ p {
 }
 
 .illustrations-hero-item-1 {
+  display: grid;
   border-right: none;
+}
+
+.illustrations-hero-item-1 h1 {
+  margin-top: auto;
 }
 
 @media (max-width: 396px) {
@@ -1030,7 +1084,7 @@ p {
   align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 967px) {
   .illustrations-hero-item-1 {
     border-bottom: none;
     border-right: solid var(--app-color) var(--app-stroke-width);

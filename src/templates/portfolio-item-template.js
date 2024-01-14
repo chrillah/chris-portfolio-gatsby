@@ -46,7 +46,7 @@ const PortfolioItemTemplate = ({ data }) => {
             : "portfolio-page color-set-1"
         }
       >
-        <div className="app-page-container">
+        <div className="app-page-wrapper">
           <div className="app-container">
             <div className="portfolio-top-wrapper">
               <div className="portfolio-page-top">
@@ -89,12 +89,12 @@ const PortfolioItemTemplate = ({ data }) => {
             </div>
 
             <div className="portfolio-middle-wrapper">
-              <h1>Description</h1>
+              <h3 className="grid-header">Description</h3>
               <p>{portfolioDescription.portfolioDescription}</p>
             </div>
 
             <div className="portfolio-bottom-wrapper">
-              <h1>Links</h1>
+              <h3 className="grid-header">Links</h3>
               <div className="link-button-container">
                 {githubLink ? (
                   <div>{renderRichText(githubLink, richTextConfig)}</div>

@@ -27,8 +27,8 @@ const AboutTemplate = contentfulPage => {
 
   return (
     <Layout>
-      <div className="gradient-container">
-        <div className="app-page-container">
+      <div className="gradient-bg">
+        <div className="app-page-wrapper">
           <div className="app-container">
             <div className="about-hero-container">
               <div className="about-hero-item-1">
@@ -47,6 +47,9 @@ const AboutTemplate = contentfulPage => {
                 <div className="education-container">
                   <div className="education-item">
                     <h1 className="hero-title">Education</h1>
+                    <div>
+                      {renderRichText(contentfulPage.about, richTextConfig)}
+                    </div>
                   </div>
                   {educationInformation.map((edge, index) => {
                     return (
@@ -64,7 +67,7 @@ const AboutTemplate = contentfulPage => {
               <></>
             )}
             <div className="about-page-bottom-container">
-              <h3>Check out the rest.</h3>
+              <h3 className="grid-header">Check out the rest.</h3>
               <div className="link-button-container">
                 {renderRichText(contentfulPage.links, richTextConfig)}
               </div>

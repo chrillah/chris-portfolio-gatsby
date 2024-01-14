@@ -40,8 +40,8 @@ const HomeTemplate = contentfulPage => {
 
   return (
     <Layout>
-      <div className="gradient-container">
-        <div className="app-page-container">
+      <div className="gradient-bg">
+        <div className="app-page-wrapper">
           <div className="app-container">
             <div className="home-item-container">
               <DisplayPortfolioItems />
@@ -80,10 +80,6 @@ const HomeTemplate = contentfulPage => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="app-page-container">
-        <div className="app-container"></div>
       </div>
     </Layout>
   )

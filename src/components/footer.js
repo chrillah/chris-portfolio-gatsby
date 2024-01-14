@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="app-page-container">
+      <div className="app-page-wrapper">
         <div className="app-container">
           <h1 className="app-header">Don't be a stranger</h1>
           <p>Lets connect</p>
@@ -87,7 +87,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="year-title">
-            Made by Christopher <span>{activeYear.getFullYear()}</span>
+            Made by <span>Christopher</span> {activeYear.getFullYear()}
           </p>
         </div>
       </div>

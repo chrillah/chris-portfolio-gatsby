@@ -14,7 +14,7 @@ const IllustrationsTemplate = contentfulPage => {
   }
   return (
     <Layout>
-      <div className="app-page-container">
+      <div className="app-page-wrapper">
         <div className="app-container">
           <div className="illustrations-hero-container">
             <div className="illustrations-hero-item-1">

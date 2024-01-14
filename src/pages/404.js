@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 
 const NotFoundPage = () => (
   <Layout>
-    <div className="gradient-container">
-      <div className="app-page-container">
+    <div className="gradient-bg">
+      <div className="app-page-wrapper">
         <div className="app-container">
           <div className="notfound-hero-container">
             <div>
