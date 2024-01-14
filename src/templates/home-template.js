@@ -61,7 +61,7 @@ const HomeTemplate = contentfulPage => {
             <div className="home-hero-container">
               <div className="hero-item-1">
                 {renderRichText(contentfulPage.content, richTextConfig)}
-                {renderRichText(contentfulPage.body, richTextConfig)}
+                <div className="hero-item-1-text">{renderRichText(contentfulPage.body, richTextConfig)}</div>
                 <div>
                   <div className="link-button-container">
                     {renderRichText(contentfulPage.links, richTextConfig)}
