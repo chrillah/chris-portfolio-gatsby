@@ -459,6 +459,7 @@ nav {
 .open-button:active,
 .back-button:active,
 .to-button:active,
+.link-button:active,
 .nav-button:active {
   transform: scale(0.95);
 }
@@ -1073,6 +1074,8 @@ p {
 /* Technology */
 
 .technology-hero-container {
+  filter: invert(1);
+  mix-blend-mode: difference;
   margin-top: calc(var(--app-pad) * 5.55);
   display: grid;
   grid-template-columns: auto;
