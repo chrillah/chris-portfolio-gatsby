@@ -14,6 +14,9 @@ const AboutTemplate = contentfulPage => {
   const richTextConfig = {
     renderNode: {
       [BLOCKS]: (node, children) => <p>{children}</p>,
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="hero-title">{children}</h1>
+      ),
       [INLINES.ENTRY_HYPERLINK]: (node, children) => {
         let url = children[0].toLowerCase()
         return (
@@ -33,12 +36,12 @@ const AboutTemplate = contentfulPage => {
             <div className="about-hero-container">
               <div className="about-hero-item-1">
                 <div className="about-presentation">
-                  <h1 className="hero-title">{contentfulPage.title}</h1>
-                  {renderRichText(contentfulPage.body, richTextConfig)}
+                  <h3>{contentfulPage.title}</h3>
+                  <div>
+                    {renderRichText(contentfulPage.content, richTextConfig)}
+                  </div>
                 </div>
-                <div className="about-description">
-                  {renderRichText(contentfulPage.content, richTextConfig)}
-                </div>
+                {renderRichText(contentfulPage.body, richTextConfig)}
               </div>
               <GatsbyImage image={image} alt={contentfulPage.title} />
             </div>
