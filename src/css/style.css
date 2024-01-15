@@ -474,14 +474,13 @@ nav {
   padding-top: var(--app-pad);
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: auto auto;
   filter: invert(1);
   mix-blend-mode: difference;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 1024px) {
   .portfolio-hero-container {
-    min-height: 80dvh;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
   }
@@ -499,12 +498,35 @@ nav {
   border-right: none;
 }
 
+@media (max-width: 424px) {
+  .portfolio-hero-item-1 > :last-child h1 {
+    font-size: 2rem;
+  }
+}
+
+.portfolio-presentation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-presentation > :last-child {
+  max-width: 200px;
+}
+
+.portfolio-presentation > :last-child p {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+}
+
 .portfolio-hero-container > :last-child {
   padding: var(--app-pad);
 }
 
-@media (max-width: 519px) {
+@media (max-width: 1023px) {
   .portfolio-hero-item-1 {
+    min-height: 80dvh;
     border-right: var(--app-color) var(--app-stroke-width) solid;
     border-bottom: none;
   }
