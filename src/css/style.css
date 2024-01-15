@@ -1095,14 +1095,34 @@ p {
   border-right: none;
 }
 
+.illustrations-hero-item-1 > :last-child {
+  display: none;
+}
+
 .illustrations-hero-item-1 h1 {
   margin-top: auto;
 }
 
-@media (max-width: 396px) {
+/* @media (max-width: 396px) {
   .illustrations-hero-item-1 h1 {
     font-size: 2rem;
   }
+} */
+
+.illustrations-presentation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.illustrations-presentation > :last-child {
+  max-width: 250px;
+}
+
+.illustrations-presentation > :last-child p {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
 }
 
 .illustrations-hero-item-2 {
@@ -1113,6 +1133,7 @@ p {
 
 @media (max-width: 967px) {
   .illustrations-hero-item-1 {
+    min-height: 80dvh;
     border-bottom: none;
     border-right: solid var(--app-color) var(--app-stroke-width);
   }

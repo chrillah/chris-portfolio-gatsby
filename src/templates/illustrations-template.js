@@ -10,6 +10,9 @@ const IllustrationsTemplate = contentfulPage => {
   const richTextConfig = {
     renderNode: {
       [BLOCKS]: (node, children) => <p>{children}</p>,
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="hero-title">{children}</h1>
+      ),
     },
   }
   return (
@@ -18,7 +21,13 @@ const IllustrationsTemplate = contentfulPage => {
         <div className="app-container">
           <div className="illustrations-hero-container">
             <div className="illustrations-hero-item-1">
-              <h1 className="hero-title">{contentfulPage.title}</h1>
+              <div className="illustrations-presentation">
+                <h3>{contentfulPage.title}</h3>
+                <div>
+                  {renderRichText(contentfulPage.about, richTextConfig)}
+                </div>
+              </div>
+              {renderRichText(contentfulPage.body, richTextConfig)}
             </div>
             <div className="illustrations-hero-item-2">
               {renderRichText(contentfulPage.content, richTextConfig)}
