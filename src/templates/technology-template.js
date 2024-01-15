@@ -63,40 +63,52 @@ const TechnologyTemplate = contentfulPage => {
               </div>
             </div>
           </div>
-
-          <ul className="technology-container">
-            {technologyInformation.map((technology, index) => {
-              if (
-                technology.node.category === selectedCategory ||
-                selectedCategory === "All"
-              ) {
-                const logo = getImage(technology.node.logo)
-                return (
-                  <li key={index} className="technology-item">
-                    <p className="technology-category">
-                      {technology.node.category}
-                    </p>
-                    <div className="technology-logo-container">
-                      <GatsbyImage
-                        image={logo}
-                        alt="image"
-                        className="technology-logo"
-                      />
-                    </div>
-                    <h3 className="technology-header">
-                      {technology.node.title}
-                    </h3>
-                    <p className="technology-description">
-                      {technology.node.description.description}
-                    </p>
-                  </li>
-                )
-              }
-              return null
-            })}
-          </ul>
         </div>
       </div>
+      <ul className="technology-container">
+        {technologyInformation.map((technology, index) => {
+          if (
+            technology.node.category === selectedCategory ||
+            selectedCategory === "All"
+          ) {
+            const logo = getImage(technology.node.logo)
+            return (
+              <li
+                key={index}
+                className={
+                  technology.node.title === "PHP"
+                    ? "technology-item color-set-1"
+                    : technology.node.title === "GatsbyJS"
+                    ? "technology-item color-set-2"
+                    : technology.node.title === "Contentful"
+                    ? "technology-item color-set-3"
+                    : "technology-item"
+                }
+              >
+                <div className="technology-item-top">
+                  <p className="technology-category">
+                    {technology.node.category}
+                  </p>
+                  <div className="technology-logo-container">
+                    <GatsbyImage
+                      image={logo}
+                      alt="image"
+                      className="technology-logo"
+                    />
+                  </div>
+                </div>
+                <div className="technology-item-bottom">
+                  <h3 className="technology-header">{technology.node.title}</h3>
+                  <p className="technology-description">
+                    {technology.node.description.description}
+                  </p>
+                </div>
+              </li>
+            )
+          }
+          return null
+        })}
+      </ul>
     </Layout>
   )
 }
