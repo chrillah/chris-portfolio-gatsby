@@ -358,18 +358,22 @@ const Header = () => {
           <div className="nav-buttons-container">
             {/* <Search searchIndex={data.siteSearchIndex.index} /> */}
             {navigation.map(({ node }, index) => {
-              return (
-                <Link
-                  key={index}
-                  onClick={() => {
-                    closeMenu()
-                  }}
-                  className="nav-button"
-                  to={node.url}
-                >
-                  {node.title}
-                </Link>
-              )
+              if (node.title === "404") {
+                return null
+              } else {
+                return (
+                  <Link
+                    key={index}
+                    onClick={() => {
+                      closeMenu()
+                    }}
+                    className="nav-button"
+                    to={node.url}
+                  >
+                    {node.title}
+                  </Link>
+                )
+              }
             })}
           </div>
         </div>

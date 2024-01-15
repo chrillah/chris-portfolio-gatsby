@@ -6,6 +6,7 @@ import PortfolioTemplate from "../templates/portfolio-template"
 import IllustrationsTemplate from "../templates/illustrations-template"
 import TechnologyTemplate from "../templates/technology-template"
 import ContactTemplate from "../templates/contact-template"
+import NotFoundTemplate from "../templates/notfound-template"
 
 const Page = ({ data }) => {
   const { contentfulPage } = data
@@ -26,6 +27,9 @@ const Page = ({ data }) => {
 
       case "contact":
         return <ContactTemplate {...contentfulPage} />
+
+      case "404":
+        return <NotFoundTemplate {...contentfulPage} />
 
       default:
         return <HomeTemplate {...contentfulPage} />
