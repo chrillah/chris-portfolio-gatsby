@@ -8,6 +8,9 @@ const ContactTemplate = contentfulPage => {
   const richTextConfig = {
     renderNode: {
       [BLOCKS]: (node, children) => <p>{children}</p>,
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="hero-title">{children}</h1>
+      ),
       [INLINES.HYPERLINK]: (node, children) => {
         const { uri } = node.data
         return (
@@ -30,7 +33,13 @@ const ContactTemplate = contentfulPage => {
           <div className="app-container">
             <div className="contact-hero-container">
               <div className="contact-hero-item-1">
-                <h1 className="hero-title">{contentfulPage.title}</h1>
+                <div className="contact-presentation">
+                  <h3>{contentfulPage.title}</h3>
+
+                  <div>
+                    {renderRichText(contentfulPage.body, richTextConfig)}
+                  </div>
+                </div>
                 <div>
                   {renderRichText(contentfulPage.content, richTextConfig)}
                 </div>
