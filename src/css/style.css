@@ -858,7 +858,7 @@ p {
 /* Education items */
 
 .education-item {
-  min-height: 40dvh;
+  min-height: 40vh;
   display: grid;
   padding: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
@@ -971,7 +971,7 @@ p {
 
 @media (max-width: 767px) {
   .hero-item-1 {
-    min-height: 50dvh;
+    min-height: 50vh;
     border-bottom: none;
   }
 }
@@ -1132,7 +1132,7 @@ p {
     min-height: 80vh;
   }
   .technology-hero-item-2 {
-    min-height: 40dvh;
+    min-height: 40vh;
     border-left: none;
     border-top: var(--app-stroke-width) var(--app-color) solid;
   }
@@ -1507,7 +1507,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 90dvh;
+  min-height: 80vh;
 }
 
 .notfound-hero-container div h1 {
