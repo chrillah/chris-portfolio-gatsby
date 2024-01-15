@@ -564,6 +564,7 @@ nav {
 
 @media (max-width: 1023px) {
   .portfolio-hero-item-1 {
+    min-height: 80dvh;
     border-right: var(--app-color) var(--app-stroke-width) solid;
     border-bottom: none;
   }
