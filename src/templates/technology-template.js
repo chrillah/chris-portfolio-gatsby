@@ -1,9 +1,20 @@
 import Layout from "../components/layout"
 import React, { useState } from "react"
+import { BLOCKS } from "@contentful/rich-text-types"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import useTechnologyInformation from "../hooks/use-technologyInformation"
 
 const TechnologyTemplate = contentfulPage => {
+  // Konfiguration för att anpassa renderingen av richtext
+  const richTextConfig = {
+    renderNode: {
+      [BLOCKS]: (node, children) => <p>{children}</p>,
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="hero-title">{children}</h1>
+      ),
+    },
+  }
   const [selectedCategory, setSelectedCategory] = useState("All")
   const technologyInformation = useTechnologyInformation()
 
@@ -18,32 +29,40 @@ const TechnologyTemplate = contentfulPage => {
       <div className="app-page-wrapper">
         <div className="app-container">
           <div className="technology-hero-container">
-            <h1 className="hero-title">{contentfulPage.title}</h1>
+            <div className="technology-hero-item-1">
+              <div className="technology-presentation">
+                <h3>{contentfulPage.title}</h3>
+                <div>{renderRichText(contentfulPage.body, richTextConfig)}</div>
+              </div>
+              {renderRichText(contentfulPage.content, richTextConfig)}
+            </div>
+
+            <div className="technology-hero-item-2">
+              <h3>Select category</h3>
+              <div>
+                <div className="technology-select-container">
+                  <select
+                    className="technology-select"
+                    value={selectedCategory}
+                    onChange={e => setSelectedCategory(e.target.value)}
+                  >
+                    {cateroryList.map((category, index) => {
+                      return (
+                        <option
+                          className="technology-option"
+                          key={index}
+                          value={category}
+                        >
+                          {category}
+                        </option>
+                      )
+                    })}
+                  </select>
+                  <span className="focus"></span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <select
-          className="technology-select"
-            value={selectedCategory}
-            onChange={e => setSelectedCategory(e.target.value)}
-          >
-            {cateroryList.map((category, index) => {
-              return (
-                <option className="technology-option" key={index} value={category}>
-                  {category}
-                </option>
-              )
-            })}
-          </select>
-
-          {/* <div className="link-button-container">
-            {cateroryList.map((category, index) => {
-              return (
-                <option key={index} className="link-button" onChange={e => setSelectedCategory(e.target.value)}>
-                  {category}
-                </option>
-              )
-            })}
-          </div> */}
 
           <ul className="technology-container">
             {technologyInformation.map((technology, index) => {
@@ -54,7 +73,7 @@ const TechnologyTemplate = contentfulPage => {
                 const logo = getImage(technology.node.logo)
                 return (
                   <li key={index} className="technology-item">
-                    <p class="technology-category">
+                    <p className="technology-category">
                       {technology.node.category}
                     </p>
                     <div className="technology-logo-container">
