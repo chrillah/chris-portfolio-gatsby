@@ -143,6 +143,8 @@ select::after {
 }
 
 select {
+  text-align: center;
+  font-weight: 900;
   appearance: none;
   background-color: transparent;
   border: none;
@@ -1148,14 +1150,14 @@ p {
   border-radius: 100px;
   line-height: 1.1;
   background-color: none;
-  display: grid;
+  /* display: grid;
   grid-template-areas: "select";
-  align-items: center;
+  align-items: center; */
   position: relative;
   padding-right: calc(var(--app-pad) * 2);
 }
 
-.technology-select-container::after {
+/* .technology-select-container::after {
   content: "^";
   width: 0.8em;
   height: 0.5em;
@@ -1163,16 +1165,17 @@ p {
   padding-bottom: 10px;
   /* background-color: var(--app-color);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%); */
-}
+/*
+} */
 
-select,
+/* select,
 .technology-select-container::after {
   grid-area: select;
-}
+} */
 
-.technology-select-container::after {
+/* .technology-select-container::after {
   justify-self: end;
-}
+} */
 
 select:focus + .focus {
   position: absolute;
