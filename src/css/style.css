@@ -1113,6 +1113,7 @@ p {
 @media (max-width: 424px) {
   .technology-hero-item-1 h1 {
     font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -1243,7 +1244,6 @@ select > option:focus {
   gap: var(--app-pad);
   padding: calc(var(--app-pad) * 2);
   background-color: var(--item-bg);
-  /* border: var(--app-stroke-width) var(--app-color) solid; */
 }
 
 @media (min-width: 425px) {
