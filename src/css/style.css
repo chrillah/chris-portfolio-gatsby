@@ -1240,7 +1240,7 @@ select > option:focus {
   min-width: 300px;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   gap: var(--app-pad);
   padding: calc(var(--app-pad) * 2);
   background-color: var(--item-bg);
@@ -1277,9 +1277,11 @@ select > option:focus {
 }
 
 .technology-header {
+  padding-bottom: calc(var(--app-pad) * 2);
 }
 
 .technology-description {
+  margin-bottom: auto;
 }
 
 /* Illustrations */

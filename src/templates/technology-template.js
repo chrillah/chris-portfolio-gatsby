@@ -101,9 +101,9 @@ const TechnologyTemplate = contentfulPage => {
                     </div>
                   </div>
                   <div className="technology-item-bottom">
-                    <h3 className="technology-header">
+                    <h1 className="technology-header">
                       {technology.node.title}
-                    </h3>
+                    </h1>
                     <p className="technology-description">
                       {technology.node.description.description}
                     </p>
