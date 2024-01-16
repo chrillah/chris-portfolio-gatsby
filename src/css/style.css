@@ -756,7 +756,7 @@ p {
   padding-top: var(--app-pad);
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 .about-hero-item-1,
