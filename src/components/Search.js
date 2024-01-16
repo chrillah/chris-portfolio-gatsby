@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { Index } from "elasticlunr"
+import React from "react"
+//import React, { useState, useEffect } from "react"
+// import { Link, graphql, useStaticQuery } from "gatsby"
+// import { Index } from "elasticlunr"
 
 const Search = () => {
   //   const [query, setQuery] = useState("")
   //   const [results, setResults] = useState([])
   //   const [searchIndex, setSearchIndex] = useState(null)
 
-//   const data = useStaticQuery(graphql`
-//     query {
-//       allSiteSearchIndex {
-//         edges {
-//           node {
-//             index
-//           }
-//         }
-//       }
-//       allContentfulPortfolioItem {
-//         edges {
-//           node {
-//             portfolioTitle
-//           }
-//         }
-//       }
-//     }
-//   `)
+  //   const data = useStaticQuery(graphql`
+  //     query {
+  //       allSiteSearchIndex {
+  //         edges {
+  //           node {
+  //             index
+  //           }
+  //         }
+  //       }
+  //       allContentfulPortfolioItem {
+  //         edges {
+  //           node {
+  //             portfolioTitle
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `)
 
   //   useEffect(() => {
   //     // Load searchIndex only once when component mounts
