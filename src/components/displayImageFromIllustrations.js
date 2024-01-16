@@ -47,6 +47,7 @@ function DisplayIllustrations() {
                             key={imageIndex}
                             image={imageData}
                             alt="Some of my illustrations"
+                            placeholder="blurred"
                           />
                         )
                       }

@@ -24,6 +24,7 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
           className="item-image"
           image={image}
           alt={item.portfolioTitle}
+          placeholder="blurred"
         />
       </div>
       <div className="item-middle-container">
