@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link } from "gatsby"
 // import { Link, StaticQuery, graphql } from "gatsby"
 import useNavigation from "../hooks/use-navigation"
+import Search from "./Search"
 // import Search from "./Search"
 
 const Header = () => {
@@ -356,7 +357,7 @@ const Header = () => {
           }
         >
           <div className="nav-buttons-container">
-            {/* <Search searchIndex={data.siteSearchIndex.index} /> */}
+            {/* <Search /> */}
             {navigation.map(({ node }, index) => {
               if (node.title === "404") {
                 return null
