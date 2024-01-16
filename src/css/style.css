@@ -822,6 +822,34 @@ p {
   }
 }
 
+.about-me-container {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: calc(var(--app-pad) * 2);
+  filter: invert(1);
+  mix-blend-mode: difference;
+  padding-inline: var(--app-pad);
+}
+
+@media (min-width: 768px) {
+  .about-me-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.about-me-item-1,
+.about-me-item-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me-item-2 p {
+  max-width: 400px;
+}
+
 .education-container {
   filter: invert(1);
   mix-blend-mode: difference;
