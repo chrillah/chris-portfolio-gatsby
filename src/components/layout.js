@@ -5,10 +5,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "../css/style.css"
-// import HeaderSearch from "./headerSearch"
-import { SearchModalProvider } from "./SearchModalContext"
 
 const Layout = ({ children }) => {
+
+    // denna query hämtar data från gatsby-config.js, visar data i headern, för meta-taggar
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -23,20 +23,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <SearchModalProvider>
-        <Helmet>
-          <meta
-            name="author"
-            title={data.site.siteMetadata.title}
-            author={data.site.siteMetadata.author}
-            content={data.site.siteMetadata.description}
-          />
-        </Helmet>
-        <Header />
-        {/* <Header /> */}
-        <main>{children}</main>
-        <Footer />
-      </SearchModalProvider>
+      <Helmet>
+        <meta
+          name="author"
+          title={data.site.siteMetadata.title}
+          author={data.site.siteMetadata.author}
+          content={data.site.siteMetadata.description}
+        />
+      </Helmet>
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }
