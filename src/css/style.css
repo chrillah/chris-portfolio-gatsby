@@ -304,6 +304,10 @@ main {
   border-radius: 100px;
 }
 
+.nav-button {
+  background-color: var(--app-bg);
+}
+
 .link-button {
   height: 80px;
 }
@@ -338,6 +342,7 @@ main {
 .logo,
 .burger,
 .cross,
+.search-icon,
 .arrow {
   width: 30px;
 }
@@ -352,6 +357,7 @@ main {
   border: var(--app-color) var(--app-stroke-width) solid;
 }
 
+.search-icon-detail,
 .logo-detail,
 .burger-detail,
 .cross-detail {
@@ -437,6 +443,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .nav-buttons-container {
@@ -1570,6 +1577,4 @@ footer {
 
 .search-test {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
-

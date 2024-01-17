@@ -8,9 +8,16 @@ const Header = () => {
   const navigation = useNavigation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+
+  const openSearch = () => {
+    setIsSearchOpen(true)
+  }
+
   //   Funktion som ändrar tillståndet på isMenuOpen till false
   const closeMenu = () => {
     setIsMenuOpen(false)
+    setIsSearchOpen(false)
   }
 
   //   funktion som ändrar tillståndet på isMenuOpen till true
@@ -137,7 +144,6 @@ const Header = () => {
               />
             </svg>
           </div>
-          <Search />
           <div
             onClick={() => {
               openMenu()
@@ -170,24 +176,71 @@ const Header = () => {
           }
         >
           <div className="nav-buttons-container">
-            {navigation.map(({ node }, index) => {
-              if (node.title === "404") {
-                return null
-              } else {
-                return (
-                  <Link
-                    key={index}
-                    onClick={() => {
-                      closeMenu()
-                    }}
-                    className="nav-button"
-                    to={node.url}
-                  >
-                    {node.title}
-                  </Link>
-                )
-              }
-            })}
+            {/* SEARCH BUTTON */}
+
+            {isSearchOpen ? (
+              <>
+              
+              </>
+            ) : (
+              <div
+                onClick={() => {
+                  openSearch()
+                }}
+                role="button"
+                className="nav-button"
+              >
+                <svg
+                  className="search-icon"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                >
+                  <line
+                    className="search-icon-detail"
+                    x1="29.04"
+                    y1="29.32"
+                    x2="19.68"
+                    y2="19.96"
+                  />
+                  <circle
+                    className="search-icon-detail"
+                    cx="11.43"
+                    cy="11.43"
+                    r="10.43"
+                  />
+                  <path
+                    className="search-icon-detail"
+                    d="M11.43,19.48c4.45,0,8.05-3.6,8.05-8.05S15.88,3.38,11.43,3.38"
+                  />
+                </svg>
+              </div>
+            )}
+
+            {!isSearchOpen ? (
+              <>
+                {navigation.map(({ node }, index) => {
+                  if (node.title === "404") {
+                    return null
+                  } else {
+                    return (
+                      <Link
+                        key={index}
+                        onClick={() => {
+                          closeMenu()
+                        }}
+                        className="nav-button"
+                        to={node.url}
+                      >
+                        {node.title}
+                      </Link>
+                    )
+                  }
+                })}
+              </>
+            ) : (
+              <Search />
+            )}
           </div>
         </div>
       </nav>
