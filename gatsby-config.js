@@ -57,6 +57,41 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-local-search`,
+      options: {
+        name: `contentfulPortfolioItem`,
+        engine: `flexsearch`,
+        engineOptions: {
+          tokenize: `forward`,
+        },
+        query: `
+            {
+             allContentfulPortfolioItem {
+                nodes {
+                    id
+                    portfolioTitle
+                    slug
+                    portfolioHeroImage {
+                        gatsbyImageData
+                        }
+                    }
+
+                }
+            }
+        `,
+        ref: `id`,
+        index: [`portfolioTitle`],
+        store: [`id`, `slug`, `portfolioTitle`, `portfolioHeroImage`],
+        normalizer: ({ data }) =>
+          data.allContentfulPortfolioItem.nodes.map(node => ({
+            id: node.id,
+            slug: node.slug,
+            portfolioTitle: node.portfolioTitle,
+            portfolioHeroImage: node.portfolioHeroImage.gatsbyImageData,
+          })),
+      },
+    },
+    {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
