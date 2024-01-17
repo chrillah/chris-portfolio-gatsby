@@ -179,14 +179,18 @@ const Header = () => {
             {/* SEARCH BUTTON */}
 
             {isSearchOpen ? (
-              <>
-              
-              </>
+              <></>
             ) : (
               <div
                 onClick={() => {
                   openSearch()
                 }}
+                onKeyDown={event => {
+                  if (event.key === "Enter") {
+                    openSearch()
+                  }
+                }}
+                tabIndex={0}
                 role="button"
                 className="nav-button"
               >
