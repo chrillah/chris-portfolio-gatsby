@@ -93,6 +93,7 @@ ul,
 button,
 select,
 option,
+input,
 svg {
   margin: 0;
   padding: 0;
@@ -160,6 +161,17 @@ select {
 
 select::-ms-expand {
   display: none;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+input::placeholder {
+  font-family: var(--app-font);
+  text-align: center;
+  color: var(--app-color);
 }
 
 body {
@@ -1576,6 +1588,38 @@ footer {
   max-width: 450px;
 }
 
-.search-test {
-  display: grid;
+/* SEARCH */
+
+.search-container {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.search-container::-webkit-scrollbar {
+  display: none;
+}
+
+.search-input {
+  padding-block: calc(var(--app-pad) * 2);
+  width: 100%;
+  border-bottom: var(--app-color) var(--app-stroke-width) solid;
+}
+
+.search-input:focus {
+  outline: calc(var(--app-stroke-width) * 2) solid var(--gradient-purple-1);
+}
+
+.no-search-result {
+  padding-block: var(--app-pad);
+  height: 100px;
+}
+
+.search-result {
+  height: 100px;
+}
+
+.search-link-container {
+  margin-top: calc(var(--app-pad) * 2);
+  /* border: var(--app-color) var(--app-stroke-width) solid; */
 }

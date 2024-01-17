@@ -48,28 +48,39 @@ const Search = () => {
   }, [query, searchIndex])
 
   return (
-    <div className="search-test">
+    <div className="search-container">
       <input
+        className="search-input"
         type="text"
+        placeholder="Search for some portfolio stuff, why not"
         value={query}
         onChange={e => setQuery(e.target.value)}
       />
 
       <ul className="search-result">
-        {results.map(page => (
-          <li key={page.id}>
-            {page.slug ? (
-              <Link to={`/portfolio/${page.slug}`}>
-                {page.title}
-              </Link>
-            ) : (
-              <span>{page.portfolioTitle}</span>
-            )}
-          </li>
-        ))}
-      </ul>
+        {/* <div className="no-search-result">
+          {results.length === 0 && query.trim() !== "" && (
+            <li>
+              <span>No results found for "{query}"</span>
+            </li>
+          )}
+        </div> */}
 
-      {query && <p>Search query: {query}</p>}
+        {/* {results.length === 0 && query.trim() !== "" ? <>no</>:<>yes</>} */}
+        <div className="search-link-container">
+          {results.map(page => (
+            <li key={page.id}>
+              {page.slug ? (
+                <Link className="link-button" to={`/portfolio/${page.slug}`}>
+                  {page.title}
+                </Link>
+              ) : (
+                <span>{page.portfolioTitle}</span>
+              )}
+            </li>
+          ))}
+        </div>
+      </ul>
     </div>
   )
 }
