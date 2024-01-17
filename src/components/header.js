@@ -10,10 +10,12 @@ const Header = () => {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
+//   funktion som ändrar tillståndet på isSearchOpen till true
   const openSearch = () => {
     setIsSearchOpen(true)
   }
 
+//   funktion som ändrar tillståndet på isSearchOpen till false
   const closeSearch = () => {
     setIsSearchOpen(false)
   }
@@ -180,8 +182,6 @@ const Header = () => {
           }
         >
           <div className="nav-buttons-container">
-            {/* SEARCH BUTTON */}
-
             {isSearchOpen ? (
               <div
                 className="back-button"

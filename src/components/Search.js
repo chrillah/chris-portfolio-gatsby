@@ -21,6 +21,7 @@ const Search = () => {
           node {
             slug
             portfolioTitle
+            portfolioSubject
           }
         }
       }
@@ -52,34 +53,19 @@ const Search = () => {
       <input
         className="search-input"
         type="text"
-        placeholder="Search for some portfolio stuff, why not"
+        placeholder='Search for some stuff. Try "react", why not'
         value={query}
         onChange={e => setQuery(e.target.value)}
       />
 
-      <ul className="search-result">
-        {/* <div className="no-search-result">
-          {results.length === 0 && query.trim() !== "" && (
-            <li>
-              <span>No results found for "{query}"</span>
-            </li>
-          )}
-        </div> */}
-
-        {/* {results.length === 0 && query.trim() !== "" ? <>no</>:<>yes</>} */}
-        <div className="search-link-container">
-          {results.map(page => (
-            <li key={page.id}>
-              {page.slug ? (
-                <Link className="link-button" to={`/portfolio/${page.slug}`}>
-                  {page.title}
-                </Link>
-              ) : (
-                <span>{page.portfolioTitle}</span>
-              )}
-            </li>
-          ))}
-        </div>
+      <ul className="search-link-container">
+        {results.map(page => (
+          <li key={page.id}>
+            <Link className="link-button" to={`/portfolio/${page.slug}`}>
+              {page.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   )

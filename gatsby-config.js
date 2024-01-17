@@ -95,11 +95,12 @@ module.exports = {
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
-        fields: ["title", "slug"],
+        fields: ["title", "slug", "portfolioSubject"],
         resolvers: {
           ContentfulPortfolioItem: {
             title: node => node.portfolioTitle,
             slug: node => node.slug,
+            portfolioSubject: node => node.portfolioSubject,
           },
         },
       },

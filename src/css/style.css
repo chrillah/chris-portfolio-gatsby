@@ -361,6 +361,7 @@ main {
 }
 
 .logo-alt {
+  padding-top: 1px;
   height: 30px;
 }
 
@@ -425,6 +426,7 @@ header {
 }
 
 nav {
+    padding-top: 2px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -435,6 +437,12 @@ nav {
   margin: 0 var(--app-pad);
   display: flex;
   justify-content: space-between;
+  height: 35px;
+}
+
+.header-buttons-container a {
+  padding: 0;
+  margin: 0;
 }
 
 .close-button,
@@ -1594,6 +1602,7 @@ footer {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  border: var(--app-color) var(--app-stroke-width) solid;
 }
 
 .search-container::-webkit-scrollbar {
@@ -1602,6 +1611,7 @@ footer {
 
 .search-input {
   padding-block: calc(var(--app-pad) * 2);
+  padding-left: var(--app-pad);
   width: 100%;
   border-bottom: var(--app-color) var(--app-stroke-width) solid;
 }
@@ -1620,6 +1630,14 @@ footer {
 }
 
 .search-link-container {
+  height: 500px;
+  overflow-y: scroll;
+  width: 100%;
+  display: grid;
+  gap: calc(var(--app-gap) / 2);
   margin-top: calc(var(--app-pad) * 2);
-  /* border: var(--app-color) var(--app-stroke-width) solid; */
+}
+
+.search-link-container .link-button {
+  margin-inline: var(--app-pad);
 }
