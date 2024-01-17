@@ -426,7 +426,7 @@ header {
 }
 
 nav {
-    padding-top: 2px;
+  padding-top: 2px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -1632,10 +1632,16 @@ footer {
 .search-link-container {
   height: 500px;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   width: 100%;
   display: grid;
   gap: calc(var(--app-gap) / 2);
   margin-top: calc(var(--app-pad) * 2);
+}
+
+.search-link-container::-webkit-scrollbar {
+  display: none;
 }
 
 .search-link-container .link-button {
