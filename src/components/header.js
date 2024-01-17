@@ -2,17 +2,18 @@ import * as React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
 import useNavigation from "../hooks/use-navigation"
+import Search from "./Search"
 
 const Header = () => {
   const navigation = useNavigation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-//   Funktion som ändrar tillståndet på isMenuOpen till false
+  //   Funktion som ändrar tillståndet på isMenuOpen till false
   const closeMenu = () => {
     setIsMenuOpen(false)
   }
 
-//   funktion som ändrar tillståndet på isMenuOpen till true
+  //   funktion som ändrar tillståndet på isMenuOpen till true
   const openMenu = () => {
     setIsMenuOpen(true)
   }
@@ -136,7 +137,7 @@ const Header = () => {
               />
             </svg>
           </div>
-
+          <Search />
           <div
             onClick={() => {
               openMenu()

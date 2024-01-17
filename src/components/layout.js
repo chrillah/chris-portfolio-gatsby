@@ -2,10 +2,10 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-//import Header from "./header"
+import Header from "./header"
 import Footer from "./footer"
 import "../css/style.css"
-import HeaderSearch from "./headerSearch"
+// import HeaderSearch from "./headerSearch"
 import { SearchModalProvider } from "./SearchModalContext"
 
 const Layout = ({ children }) => {
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
             content={data.site.siteMetadata.description}
           />
         </Helmet>
-        <HeaderSearch />
+        <Header />
         {/* <Header /> */}
         <main>{children}</main>
         <Footer />
