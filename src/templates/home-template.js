@@ -40,7 +40,7 @@ const HomeTemplate = contentfulPage => {
 
   return (
     <Layout>
-      <div className="gradient-bg">
+      <div className="gradient-bg animation-bg">
         <div className="app-page-wrapper">
           <div className="app-container">
             <div className="home-item-container">
@@ -61,7 +61,9 @@ const HomeTemplate = contentfulPage => {
             <div className="home-hero-container">
               <div className="hero-item-1">
                 {renderRichText(contentfulPage.content, richTextConfig)}
-                <div className="hero-item-1-text">{renderRichText(contentfulPage.body, richTextConfig)}</div>
+                <div className="hero-item-1-text">
+                  {renderRichText(contentfulPage.body, richTextConfig)}
+                </div>
                 <div>
                   <div className="link-button-container">
                     {renderRichText(contentfulPage.links, richTextConfig)}

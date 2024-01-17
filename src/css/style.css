@@ -209,16 +209,21 @@ main {
   background-position: left;
 
   background-image: var(--gradient-1);
+  overflow-y: scroll;
 
   /* animation: scroll-animation infinite 10s ease-in-out; */
 
-  animation: scroll-animation 5s ease-in-out;
+  /* animation: scroll-animation 5s ease-in-out; */
 
   /* animation-timeline: --squareTimeline; */
   /* animation-duration: 1ms; */
 
   /* animation: scroll-animation linear;
   animation-timeline: scroll(); */
+}
+
+.animation-bg {
+  animation: scroll-animation 5s ease-in-out;
 }
 
 @keyframes scroll-animation {
