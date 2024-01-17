@@ -64,6 +64,7 @@ module.exports = {
         engineOptions: {
           tokenize: `forward`,
         },
+        // query skapas för varje contentType som man vill göra sökbar
         query: `
             {
              allContentfulPortfolioItem {

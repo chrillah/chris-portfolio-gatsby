@@ -2,7 +2,6 @@ import * as React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
 import useNavigation from "../hooks/use-navigation"
-import SearchInput from "./searchInput"
 
 const HeaderSearch = () => {
   const navigation = useNavigation()
@@ -137,7 +136,6 @@ const HeaderSearch = () => {
               />
             </svg>
           </div>
-          <SearchInput />
           <div
             onClick={() => {
               openMenu()
