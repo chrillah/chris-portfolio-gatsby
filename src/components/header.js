@@ -10,12 +10,12 @@ const Header = () => {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
-//   funktion som ändrar tillståndet på isSearchOpen till true
+  //   funktion som ändrar tillståndet på isSearchOpen till true
   const openSearch = () => {
     setIsSearchOpen(true)
   }
 
-//   funktion som ändrar tillståndet på isSearchOpen till false
+  //   funktion som ändrar tillståndet på isSearchOpen till false
   const closeSearch = () => {
     setIsSearchOpen(false)
   }
@@ -255,7 +255,11 @@ const Header = () => {
             {!isSearchOpen ? (
               <>
                 {navigation.map(({ node }, index) => {
-                  if (node.title === "404") {
+                  if (
+                    node.title === "404" ||
+                    node.title === "Contact" ||
+                    node.title === "Technology"
+                  ) {
                     return null
                   } else {
                     return (

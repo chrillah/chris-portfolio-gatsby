@@ -1,12 +1,13 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
 import DisplayPortfolioItems from "../components/displayPortfolioItems"
 import DisplayAboutSection from "../components/displayAboutSection"
-
+import usePortfolioInformation from "../hooks/use-portfolioInformation"
 import Seo from "../components/seo"
 
 const HomeTemplate = contentfulPage => {
@@ -37,28 +38,51 @@ const HomeTemplate = contentfulPage => {
   if (contentfulPage.about) {
     renderRichText(contentfulPage.about, richTextConfig)
   }
-
+  const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
-      <div className="gradient-bg animation-bg">
+      <div className="gradient-bg">
+        <div className="home-item-container">
+          <DisplayPortfolioItems />
+          {aboutLink ? (
+            <DisplayAboutSection
+              aboutLink={aboutLink}
+              aboutHeader={contentfulPage.aboutHeader}
+              aboutDescription={
+                contentfulPage.aboutDescription.aboutDescription
+              }
+            />
+          ) : (
+            <></>
+          )}
+          <DisplayImageFromIllustrations />
+        </div>
+
         <div className="app-page-wrapper">
           <div className="app-container">
-            <div className="home-item-container">
-              <DisplayPortfolioItems />
-              {aboutLink ? (
-                <DisplayAboutSection
-                  aboutLink={aboutLink}
-                  aboutHeader={contentfulPage.aboutHeader}
-                  aboutDescription={
-                    contentfulPage.aboutDescription.aboutDescription
-                  }
-                />
-              ) : (
-                <></>
-              )}
-              <DisplayImageFromIllustrations />
-            </div>
-            <div className="home-hero-container">
+            <ul className="projects-page-bottom-container-2">
+              <h1 className="grid-header">Technic</h1>
+              {portfolioInformation.map((edge, index) => {
+                return (
+                  <li key={index}>
+                    {/* <h3 className="technic-header">{edge.node.portfolioSubject}</h3> */}
+                    <Link to={`/portfolio/${edge.node.slug}`}>
+                      <h3>{edge.node.portfolioTitle}</h3>
+                      <p>{edge.node.portfolioSubject}</p>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+            {/* <div className="projects-page-bottom-container">
+              <p>Do you like what you see? Check out the rest.</p>
+              <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
+            </div> */}
+          </div>
+        </div>
+        <div className="app-page-wrapper">
+          <div className="app-container">
+            {/* <div className="home-hero-container">
               <div className="hero-item-1">
                 {renderRichText(contentfulPage.content, richTextConfig)}
                 <div className="hero-item-1-text">
@@ -79,7 +103,7 @@ const HomeTemplate = contentfulPage => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -17,37 +17,43 @@ const IllustrationsTemplate = contentfulPage => {
   }
   return (
     <Layout>
-      <div className="app-page-wrapper">
-        <div className="app-container">
-          <div className="illustrations-hero-container">
-            <div className="illustrations-hero-item-1">
-              <div className="illustrations-presentation">
-                <h3>{contentfulPage.title}</h3>
-                <div>
-                  {renderRichText(contentfulPage.about, richTextConfig)}
+      <div className="gradient-bg">
+        <div className="app-page-wrapper">
+          <div className="app-container">
+            <div className="illustrations-hero-container">
+              <div className="illustrations-hero-item-1">
+                <div className="illustrations-presentation">
+                  <h3>{contentfulPage.title}</h3>
+                  <div>
+                    {renderRichText(contentfulPage.about, richTextConfig)}
+                  </div>
                 </div>
+                {renderRichText(contentfulPage.body, richTextConfig)}
               </div>
-              {renderRichText(contentfulPage.body, richTextConfig)}
-            </div>
-            <div className="illustrations-hero-item-2">
-              {renderRichText(contentfulPage.content, richTextConfig)}
+              <div className="illustrations-hero-item-2">
+                {renderRichText(contentfulPage.content, richTextConfig)}
+              </div>
             </div>
           </div>
-          <div className="gallery-container">
-            {contentfulPage.gallery.map((image, index) => {
-              const imageData = getImage(image)
-              return (
-                <div key={index} className="gallery-image">
-                  <GatsbyImage image={imageData} alt={image.title} />
-                </div>
-              )
-            })}
-          </div>
-          <div className="illustrations-page-bottom-container">
-            <p>Do you like what you see? Check out the rest.</p>
-            <Link to="/projects" className="link-button">
-              Projects
-            </Link>
+        </div>
+        <div className="gallery-container">
+          {contentfulPage.gallery.map((image, index) => {
+            const imageData = getImage(image)
+            return (
+              <div key={index} className="gallery-image">
+                <GatsbyImage image={imageData} alt={image.title} />
+              </div>
+            )
+          })}
+        </div>
+        <div className="app-page-wrapper">
+          <div className="app-container">
+            <div className="illustrations-page-bottom-container">
+              <p>Do you like what you see? Check out the rest.</p>
+              <Link to="/projects" className="link-button">
+                Projects
+              </Link>
+            </div>
           </div>
         </div>
       </div>

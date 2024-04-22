@@ -15,6 +15,9 @@
   --indigo: #5200ff;
 
   --yellow: #f2d022;
+
+  --silver-gray: #f0f0f2;
+
   --black: #111111;
   --grey: #efefef;
   --light-purple: #a0b0d9;
@@ -50,7 +53,7 @@
     var(--gradient-lavender-4) 100%
   );
 
-  --app-bg: var(--yellow);
+  --app-bg: var(--gradient-peach-1);
   --app-color: var(--black);
 
   --page-bg: var(--grey);
@@ -720,6 +723,31 @@ p {
   grid-template-columns: 1fr;
 }
 
+.projects-page-bottom-container-2 {
+  border: var(--app-color) var(--app-stroke-width) solid;
+  padding: var(--app-pad);
+  filter: invert(1);
+  mix-blend-mode: difference;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  transform-origin: center;
+}
+
+@media (max-width: 740px) {
+  .projects-page-bottom-container-2 {
+    grid-template-columns: 1fr 1fr;
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .projects-page-bottom-container-2 {
+    grid-template-columns: 1fr;
+    transform-origin: center;
+  }
+}
+
 @media (min-width: 425px) {
   .projects-page-bottom-container {
     grid-template-columns: 1fr 1fr;
@@ -1079,7 +1107,7 @@ p {
   scrollbar-width: none;
   padding: var(--app-pad) 0;
   height: 100vh;
-  max-height: 800px;
+  max-height: 600px;
 }
 
 .home-item-container::-webkit-scrollbar {
@@ -1095,7 +1123,7 @@ p {
   padding: var(--item-pad);
   transition: all ease-in-out 150ms;
   min-height: var(--item-height);
-  max-width: 280px;
+  min-width: 300px;
 }
 
 .present-portfolio-item .item-top-container p,
@@ -1116,6 +1144,7 @@ p {
   border-radius: var(--border-radius);
   filter: invert(1);
   mix-blend-mode: difference;
+  min-width: 800px;
 }
 
 .about-section {
@@ -1138,7 +1167,6 @@ p {
   align-items: center;
   width: 900px;
   border-radius: var(--border-radius);
-  max-height: 502.78px;
   overflow: hidden;
   filter: invert(1);
   mix-blend-mode: difference;

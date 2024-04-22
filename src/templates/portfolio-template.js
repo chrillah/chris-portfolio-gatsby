@@ -30,7 +30,7 @@ const PortfolioTemplate = contentfulPage => {
     <Layout>
       <div className="gradient-bg">
         <div className="app-page-wrapper">
-          <div className="app-container">
+          {/* <div className="app-container">
             <div className="portfolio-hero-container">
               <div className="portfolio-hero-item-1">
                 <div className="portfolio-presentation">
@@ -59,7 +59,7 @@ const PortfolioTemplate = contentfulPage => {
                 })}
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="portfolio-item-container">
           {portfolioInformation.map((edge, index) => {
@@ -73,6 +73,18 @@ const PortfolioTemplate = contentfulPage => {
             )
           })}
         </div>
+        {/* <div className="portfolio-item-container">
+          {portfolioInformation.map((edge, index) => {
+            return (
+              <PortfolioItem
+                key={edge.node.portfolioTitle}
+                item={edge.node}
+                lengthOfItems={portfolioInformation.length}
+                indexOfItem={index + 1}
+              />
+            )
+          })}
+        </div> */}
 
         <div className="app-page-wrapper">
           <div className="app-container">
