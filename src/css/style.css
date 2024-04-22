@@ -71,7 +71,7 @@
 
   --svg-stroke-width: var(--app-stroke-width);
 
-  --item-image-size: 280px;
+  --item-image-size: 300px;
   --item-height: 490px;
 }
 
@@ -630,6 +630,8 @@ nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad);
+  height: 100vh;
+  max-height: 600px;
 }
 
 .portfolio-item-container::-webkit-scrollbar {
@@ -643,6 +645,7 @@ nav {
   padding: var(--item-pad);
   transition: all ease-in-out 150ms;
   min-height: var(--item-height);
+  min-width: 300px;
 }
 
 .portfolio-item:hover {
@@ -653,7 +656,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: calc(var(--app-pad) * 2);
+  padding-block: calc(var(--app-pad) * 2);
 }
 
 .item-top-container h3 {
@@ -675,11 +678,8 @@ nav {
   height: var(--item-image-size);
 }
 
-.item-top-container h3 {
-  padding-bottom: var(--item-pad);
-}
-
 .item-middle-container {
+  padding-block: calc(var(--app-pad) * 3);
   display: grid;
   grid-template-rows: auto auto;
 }
@@ -1078,6 +1078,8 @@ p {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad) 0;
+  height: 100vh;
+  max-height: 800px;
 }
 
 .home-item-container::-webkit-scrollbar {
