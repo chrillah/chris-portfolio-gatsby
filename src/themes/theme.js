@@ -1,6 +1,7 @@
 export const themeColors = {
   black: "#111111",
   peach: "#ff906f",
+  lilac: "#B7AEF1",
 }
 
 export const themeFonts = {
@@ -13,7 +14,7 @@ export const theme = {
   appColor: themeColors.black,
   appFont: themeFonts.poppins,
   appDisplayFont: themeFonts.delaGothic,
-  appBg: themeColors.peach,
+  appBg: themeColors.lilac,
   appGap: "0.5rem",
   appPad: "0.2rem",
 }

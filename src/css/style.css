@@ -14,6 +14,8 @@
   --lavender: #dac9ff;
   --indigo: #5200ff;
 
+  --lilac: #b7aef1;
+
   --yellow: #f2d022;
 
   --silver-gray: #f0f0f2;
@@ -53,7 +55,7 @@
     var(--gradient-lavender-4) 100%
   );
 
-  --app-bg: var(--gradient-peach-1);
+  --app-bg: var(--lilac);
   --app-color: var(--black);
 
   --page-bg: var(--grey);
