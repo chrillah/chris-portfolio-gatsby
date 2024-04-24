@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import useNavigation from "../hooks/use-navigation"
 import Search from "./Search"
+import { AppButton } from "./buttons/AppButton"
 
 const Header = () => {
   const navigation = useNavigation()
@@ -183,73 +184,26 @@ const Header = () => {
         >
           <div className="nav-buttons-container">
             {isSearchOpen ? (
-              <div
-                className="back-button"
-                onClick={() => {
-                  closeSearch()
-                }}
+              <AppButton
+                backButton
+                onClick={closeSearch}
                 onKeyDown={event => {
                   if (event.key === "Enter") {
                     closeSearch()
                   }
                 }}
-                tabIndex={0}
-                role="button"
-              >
-                <svg
-                  className="arrow rev"
-                  id="Layer_1"
-                  data-name="Layer 1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 30 30"
-                >
-                  <polyline
-                    className="arrow-detail"
-                    points="14.95 29.44 29.39 15 14.95 .56"
-                  />
-                  <line className="arrow-detail" x1="29.39" y1="15" y2="15" />
-                </svg>
-                <p>Back</p>
-              </div>
+                title={"Back"}
+              />
             ) : (
-              <div
-                onClick={() => {
-                  openSearch()
-                }}
+              <AppButton
+                search
+                onClick={openSearch}
                 onKeyDown={event => {
                   if (event.key === "Enter") {
                     openSearch()
                   }
                 }}
-                tabIndex={0}
-                role="button"
-                className="nav-button"
-              >
-                <svg
-                  className="search-icon"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 30 30"
-                >
-                  <line
-                    className="search-icon-detail"
-                    x1="29.04"
-                    y1="29.32"
-                    x2="19.68"
-                    y2="19.96"
-                  />
-                  <circle
-                    className="search-icon-detail"
-                    cx="11.43"
-                    cy="11.43"
-                    r="10.43"
-                  />
-                  <path
-                    className="search-icon-detail"
-                    d="M11.43,19.48c4.45,0,8.05-3.6,8.05-8.05S15.88,3.38,11.43,3.38"
-                  />
-                </svg>
-              </div>
+              />
             )}
 
             {!isSearchOpen ? (
@@ -263,16 +217,15 @@ const Header = () => {
                     return null
                   } else {
                     return (
-                      <Link
+                      <AppButton
+                        nav
                         key={index}
+                        url={node.url}
+                        title={node.title}
                         onClick={() => {
                           closeMenu()
                         }}
-                        className="nav-button"
-                        to={node.url}
-                      >
-                        {node.title}
-                      </Link>
+                      />
                     )
                   }
                 })}
