@@ -62,7 +62,10 @@ const HomeTemplate = contentfulPage => {
 
         <div className="app-page-wrapper">
           <div className="app-container">
-            <h1 className="hero-title">Skill Set</h1>
+            <div className="skill-sets">
+              <h1 className="hero-title">Skill Set</h1>
+              <IconCarousel />
+            </div>
             {/* <ul className="projects-page-bottom-container-2">
               <h1 className="grid-header">Technic</h1>
               {portfolioInformation.map((edge, index) => {
@@ -77,7 +80,6 @@ const HomeTemplate = contentfulPage => {
               })}
             </ul> */}
 
-            <IconCarousel />
             {/* <div className="projects-page-bottom-container">
               <p>Do you like what you see? Check out the rest.</p>
               <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>

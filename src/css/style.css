@@ -1243,6 +1243,10 @@ p {
   border-radius: var(--border-radius);
 }
 
+.skill-sets {
+  padding-block: calc(var(--app-pad) * 10);
+}
+
 /* Technology */
 
 .technology-hero-container {
