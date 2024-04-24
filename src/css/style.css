@@ -20,6 +20,8 @@
 
   --silver-gray: #f0f0f2;
 
+  --sliver: #f2eeeb;
+
   --black: #111111;
   --grey: #efefef;
   --light-purple: #a0b0d9;
@@ -214,6 +216,8 @@ main {
   background-position: left;
 
   background-image: var(--gradient-1);
+
+  background: var(--sliver);
   overflow-y: scroll;
 
   /* animation: scroll-animation infinite 10s ease-in-out; */
@@ -569,8 +573,8 @@ nav {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
 }
 
 @media (min-width: 1024px) {
@@ -738,8 +742,8 @@ p {
 /* Portfolio Page */
 
 .projects-page-bottom-container {
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
@@ -748,8 +752,8 @@ p {
 .projects-page-bottom-container-2 {
   border: var(--app-color) var(--app-stroke-width) solid;
   padding: var(--app-pad);
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -810,20 +814,53 @@ p {
 }
 
 .gallery-container {
-  background-color: var(--app-color);
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  /* gap: var(--app-gap); */
+  gap: calc(var(--app-pad) * 10);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: var(--app-pad);
+  /* background-color: var(--app-color); */
+  /* height: 100vh;
+  max-height: 600px; */
+  /* background-color: var(--app-color);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: calc(var(--app-pad) * 10);
+  gap: calc(var(--app-pad) * 10); */
 }
 
-.gallery-container > :first-child {
+/* .gallery-container > :first-child {
   margin-top: calc(var(--app-pad) * 10);
 }
 
 .gallery-container > :last-child {
   margin-bottom: calc(var(--app-pad) * 10);
+} */
+
+.gallery-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: var(--app-stroke-width) var(--app-color) solid; */
+  /* margin: var(--app-pad); */
+  width: 600px;
+  /* background-color: #ffffff; */
+}
+
+@media (min-width: 1024px) {
+  .gallery-image {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1210px) {
+  .gallery-image {
+    width: 1000px;
+  }
 }
 
 .link-button-container {
@@ -834,8 +871,8 @@ p {
 /* About */
 
 .about-hero-container {
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
   padding-top: var(--app-pad);
   display: grid;
   grid-template-columns: auto;
@@ -911,8 +948,8 @@ p {
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   gap: calc(var(--app-pad) * 2);
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
   padding-inline: var(--app-pad);
 }
 
@@ -946,8 +983,8 @@ p {
 }
 
 .education-container {
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
   padding-block: var(--app-pad);
   display: grid;
   grid-template-columns: 1fr;
@@ -1045,8 +1082,8 @@ p {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1fr 1fr;
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
 }
 
 .hero-item-1,
@@ -1209,8 +1246,8 @@ p {
 /* Technology */
 
 .technology-hero-container {
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
   margin-top: calc(var(--app-pad) * 5.55);
   display: grid;
   grid-template-columns: auto;
@@ -1486,11 +1523,6 @@ select > option:focus {
   }
 }
 
-.gallery-image {
-  margin: var(--app-pad);
-  background-color: #ffffff;
-}
-
 .illustrations-page-bottom-container {
   margin-top: var(--app-pad);
   margin-bottom: var(--app-pad);
@@ -1534,8 +1566,8 @@ select > option:focus {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1fr 1fr;
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* filter: invert(1);
+  mix-blend-mode: difference; */
 }
 
 @media (min-width: 632px) {

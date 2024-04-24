@@ -74,26 +74,27 @@ const PortfolioItemTemplate = ({ data }) => {
               </div>
               <h1 className="hero-title">{portfolioTitle}</h1>
             </div>
-            <div className="gallery-container">
-              {portfolioImages.map((image, index) => {
-                const imageData = getImage(image)
-                return (
-                  <div key={index}>
-                    <GatsbyImage
-                      className="gallery-image"
-                      image={imageData}
-                      alt={`Image ${index + 1}`}
-                    />
-                  </div>
-                )
-              })}
-            </div>
-
+          </div>
+        </div>
+        <div className="gallery-container">
+          {portfolioImages.map((image, index) => {
+            const imageData = getImage(image)
+            return (
+              <GatsbyImage
+                key={index}
+                className="gallery-image"
+                image={imageData}
+                alt={`Image ${index + 1}`}
+              />
+            )
+          })}
+        </div>
+        <div className="app-page-wrapper">
+          <div className="app-container">
             <div className="portfolio-middle-wrapper">
               <h3 className="grid-header">Description</h3>
               <p>{portfolioDescription.portfolioDescription}</p>
             </div>
-
             <div className="portfolio-bottom-wrapper">
               <h3 className="grid-header">Links</h3>
               <div className="link-button-container">
