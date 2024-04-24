@@ -1,5 +1,4 @@
 .icon-body {
-  fill: red;
+  /* fill: var(--app-color); */
+  fill: var(--red);
 }
-
-

@@ -10,6 +10,7 @@ import DisplayAboutSection from "../components/displayAboutSection"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
 import Seo from "../components/seo"
 import { LogoContainer } from "../components/LogoContainer"
+import { IconCarousel } from "../components/icons/IconCarousel"
 
 const HomeTemplate = contentfulPage => {
   let aboutLink
@@ -61,12 +62,12 @@ const HomeTemplate = contentfulPage => {
 
         <div className="app-page-wrapper">
           <div className="app-container">
-            <ul className="projects-page-bottom-container-2">
+            <h1 className="hero-title">Skill Set</h1>
+            {/* <ul className="projects-page-bottom-container-2">
               <h1 className="grid-header">Technic</h1>
               {portfolioInformation.map((edge, index) => {
                 return (
                   <li key={index}>
-                    {/* <h3 className="technic-header">{edge.node.portfolioSubject}</h3> */}
                     <Link to={`/portfolio/${edge.node.slug}`}>
                       <h3>{edge.node.portfolioTitle}</h3>
                       <p>{edge.node.portfolioSubject}</p>
@@ -74,9 +75,9 @@ const HomeTemplate = contentfulPage => {
                   </li>
                 )
               })}
-            </ul>
+            </ul> */}
 
-            <LogoContainer />
+            <IconCarousel />
             {/* <div className="projects-page-bottom-container">
               <p>Do you like what you see? Check out the rest.</p>
               <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
