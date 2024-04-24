@@ -9,6 +9,7 @@ import DisplayPortfolioItems from "../components/displayPortfolioItems"
 import DisplayAboutSection from "../components/displayAboutSection"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
 import Seo from "../components/seo"
+import { LogoContainer } from "../components/LogoContainer"
 
 const HomeTemplate = contentfulPage => {
   let aboutLink
@@ -74,6 +75,8 @@ const HomeTemplate = contentfulPage => {
                 )
               })}
             </ul>
+
+            <LogoContainer />
             {/* <div className="projects-page-bottom-container">
               <p>Do you like what you see? Check out the rest.</p>
               <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
