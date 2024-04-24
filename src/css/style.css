@@ -256,6 +256,10 @@ main {
   word-wrap: break-word;
 }
 
+.portfolio-subject {
+  font-size: 1rem;
+}
+
 @media (min-width: 512px) {
   .hero-title {
     font-size: 4rem;
@@ -267,6 +271,21 @@ main {
   .hero-title {
     font-size: 6rem;
     line-height: 6.5rem;
+  }
+
+  .portfolio-subject {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1210px) {
+  .hero-title {
+    font-size: 8rem;
+    line-height: 6.5rem;
+  }
+
+  .portfolio-subject {
+    font-size: 6rem;
   }
 }
 
@@ -346,6 +365,7 @@ main {
 .link-button:hover,
 .nav-button:hover {
   transform: scaleY(1.05);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -782,7 +802,7 @@ p {
 }
 
 .portfolio-page {
-  background-color: var(--app-bg);
+  background-color: var(--item-bg);
   padding-top: var(--app-pad);
   padding-bottom: var(--app-pad);
 }

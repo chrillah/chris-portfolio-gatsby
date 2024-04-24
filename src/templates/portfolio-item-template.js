@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { AppButton } from "../components/buttons/AppButton"
 
 const PortfolioItemTemplate = ({ data }) => {
   const {
@@ -67,7 +68,7 @@ const PortfolioItemTemplate = ({ data }) => {
                   <p>Projects</p>
                 </Link>
                 <div>
-                  <h3>{portfolioSubject}</h3>
+                  <h3 className="portfolio-subject">{portfolioSubject}</h3>
                   <p>{timePeriod}</p>
                 </div>
               </div>

@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PortfolioItem from "../components/portfolioItem"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
+import { AppButton } from "../components/buttons/AppButton"
 
 const PortfolioTemplate = contentfulPage => {
   // Konfiguration för att anpassa renderingen av richtext
@@ -18,9 +19,16 @@ const PortfolioTemplate = contentfulPage => {
       [INLINES.ENTRY_HYPERLINK]: (node, children) => {
         let url = children[0].toLowerCase()
         return (
-          <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
-            {children}
-          </a>
+          <>
+            {/* <AppButton to={`/${url}`} title={children} /> */}
+            <a
+              className="link-button"
+              href={`/${url}`}
+              rel="noopener noreferrer"
+            >
+              {children}
+            </a>
+          </>
         )
       },
     },

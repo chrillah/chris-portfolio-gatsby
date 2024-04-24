@@ -18,14 +18,16 @@ export const BigButton = styled.button`
   max-height: 150px;
 
   &:hover {
+    background: rgba(255, 255, 255, 0.3);
     transform: scaleY(1.05);
   }
 
   &:active {
+    background: rgba(255, 255, 255, 0.3);
     transform: scaleY(0.95);
   }
 `
-export const LinkButton = styled(Link)`
+export const LinkButton_1 = styled(Link)`
   border: ${theme.appStrokeWidth} ${theme.appColor} solid;
   display: flex;
   justify-content: center;
@@ -39,10 +41,41 @@ export const LinkButton = styled(Link)`
 
   &:hover {
     transform: scaleY(1.05);
+    background: rgba(255, 255, 255, 0.3);
   }
 
   &:active {
     transform: scaleY(0.95);
+    background: rgba(255, 255, 255, 0.3);
+  }
+`
+export const LinkButton_2 = styled(Link)`
+  border: ${theme.appStrokeWidth} ${theme.appColor} solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
+  border-radius: 100px;
+  max-height: 150px;
+
+  height: 80px;
+
+  margin-inline: ${theme.appGap};
+
+  @media (min-width: 425px) {
+    height: 120px;
+  }
+
+  &:hover {
+    transform: scaleY(1.05);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active {
+    transform: scaleY(0.95);
+    background: rgba(255, 255, 255, 0.3);
   }
 `
 
@@ -80,9 +113,9 @@ export const AppButton = ({
 }) => {
   if (nav) {
     return (
-      <LinkButton onClick={onClick} to={url} tabIndex={0}>
+      <LinkButton_1 onClick={onClick} to={url} tabIndex={0}>
         {title}
-      </LinkButton>
+      </LinkButton_1>
     )
   }
   if (link) {
@@ -145,9 +178,9 @@ export const AppButton = ({
     )
   } else {
     return (
-      <LinkButton onClick={onClick} to={url} tabIndex={0}>
+      <LinkButton_2 onClick={onClick} to={url} tabIndex={0}>
         {title}
-      </LinkButton>
+      </LinkButton_2>
     )
   }
 }
