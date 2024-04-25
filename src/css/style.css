@@ -986,10 +986,19 @@ p {
 }
 
 .about-me-item-2 {
+  border-top: var(--app-color) var(--app-stroke-width) solid;
+  border-left: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .about-me-item-2 {
+    border-top: none;
+    border-left: var(--app-color) var(--app-stroke-width) solid;
+  }
 }
 .about-me-item-2 p {
   max-width: 400px;
