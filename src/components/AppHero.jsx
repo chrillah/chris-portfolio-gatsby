@@ -44,6 +44,10 @@ export const TopContainer = styled.div`
 
   p {
     text-align: right;
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    max-width: 150px;
   }
 `
 

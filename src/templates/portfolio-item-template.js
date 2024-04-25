@@ -39,13 +39,14 @@ const PortfolioItemTemplate = ({ data }) => {
   return (
     <Layout>
       <div
-        className={
-          portfolioSubject === "React"
-            ? "portfolio-page color-set-3"
-            : portfolioSubject === "Vue"
-            ? "portfolio-page color-set-2"
-            : "portfolio-page color-set-1"
-        }
+        className="portfolio-page"
+        // {
+        //   portfolioSubject === "React"
+        //     ? "portfolio-page color-set-3"
+        //     : portfolioSubject === "Vue"
+        //     ? "portfolio-page color-set-2"
+        //     : "portfolio-page color-set-1"
+        // }
       >
         <div className="app-page-wrapper">
           <div className="app-container">
