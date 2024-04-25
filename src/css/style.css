@@ -334,6 +334,10 @@ main {
   padding-top: 2px;
 }
 
+/* .to-button p {
+  font-size: 1.5rem;
+} */
+
 .rev {
   rotate: 180deg;
 }
@@ -1167,7 +1171,7 @@ p {
   display: grid;
   grid-auto-flow: column;
   overflow-x: scroll;
-  gap: 0.5rem;
+  gap: var(--app-gap);
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad) 0;
@@ -1177,6 +1181,14 @@ p {
 
 .home-item-container::-webkit-scrollbar {
   display: none;
+}
+
+.home-item-container > :first-child {
+  margin-left: var(--app-pad);
+}
+
+.home-item-container > :last-child {
+  margin-right: var(--app-pad);
 }
 
 .present-portfolio-item {

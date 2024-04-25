@@ -3,9 +3,16 @@ import styled from "styled-components"
 import { theme } from "../themes/theme"
 
 export const HeroWrapper = styled.div`
+  padding-top: ${theme.appPad};
+  padding-bottom: ${theme.appPad};
+`
+
+export const HeroContainer = styled.div`
   border: ${theme.appStrokeWidth} ${theme.appColor} solid;
   display: grid;
   min-height: 80vh;
+  max-height: 800px;
+  padding: ${theme.appPad};
 `
 
 export const HeroTitle = styled.h1`
@@ -34,16 +41,22 @@ export const HeroTitle = styled.h1`
 export const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  p {
+    text-align: right;
+  }
 `
 
 export const AppHero = ({ title, topLeft, topRight }) => {
   return (
     <HeroWrapper>
-      <TopContainer>
-        <p>{topLeft}</p>
-        <h3>{topRight}</h3>
-      </TopContainer>
-      <HeroTitle>{title}</HeroTitle>
+      <HeroContainer>
+        <TopContainer>
+          <h3>{topLeft}</h3>
+          <p>{topRight}</p>
+        </TopContainer>
+        <HeroTitle>{title}</HeroTitle>
+      </HeroContainer>
     </HeroWrapper>
   )
 }
