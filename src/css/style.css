@@ -1075,7 +1075,7 @@ p {
 
 .education-item:first-of-type h1,
 .education-item:first-of-type p {
-  color: #ffffff;
+  color: var(--sliver);
 }
 
 .education-item:first-of-type h1 {
@@ -1551,8 +1551,6 @@ select > option:focus {
     font-size: 2rem;
   }
 } */
-
-
 
 .illustrations-presentation {
   display: flex;
