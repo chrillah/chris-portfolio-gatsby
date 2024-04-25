@@ -41,7 +41,7 @@ const PortfolioItemTemplate = ({ data }) => {
       <div
         className={
           portfolioSubject === "React"
-            ? "portfolio-page"
+            ? "portfolio-page color-set-3"
             : portfolioSubject === "Vue"
             ? "portfolio-page color-set-2"
             : "portfolio-page color-set-1"

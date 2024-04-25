@@ -20,11 +20,17 @@ export const BigButton = styled.button`
   &:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scaleY(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
 
   &:active {
     background: rgba(255, 255, 255, 0.3);
     transform: scaleY(0.95);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0.3) 0px 0px 0px 0px,
+      rgba(10, 37, 64, 0.35) 0px 0px 0px 0px inset;
   }
 `
 export const LinkButton_1 = styled(Link)`
@@ -50,6 +56,9 @@ export const LinkButton_1 = styled(Link)`
   &:active {
     transform: scaleY(0.95);
     background: rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0.3) 0px 0px 0px 0px,
+      rgba(10, 37, 64, 0.35) 0px 0px 0px 0px inset;
   }
 `
 export const LinkButton_2 = styled(Link)`
@@ -82,6 +91,9 @@ export const LinkButton_2 = styled(Link)`
   &:active {
     transform: scaleY(0.95);
     background: rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0.3) 0px 0px 0px 0px,
+      rgba(10, 37, 64, 0.35) 0px 0px 0px 0px inset;
   }
 `
 

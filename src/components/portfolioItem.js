@@ -9,7 +9,7 @@ const PortfolioItem = ({ item, lengthOfItems, indexOfItem }) => {
       to={`/portfolio/${item.slug}`}
       className={
         item.portfolioSubject === "React"
-          ? "portfolio-item"
+          ? "portfolio-item color-set-3"
           : item.portfolioSubject === "Vue"
           ? "portfolio-item color-set-2"
           : "portfolio-item color-set-1"
