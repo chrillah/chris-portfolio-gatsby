@@ -1276,6 +1276,11 @@ p {
   padding-block: calc(var(--app-pad) * 10);
 }
 
+.projects-header {
+  padding-top: calc(var(--app-pad) * 10);
+  padding-bottom: calc(var(--app-pad) * 10);
+}
+
 /* Technology */
 
 .technology-hero-container {

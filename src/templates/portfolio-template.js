@@ -68,6 +68,11 @@ const PortfolioTemplate = contentfulPage => {
               </ul>
             </div>
           </div> */}
+          <div className="app-container">
+            <div className="projects-header">
+              <h1 className="hero-title">Projects</h1>
+            </div>
+          </div>
         </div>
         <div className="portfolio-item-container">
           {portfolioInformation.map((edge, index) => {
