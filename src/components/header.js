@@ -183,7 +183,7 @@ const Header = () => {
           }
         >
           <div className="nav-buttons-container">
-            {isSearchOpen ? (
+            {/* {isSearchOpen ? (
               <AppButton
                 backButton
                 onClick={closeSearch}
@@ -204,7 +204,7 @@ const Header = () => {
                   }
                 }}
               />
-            )}
+            )} */}
 
             {!isSearchOpen ? (
               <>
