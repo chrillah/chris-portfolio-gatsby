@@ -43,14 +43,16 @@ const AboutTemplate = contentfulPage => {
                 </div>
                 {renderRichText(contentfulPage.body, richTextConfig)}
               </div>
-              <GatsbyImage image={image} alt={contentfulPage.title} />
             </div>
             <div className="about-me-container">
               <div className="about-me-item-1">
-                <h1>{contentfulPage.aboutDescription.aboutDescription}</h1>
+                <GatsbyImage image={image} alt={contentfulPage.title} />
               </div>
               <div className="about-me-item-2">
-                {renderRichText(contentfulPage.about, richTextConfig)}
+                <div className="about-me-presentation">
+                  <h1>{contentfulPage.aboutDescription.aboutDescription}</h1>
+                  {renderRichText(contentfulPage.about, richTextConfig)}
+                </div>
               </div>
             </div>
             {educationInformation ? (
