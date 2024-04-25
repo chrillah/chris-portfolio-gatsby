@@ -55,7 +55,7 @@ const IllustrationsTemplate = contentfulPage => {
         <div className="app-page-wrapper">
           <div className="app-container">
             <div className="illustrations-page-bottom-container">
-              <p>Do you like what you see? Check out the rest.</p>
+              <p>Check out the rest.</p>
               <Link to="/projects" className="link-button">
                 Projects
               </Link>

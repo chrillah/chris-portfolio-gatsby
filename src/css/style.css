@@ -65,7 +65,7 @@
   --item-bg: var(--grey);
   --item-font-color: var(--app-color);
 
-  --max-width: 1800px;
+  --max-width: 2800px;
 
   --app-pad: 0.2rem;
 
@@ -669,7 +669,7 @@ nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad);
-  height: 100vh;
+  height: 80vh;
   max-height: 600px;
 }
 
@@ -684,7 +684,7 @@ nav {
   padding: var(--item-pad);
   transition: all ease-in-out 150ms;
   min-height: var(--item-height);
-  min-width: 300px;
+  width: 300px;
 }
 
 .portfolio-item:hover {
@@ -1175,7 +1175,7 @@ p {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad) 0;
-  height: 100vh;
+  height: 80vh;
   max-height: 600px;
 }
 
@@ -1200,7 +1200,7 @@ p {
   padding: var(--item-pad);
   transition: all ease-in-out 150ms;
   min-height: var(--item-height);
-  min-width: 300px;
+  width: 300px;
 }
 
 .present-portfolio-item .item-top-container p,
@@ -1221,7 +1221,7 @@ p {
   border-radius: var(--border-radius);
   filter: invert(1);
   mix-blend-mode: difference;
-  min-width: 800px;
+  min-width: 900px;
 }
 
 .about-section {

@@ -10,8 +10,8 @@ export const HeroWrapper = styled.div`
 export const HeroContainer = styled.div`
   border: ${theme.appStrokeWidth} ${theme.appColor} solid;
   display: grid;
-  min-height: 80vh;
-  max-height: 800px;
+  height: 80vh;
+  max-height: 600px;
   padding: ${theme.appPad};
 `
 

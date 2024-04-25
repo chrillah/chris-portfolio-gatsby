@@ -56,7 +56,7 @@ function DisplayIllustrations() {
                   </div>
                 )
               })}
-            </> : <>No</>}
+            </> : <></>}
       <div className="to-button">
         <svg
           className="arrow"
