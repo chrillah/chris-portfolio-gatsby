@@ -26,6 +26,10 @@
   --grey: #efefef;
   --light-purple: #a0b0d9;
 
+  --purple-1: #dbd8de;
+  --purple-2: #b7b1bd;
+  --purple-3: #938a9c;
+
   /* GRADIENT COLOR SETTINGS */
 
   --gradient-lavender-1: #aeb1ee;
@@ -647,18 +651,24 @@ nav {
 }
 
 .color-set-1 {
-  --item-bg: var(--turquoise);
-  --page-bg: var(--turquoise);
+  /* --item-bg: var(--turquoise);
+  --page-bg: var(--turquoise); */
+  --item-bg: var(--purple-1);
+  --page-bg: var(--purple-1);
 }
 
 .color-set-2 {
-  --item-bg: var(--lavender);
-  --page-bg: var(--lavender);
+  /* --item-bg: var(--lavender);
+  --page-bg: var(--lavender); */
+  --item-bg: var(--purple-2);
+  --page-bg: var(--purple-2);
 }
 
 .color-set-3 {
-  --item-bg: var(--gradient-yellow-1);
-  --page-bg: var(--gradient-yellow-1);
+  /* --item-bg: var(--gradient-yellow-1);
+  --page-bg: var(--gradient-yellow-1); */
+  --item-bg: var(--purple-3);
+  --page-bg: var(--purple-3);
 }
 
 .portfolio-item-container {
@@ -678,6 +688,7 @@ nav {
 }
 
 .portfolio-item {
+  border: var(--app-stroke-width) var(--app-color) solid;
   position: relative;
   background-color: var(--item-bg);
   border-radius: var(--border-radius);
