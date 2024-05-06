@@ -12,12 +12,14 @@ export const HeroContainer = styled.div`
   display: grid;
   height: 80vh;
   max-height: 600px;
+  min-height: 350px;
+  overflow: auto;
   padding: ${theme.appPad};
 `
 
 export const HeroTitle = styled.h1`
   margin-top: auto;
-  padding-bottom: calc(${theme.appPad} * 2);
+  padding-bottom: calc(${theme.appPad} * 3);
   font-size: 3rem;
   line-height: 3.5rem;
   word-wrap: break-word;
