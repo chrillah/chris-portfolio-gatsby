@@ -368,18 +368,18 @@ main {
 }
 
 .link-button {
-  height: 80px;
+  height: 180px;
 }
 
 @media (min-width: 425px) {
   .link-button {
-    height: 120px;
+    height: 200px;
   }
 }
 
-.nav-button {
+/* .nav-button {
   max-height: 150px;
-}
+} */
 
 .link-button:hover,
 .nav-button:hover {
@@ -1651,7 +1651,6 @@ select > option:focus {
 
 .illustrations-page-bottom-container {
   margin-top: var(--app-pad);
-  margin-bottom: var(--app-pad);
   border: var(--app-stroke-width) var(--app-color) solid;
   display: grid;
   grid-template-columns: 1fr;

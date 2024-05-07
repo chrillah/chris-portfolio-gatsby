@@ -43,7 +43,6 @@ export const LinkButton_1 = styled(Link)`
   transition: all ease-in-out 150ms;
   border-radius: 100px;
   background-color: ${theme.appBg};
-  max-height: 150px;
 
   &:hover {
     transform: scaleY(1.05);
@@ -70,7 +69,6 @@ export const LinkButton_2 = styled(Link)`
   cursor: pointer;
   transition: all ease-in-out 150ms;
   border-radius: 100px;
-  max-height: 150px;
 
   height: 80px;
 

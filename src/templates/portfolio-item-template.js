@@ -99,6 +99,7 @@ const PortfolioItemTemplate = ({ data }) => {
             <div className="portfolio-bottom-wrapper">
               <h3 className="grid-header">Links</h3>
               <div className="link-button-container">
+                
                 {githubLink ? (
                   <div>{renderRichText(githubLink, richTextConfig)}</div>
                 ) : (
