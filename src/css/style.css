@@ -437,7 +437,7 @@ main {
 }
 
 .logo-alt-detail {
-  fill: none;
+  fill: var(--app-bg);
   stroke: var(--app-color);
   stroke-width: var(--svg-stroke-width);
   stroke-linecap: round;
@@ -708,13 +708,12 @@ nav {
   width: 300px;
 }
 
-@media (max-height: 666px) {
+/* @media (max-height: 666px) {
   .portfolio-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 500px;
+    transform: rotateZ(90deg);
+    min-height: 100%;
   }
-}
+} */
 
 .portfolio-item:hover {
   transform: scale(1.01);
