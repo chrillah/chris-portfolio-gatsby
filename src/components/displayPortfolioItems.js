@@ -25,7 +25,9 @@ function DisplayPortfolioItems() {
           })}
         </>
       ) : (
-        <></>
+        <>
+          <h1>WAIT</h1>
+        </>
       )}
     </>
   )

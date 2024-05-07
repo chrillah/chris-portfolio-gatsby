@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import { AppHero } from "../components/AppHero"
 
-const IllustrationsTemplate = contentfulPage => {
+const CreativityTemplate = contentfulPage => {
   // Konfiguration för att anpassa renderingen av richtext
   const richTextConfig = {
     renderNode: {
@@ -67,4 +67,4 @@ const IllustrationsTemplate = contentfulPage => {
   )
 }
 
-export default IllustrationsTemplate
+export default CreativityTemplate
