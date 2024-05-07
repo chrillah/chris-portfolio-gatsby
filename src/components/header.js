@@ -32,6 +32,8 @@ const Header = () => {
     setIsMenuOpen(true)
   }
 
+  console.log(navigation)
+
   return (
     <header>
       <nav>

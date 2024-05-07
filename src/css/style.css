@@ -187,6 +187,11 @@ input::placeholder {
 
 body {
   background-color: var(--app-bg);
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 main {
@@ -1304,6 +1309,20 @@ p {
   width: 300px;
 }
 
+.illustration-section {
+  border: var(--app-stroke-width) var(--app-color) solid;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 300px; */
+  width: 900px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
 @media (min-width: 425px) {
   .about-section {
     max-width: 600px;
@@ -1312,6 +1331,9 @@ p {
   .home-big-logo-wrapper {
     width: 600px;
   }
+  /* .illustration-section {
+    width: 600px;
+  } */
 }
 
 @media (min-width: 768px) {
@@ -1321,19 +1343,9 @@ p {
   .home-big-logo-wrapper {
     min-width: 900px;
   }
-}
-
-.illustration-section {
-  border: var(--app-stroke-width) var(--app-color) solid;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 900px;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  filter: invert(1);
-  mix-blend-mode: difference;
+  /* .illustration-section {
+    width: 900px;
+  } */
 }
 
 .illustration-section .to-button {
