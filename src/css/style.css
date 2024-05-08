@@ -69,7 +69,7 @@
   --item-bg: var(--grey);
   --item-font-color: var(--app-color);
 
-  --max-width: 2200px;
+  --max-width: 2800px;
 
   --app-pad: 0.2rem;
 
@@ -438,6 +438,14 @@ main {
 
 .logo-alt-detail {
   fill: var(--app-bg);
+  stroke: var(--app-color);
+  stroke-width: var(--svg-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.logo-alt-detail-2 {
+  fill: none;
   stroke: var(--app-color);
   stroke-width: var(--svg-stroke-width);
   stroke-linecap: round;
