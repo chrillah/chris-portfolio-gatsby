@@ -95,7 +95,7 @@ const PortfolioItemTemplate = ({ data }) => {
           })}
         </div>
         <div className="app-page-wrapper">
-          <div className="app-container">
+          <div className="portfolio-desc-links-wrapper">
             <div className="portfolio-middle-wrapper">
               <h3 className="grid-header">Description</h3>
               <p>{portfolioDescription.portfolioDescription}</p>

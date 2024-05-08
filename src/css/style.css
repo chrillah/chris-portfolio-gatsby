@@ -564,9 +564,7 @@ nav {
 
 /* Portfolio */
 
-.portfolio-top-wrapper,
-.portfolio-middle-wrapper,
-.portfolio-bottom-wrapper {
+.portfolio-top-wrapper {
   border: var(--app-stroke-width) var(--app-color) solid;
   padding: var(--app-pad);
   margin-bottom: var(--app-pad);
@@ -583,14 +581,6 @@ nav {
 .portfolio-top-wrapper .hero-title {
   margin-top: auto;
   padding-bottom: calc(var(--app-pad) * 3);
-}
-
-.portfolio-middle-wrapper {
-  margin-top: var(--app-pad);
-}
-
-.portfolio-bottom-wrapper {
-  margin-bottom: 0;
 }
 
 .portfolio-page-top {
@@ -663,6 +653,26 @@ nav {
 
 .portfolio-hero-container > :last-child {
   padding: var(--app-pad);
+}
+
+.portfolio-desc-links-wrapper {
+  position: relative;
+  display: grid;
+  margin: 0 var(--app-pad);
+  margin-top: var(--app-pad);
+  gap: var(--app-pad);
+}
+
+@media (min-width: 1024px) {
+  .portfolio-desc-links-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.portfolio-middle-wrapper,
+.portfolio-bottom-wrapper {
+  padding: var(--app-pad);
+  border: var(--app-stroke-width) var(--app-color) solid;
 }
 
 @media (max-width: 1023px) {
@@ -839,7 +849,7 @@ p {
   }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 600px) {
   .projects-page-bottom-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -861,7 +871,7 @@ p {
   padding: var(--app-pad);
 }
 
-@media (max-width: 424px) {
+@media (max-width: 599px) {
   .projects-page-bottom-container > :first-child {
     border-right: var(--app-color) var(--app-stroke-width) solid;
     border-bottom: none;
