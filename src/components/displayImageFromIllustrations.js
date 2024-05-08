@@ -22,13 +22,19 @@ function DisplayIllustrations() {
 
   let numberOfImages
 
-  if (data) {
-    data.allContentfulGallery.edges.forEach(edge => {
-      if (edge) {
-        numberOfImages = edge.node.images.length
-      }
-    })
-  }
+  //   if (data) {
+  //     data.allContentfulGallery.edges.forEach(edge => {
+  //       if (edge) {
+  //         numberOfImages = edge.node.images.length
+  //       }
+  //     })
+  //   }
+
+  data.allContentfulGallery.edges.forEach(edge => {
+    if (edge) {
+      numberOfImages = edge.node.images.length
+    }
+  })
 
   const randomNumber = Math.floor(Math.random() * numberOfImages) + 1
 

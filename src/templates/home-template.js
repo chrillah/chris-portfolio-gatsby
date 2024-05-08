@@ -1,21 +1,16 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
 import DisplayPortfolioItems from "../components/displayPortfolioItems"
 import DisplayAboutSection from "../components/displayAboutSection"
-import usePortfolioInformation from "../hooks/use-portfolioInformation"
 import Seo from "../components/seo"
-import { LogoContainer } from "../components/LogoContainer"
 import { IconCarousel } from "../components/icons/IconCarousel"
 
 const HomeTemplate = contentfulPage => {
   let aboutLink
-
-  // Konfiguration för att anpassa renderingen av richtext
   const richTextConfig = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => (
@@ -37,10 +32,11 @@ const HomeTemplate = contentfulPage => {
   }
 
   const image = getImage(contentfulPage.image)
-  if (contentfulPage.about) {
-    renderRichText(contentfulPage.about, richTextConfig)
-  }
-  const portfolioInformation = usePortfolioInformation()
+  //   if (contentfulPage.about) {
+  //     renderRichText(contentfulPage.about, richTextConfig)
+  //   }
+
+  renderRichText(contentfulPage.about, richTextConfig)
   return (
     <Layout>
       <div className="gradient-bg">
