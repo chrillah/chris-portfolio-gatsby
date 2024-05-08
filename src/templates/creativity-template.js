@@ -5,6 +5,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import { AppHero } from "../components/AppHero"
+import { Helmet } from "react-helmet"
 
 const CreativityTemplate = contentfulPage => {
   // Konfiguration för att anpassa renderingen av richtext
@@ -18,14 +19,29 @@ const CreativityTemplate = contentfulPage => {
   }
   return (
     <Layout>
+      <Helmet>
+        <title>Creativity</title>
+      </Helmet>
       <div className="gradient-bg">
         <div className="app-page-wrapper">
           <div className="app-container">
-            <AppHero
+            <div className="about-hero-container">
+              <div className="about-hero-item-1">
+                <div className="about-presentation">
+                  <h3>{contentfulPage.title}</h3>
+                  <div>
+                    {renderRichText(contentfulPage.about, richTextConfig)}
+                  </div>
+                </div>
+                {renderRichText(contentfulPage.body, richTextConfig)}
+              </div>
+            </div>
+
+            {/* <AppHero
               title={renderRichText(contentfulPage.body, richTextConfig)}
               topLeft={contentfulPage.title}
               topRight={renderRichText(contentfulPage.about, richTextConfig)}
-            />
+            /> */}
             {/* <div className="illustrations-hero-container">
               <div className="illustrations-hero-item-1">
                 <div className="illustrations-presentation">

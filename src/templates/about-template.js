@@ -5,6 +5,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import useEducationInformation from "../hooks/use-educationInformation"
 import EducationItem from "../components/educationItem"
+import { Helmet } from "react-helmet"
 
 const AboutTemplate = contentfulPage => {
   const educationInformation = useEducationInformation()
@@ -19,6 +20,8 @@ const AboutTemplate = contentfulPage => {
       ),
       [INLINES.ENTRY_HYPERLINK]: (node, children) => {
         let url = children[0].toLowerCase()
+
+        console.log(url)
         return (
           <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
             {children}
@@ -30,6 +33,9 @@ const AboutTemplate = contentfulPage => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>About Ch</title>
+      </Helmet>
       <div className="gradient-bg">
         <div className="app-page-wrapper">
           <div className="app-container">

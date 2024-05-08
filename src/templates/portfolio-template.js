@@ -1,12 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PortfolioItem from "../components/portfolioItem"
 import usePortfolioInformation from "../hooks/use-portfolioInformation"
-import { AppButton } from "../components/buttons/AppButton"
+import { Helmet } from "react-helmet"
 
 const PortfolioTemplate = contentfulPage => {
   // Konfiguration för att anpassa renderingen av richtext
@@ -36,6 +35,9 @@ const PortfolioTemplate = contentfulPage => {
   const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
+      <Helmet>
+        <title>Projects</title>
+      </Helmet>
       <div className="gradient-bg">
         <div className="app-page-wrapper">
           {/* <div className="app-container">

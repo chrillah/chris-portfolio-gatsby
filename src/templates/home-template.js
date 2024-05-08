@@ -8,6 +8,7 @@ import DisplayPortfolioItems from "../components/displayPortfolioItems"
 import DisplayAboutSection from "../components/displayAboutSection"
 import Seo from "../components/seo"
 import { IconCarousel } from "../components/icons/IconCarousel"
+import { Helmet } from "react-helmet"
 
 const HomeTemplate = contentfulPage => {
   let aboutLink
@@ -39,6 +40,9 @@ const HomeTemplate = contentfulPage => {
   renderRichText(contentfulPage.about, richTextConfig)
   return (
     <Layout>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <div className="gradient-bg">
         <div className="home-item-container">
           <DisplayPortfolioItems />

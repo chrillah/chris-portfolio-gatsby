@@ -37,6 +37,7 @@ const Header = () => {
       <nav>
         <div className="header-buttons-container">
           <Link
+            className="logo-link"
             to="/"
             onClick={() => {
               closeMenu()
@@ -113,6 +114,7 @@ const Header = () => {
                 points="62.34 24.54 58.35 29.6 49.17 29.6 53.17 24.54 62.34 24.54"
               />
             </svg>
+            <p>CH</p>
           </Link>
 
           <div
