@@ -13,7 +13,7 @@ export const HeroContainer = styled.div`
   height: 80vh;
   max-height: 600px;
   min-height: 350px;
-  overflow: auto;
+  /* overflow: auto; */
   padding: ${theme.appPad};
 `
 

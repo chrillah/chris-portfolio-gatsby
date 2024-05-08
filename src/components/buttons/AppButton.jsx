@@ -33,7 +33,7 @@ export const BigButton = styled.button`
       rgba(10, 37, 64, 0.35) 0px 0px 0px 0px inset;
   }
 `
-export const LinkButton_1 = styled(Link)`
+export const LinkButton1 = styled(Link)`
   border: ${theme.appStrokeWidth} ${theme.appColor} solid;
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@ export const LinkButton_1 = styled(Link)`
       rgba(10, 37, 64, 0.35) 0px 0px 0px 0px inset;
   }
 `
-export const LinkButton_2 = styled(Link)`
+export const LinkButton2 = styled(Link)`
   border: ${theme.appStrokeWidth} ${theme.appColor} solid;
   display: flex;
   justify-content: center;
@@ -129,9 +129,9 @@ export const AppButton = ({
 }) => {
   if (nav) {
     return (
-      <LinkButton_1 onClick={onClick} to={url} tabIndex={0}>
+      <LinkButton1 onClick={onClick} to={url} tabIndex={0}>
         {title}
-      </LinkButton_1>
+      </LinkButton1>
     )
   }
   if (link) {
@@ -194,9 +194,9 @@ export const AppButton = ({
     )
   } else {
     return (
-      <LinkButton_2 onClick={onClick} to={url} tabIndex={0}>
+      <LinkButton2 onClick={onClick} to={url} tabIndex={0}>
         {title}
-      </LinkButton_2>
+      </LinkButton2>
     )
   }
 }
