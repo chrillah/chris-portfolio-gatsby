@@ -712,10 +712,12 @@ nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad);
-  height: 80vh;
+  /* height: 80vh;
   max-height: 600px;
-  min-height: 350px;
+  min-height: 350px; */
   /* overflow: auto; */
+
+  height: 550px;
 }
 
 .portfolio-item-container::-webkit-scrollbar {
@@ -1268,10 +1270,12 @@ p {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: var(--app-pad) 0;
-  height: 80vh;
+  /* height: 80vh;
   max-height: 600px;
-  min-height: 350px;
+  min-height: 350px; */
   /* overflow: auto; */
+
+  height: 550px;
 }
 
 .home-item-container::-webkit-scrollbar {
