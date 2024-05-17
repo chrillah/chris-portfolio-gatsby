@@ -4,7 +4,6 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import { AppHero } from "../components/AppHero"
 import { Helmet } from "react-helmet"
 
 const CreativityTemplate = contentfulPage => {

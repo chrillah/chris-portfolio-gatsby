@@ -11,23 +11,18 @@ const Header = () => {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
-  //   funktion som ändrar tillståndet på isSearchOpen till true
-  const openSearch = () => {
-    setIsSearchOpen(true)
-  }
+  //   const openSearch = () => {
+  //     setIsSearchOpen(true)
+  //   }
+  //   const closeSearch = () => {
+  //     setIsSearchOpen(false)
+  //   }
 
-  //   funktion som ändrar tillståndet på isSearchOpen till false
-  const closeSearch = () => {
-    setIsSearchOpen(false)
-  }
-
-  //   Funktion som ändrar tillståndet på isMenuOpen till false
   const closeMenu = () => {
     setIsMenuOpen(false)
     setIsSearchOpen(false)
   }
 
-  //   funktion som ändrar tillståndet på isMenuOpen till true
   const openMenu = () => {
     setIsMenuOpen(true)
   }

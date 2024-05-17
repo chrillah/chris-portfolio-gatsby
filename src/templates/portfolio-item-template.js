@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { AppButton } from "../components/buttons/AppButton"
 import { Helmet } from "react-helmet"
 
 const PortfolioItemTemplate = ({ data }) => {

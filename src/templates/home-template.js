@@ -32,7 +32,7 @@ const HomeTemplate = contentfulPage => {
     },
   }
 
-  const image = getImage(contentfulPage.image)
+  //   const image = getImage(contentfulPage.image)
   //   if (contentfulPage.about) {
   //     renderRichText(contentfulPage.about, richTextConfig)
   //   }
