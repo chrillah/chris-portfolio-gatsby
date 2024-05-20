@@ -3,35 +3,35 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 function DisplayIllustrations() {
-  //   const data = useStaticQuery(graphql`
-  //     query {
-  //       allContentfulGallery {
-  //         edges {
-  //           node {
-  //             images {
-  //               gatsbyImageData(width: 900)
-  //             }
-  //             description {
-  //               description
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
   const data = useStaticQuery(graphql`
     query {
       allContentfulGallery {
         edges {
           node {
             images {
-              gatsbyImage(width: 1000)
+              gatsbyImageData(width: 900)
+            }
+            description {
+              description
             }
           }
         }
       }
     }
   `)
+  //   const data = useStaticQuery(graphql`
+  //     query {
+  //       allContentfulGallery {
+  //         edges {
+  //           node {
+  //             images {
+  //               gatsbyImage(width: 1000)
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `)
 
   let numberOfImages
 
