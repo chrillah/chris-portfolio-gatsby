@@ -1893,3 +1893,9 @@ footer {
 .search-link-container .link-button {
   margin-inline: var(--app-pad);
 }
+
+.empty {
+  background-color: var(--app-color);
+  width: 100%;
+  height: 100%;
+}
