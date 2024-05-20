@@ -54,9 +54,6 @@ export const data = graphql`
       template
       title
       url
-      gallery {
-        gatsbyImageData(width: 900)
-      }
       links {
         raw
       }
