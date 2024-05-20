@@ -25,10 +25,7 @@ function DisplayIllustrations() {
         edges {
           node {
             images {
-              gatsbyImageData(width: 1000)
-            }
-            description {
-              description
+              gatsbyImage(width: 1000)
             }
           }
         }
