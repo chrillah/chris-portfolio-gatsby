@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 // import { getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
+//import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
 import DisplayPortfolioItems from "../components/displayPortfolioItems"
 import DisplayAboutSection from "../components/displayAboutSection"
 import Seo from "../components/seo"
@@ -57,7 +57,7 @@ const HomeTemplate = contentfulPage => {
           ) : (
             <></>
           )}
-          <DisplayImageFromIllustrations />
+          {/* <DisplayImageFromIllustrations /> */}
         </div>
 
         <div className="app-page-wrapper">

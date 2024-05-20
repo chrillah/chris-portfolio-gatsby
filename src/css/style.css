@@ -789,12 +789,18 @@ p {
 }
 
 .item-button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 800;
   padding: var(--item-pad) var(--item-pad) calc(var(--item-pad) * 3)
     var(--item-pad);
 }
 
 .item-bottom-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -804,15 +810,9 @@ p {
 
 @media (min-height: 665px) {
   .item-bottom-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 
   .item-button-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
 }
 
