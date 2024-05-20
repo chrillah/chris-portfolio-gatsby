@@ -39,34 +39,6 @@ const Page = ({ data }) => {
   return <>{getTemplate()}</>
 }
 
-export const data = graphql`
-  query pageQuery($id: String) {
-    contentfulPage(id: { eq: $id }) {
-      image {
-        gatsbyImageData(width: 1000)
-      }
-      body {
-        raw
-      }
-      content {
-        raw
-      }
-      template
-      title
-      url
-      links {
-        raw
-      }
-      about {
-        raw
-      }
-      aboutDescription {
-        aboutDescription
-      }
-      aboutHeader
-    }
-  }
-`
 // export const data = graphql`
 //   query pageQuery($id: String) {
 //     contentfulPage(id: { eq: $id }) {
@@ -82,10 +54,6 @@ export const data = graphql`
 //       template
 //       title
 //       url
-//       gallery {
-//         title
-//         gatsbyImageData(height: 800)
-//       }
 //       links {
 //         raw
 //       }
@@ -99,5 +67,37 @@ export const data = graphql`
 //     }
 //   }
 // `
+export const data = graphql`
+  query pageQuery($id: String) {
+    contentfulPage(id: { eq: $id }) {
+      image {
+        gatsbyImageData(width: 1000)
+      }
+      body {
+        raw
+      }
+      content {
+        raw
+      }
+      template
+      title
+      url
+      gallery {
+        title
+        gatsbyImageData(height: 800)
+      }
+      links {
+        raw
+      }
+      about {
+        raw
+      }
+      aboutDescription {
+        aboutDescription
+      }
+      aboutHeader
+    }
+  }
+`
 
 export default Page
