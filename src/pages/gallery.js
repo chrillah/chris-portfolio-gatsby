@@ -60,10 +60,10 @@ const Gallery = () => {
             </div>
           </div>
         </div> */}
-        <div className="gallery-container">
+        <div>
           {data.allContentfulGallery.edges.map((edge, index) => {
             return (
-              <div className="gallery" key={index}>
+              <div key={index} className="gallery-container">
                 {edge.node.images.map((image, imageIndex) => {
                   const imageData = getImage(image)
                   console.log(imageData)
