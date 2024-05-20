@@ -7,12 +7,10 @@ const HeaderSearch = () => {
   const navigation = useNavigation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  //   Funktion som ändrar tillståndet på isMenuOpen till false
   const closeMenu = () => {
     setIsMenuOpen(false)
   }
 
-  //   funktion som ändrar tillståndet på isMenuOpen till true
   const openMenu = () => {
     setIsMenuOpen(true)
   }
