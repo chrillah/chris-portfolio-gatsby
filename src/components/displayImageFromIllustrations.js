@@ -52,7 +52,7 @@ function DisplayIllustrations() {
   const randomNumber = Math.floor(Math.random() * numberOfImages) + 1
 
   return (
-    <Link to="/creativity" className="illustration-section">
+    <Link to="/gallery" className="illustration-section">
       {data ? (
         <>
           {data.allContentfulGallery.edges.map((edge, index) => {

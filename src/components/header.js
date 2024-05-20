@@ -209,7 +209,8 @@ const Header = () => {
                   if (
                     node.title === "404" ||
                     node.title === "Contact" ||
-                    node.title === "Technology"
+                    node.title === "Technology" ||
+                    node.title === "Creativity"
                   ) {
                     return null
                   } else {
@@ -226,6 +227,14 @@ const Header = () => {
                     )
                   }
                 })}
+                <AppButton
+                  nav
+                  url="/gallery"
+                  title="Gallery"
+                  onClick={() => {
+                    closeMenu()
+                  }}
+                />
               </>
             ) : (
               <Search />
