@@ -55,8 +55,8 @@ export const data = graphql`
       title
       url
       gallery {
+        gatsbyImage(width: 900)
         title
-        gatsbyImageData(height: 800)
       }
       links {
         raw
@@ -71,5 +71,37 @@ export const data = graphql`
     }
   }
 `
+// export const data = graphql`
+//   query pageQuery($id: String) {
+//     contentfulPage(id: { eq: $id }) {
+//       image {
+//         gatsbyImageData(width: 1000)
+//       }
+//       body {
+//         raw
+//       }
+//       content {
+//         raw
+//       }
+//       template
+//       title
+//       url
+//       gallery {
+//         title
+//         gatsbyImageData(height: 800)
+//       }
+//       links {
+//         raw
+//       }
+//       about {
+//         raw
+//       }
+//       aboutDescription {
+//         aboutDescription
+//       }
+//       aboutHeader
+//     }
+//   }
+// `
 
 export default Page
