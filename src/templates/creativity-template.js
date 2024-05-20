@@ -60,9 +60,11 @@ const CreativityTemplate = contentfulPage => {
         <div className="gallery-container">
           {contentfulPage.gallery.map((image, index) => {
             const imageData = getImage(image)
+
+            console.log(imageData)
             return (
               <div key={index} className="gallery-image">
-                <GatsbyImage image={imageData} alt={image.title} />
+                <GatsbyImage image={imageData} alt="" />
               </div>
             )
           })}

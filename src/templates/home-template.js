@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
-import { getImage } from "gatsby-plugin-image"
+// import { getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import DisplayImageFromIllustrations from "../components/displayImageFromIllustrations"
 import DisplayPortfolioItems from "../components/displayPortfolioItems"
