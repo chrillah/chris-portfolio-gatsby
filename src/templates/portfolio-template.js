@@ -1,6 +1,4 @@
 import * as React from "react"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PortfolioItem from "../components/portfolioItem"
@@ -8,30 +6,29 @@ import usePortfolioInformation from "../hooks/use-portfolioInformation"
 import { Helmet } from "react-helmet"
 
 const PortfolioTemplate = contentfulPage => {
-  // Konfiguration för att anpassa renderingen av richtext
-  const richTextConfig = {
-    renderNode: {
-      [BLOCKS]: (node, children) => <p>{children}</p>,
-      [BLOCKS.HEADING_1]: (node, children) => (
-        <h1 className="hero-title">{children}</h1>
-      ),
-      [INLINES.ENTRY_HYPERLINK]: (node, children) => {
-        let url = children[0].toLowerCase()
-        return (
-          <>
-            {/* <AppButton to={`/${url}`} title={children} /> */}
-            <a
-              className="link-button"
-              href={`/${url}`}
-              rel="noopener noreferrer"
-            >
-              {children}
-            </a>
-          </>
-        )
-      },
-    },
-  }
+  //   const richTextConfig = {
+  //     renderNode: {
+  //       [BLOCKS]: (node, children) => <p>{children}</p>,
+  //       [BLOCKS.HEADING_1]: (node, children) => (
+  //         <h1 className="hero-title">{children}</h1>
+  //       ),
+  //         [INLINES.ENTRY_HYPERLINK]: (node, children) => {
+  //           let url = children[0].toLowerCase()
+  //           return (
+  //             <>
+  //               {/* <AppButton to={`/${url}`} title={children} /> */}
+  //               <a
+  //                 className="link-button"
+  //                 href={`/${url}`}
+  //                 rel="noopener noreferrer"
+  //               >
+  //                 {children}
+  //               </a>
+  //             </>
+  //           )
+  //         },
+  //     },
+  //   }
   const portfolioInformation = usePortfolioInformation()
   return (
     <Layout>
@@ -105,7 +102,15 @@ const PortfolioTemplate = contentfulPage => {
           <div className="app-container">
             <div className="projects-page-bottom-container">
               <p>Check out the rest.</p>
-              <div>{renderRichText(contentfulPage.links, richTextConfig)}</div>
+              <div>
+                <a
+                  className="link-button"
+                  href="/gallery"
+                  rel="noopener noreferrer"
+                >
+                  Gallery
+                </a>
+              </div>
             </div>
           </div>
         </div>

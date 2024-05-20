@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { BLOCKS, INLINES } from "@contentful/rich-text-types"
+import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import useEducationInformation from "../hooks/use-educationInformation"
@@ -18,16 +18,16 @@ const AboutTemplate = contentfulPage => {
       [BLOCKS.HEADING_1]: (node, children) => (
         <h1 className="hero-title">{children}</h1>
       ),
-      [INLINES.ENTRY_HYPERLINK]: (node, children) => {
-        let url = children[0].toLowerCase()
+      //   [INLINES.ENTRY_HYPERLINK]: (node, children) => {
+      //     let url = children[0].toLowerCase()
 
-        console.log(url)
-        return (
-          <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
-            {children}
-          </a>
-        )
-      },
+      //     console.log(url)
+      //     return (
+      //       <a className="link-button" href={`/${url}`} rel="noopener noreferrer">
+      //         {children}
+      //       </a>
+      //     )
+      //   },
     },
   }
 
@@ -88,7 +88,20 @@ const AboutTemplate = contentfulPage => {
             <div className="about-page-bottom-container">
               <h3 className="grid-header">Check out the rest.</h3>
               <div className="link-button-container">
-                {renderRichText(contentfulPage.links, richTextConfig)}
+                <a
+                  className="link-button"
+                  href="/projects"
+                  rel="noopener noreferrer"
+                >
+                  Projects
+                </a>
+                <a
+                  className="link-button"
+                  href="/gallery"
+                  rel="noopener noreferrer"
+                >
+                  Gallery
+                </a>
               </div>
             </div>
           </div>
