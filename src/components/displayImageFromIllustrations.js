@@ -1,5 +1,5 @@
 import React from "react"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 function DisplayIllustrations() {
@@ -32,8 +32,8 @@ function DisplayIllustrations() {
       }
     }
   `)
-//   KOMMENTERAD UT
-  //let numberOfImages
+
+  let numberOfImages
 
   //   if (data) {
   //     data.allContentfulGallery.edges.forEach(edge => {
@@ -43,20 +43,19 @@ function DisplayIllustrations() {
   //     })
   //   }
 
-//   KOMMENTERAD UT
-  //   data.allContentfulGallery.edges.forEach(edge => {
-  //     if (edge) {
-  //       numberOfImages = edge.node.images.length
-  //     }
-  //   })
+  data.allContentfulGallery.edges.forEach(edge => {
+    if (edge) {
+      numberOfImages = edge.node.images.length
+    }
+  })
 
-  //   const randomNumber = Math.floor(Math.random() * numberOfImages) + 1
+  const randomNumber = Math.floor(Math.random() * numberOfImages) + 1
 
   return (
     <Link to="/creativity" className="illustration-section">
       {data ? (
-        <div className="empty">
-          {/* {data.allContentfulGallery.edges.map((edge, index) => {
+        <>
+          {data.allContentfulGallery.edges.map((edge, index) => {
             return (
               <div key={index} className="gallery">
                 {edge.node.images.map((image, imageIndex) => {
@@ -75,10 +74,10 @@ function DisplayIllustrations() {
                 })}
               </div>
             )
-          })} */}
-        </div>
+          })}
+        </>
       ) : (
-        <div className="empty"></div>
+        <></>
       )}
       <div className="to-button">
         <svg
