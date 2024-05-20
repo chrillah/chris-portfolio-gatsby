@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
 import PortfolioTemplate from "../templates/portfolio-template"
-import TechnologyTemplate from "../templates/technology-template"
+//import TechnologyTemplate from "../templates/technology-template"
 import ContactTemplate from "../templates/contact-template"
 import NotFoundTemplate from "../templates/notfound-template"
 //import CreativityTemplate from "../templates/creativity-template"
@@ -22,8 +22,8 @@ const Page = ({ data }) => {
       //   case "creativity":
       //     return <CreativityTemplate {...contentfulPage} />
 
-      case "technology":
-        return <TechnologyTemplate {...contentfulPage} />
+      //   case "technology":
+      //     return <TechnologyTemplate {...contentfulPage} />
 
       case "contact":
         return <ContactTemplate {...contentfulPage} />
